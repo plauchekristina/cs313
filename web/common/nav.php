@@ -32,7 +32,7 @@
                         <a href="../hello.html">Home</a>
                     </li>
                     <li>
-                        <a href="../week2.php">Assignments</a>
+                        <a href="#">Assignments</a>
                     </li>
                     <li>
                         <a href="#">About Me</a>

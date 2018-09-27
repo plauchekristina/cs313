@@ -3,28 +3,32 @@
 <div class="jumbotron">
         <div class="container text-center">
             <h1>Fall Semester 2018</h1>
-            <p>Week 2...</p>
+            <p>Week 2</p>
         </div>
     </div>
     <div class="container text-center">
         <div class="row">
             <div class="col-sm-12 panel panel-default text-left">
-                <div class="panel-body bold fun-quote">
+                <div class="panel-body bold fun-quote" id="colorChanger">
                     <p> Hi there! I used to think I was indecisive, but now I'm not quite sure. </p>
                     <div>
                 <label>Change the Background Color</label>
         </div>
         <div>
                 <input name="colorChange" 
-                       id="color-change" 
+                       id="colorInput" 
                        type="text" />
                     <button onclick="changeColor()" type="button" class="btn btn-dark">Change Color</button>
                 </div>
 
             </div>
+            </div>
+
+    </div>
+</div>
             <!-- Left column -->
             <div class="col-sm-3">
-                <div class="profile bold">
+                <div class="profile bold" id="profile">
                     <p>
                         <a href="#">Kristina</a>
                     </p>
@@ -51,11 +55,9 @@
 
 
             </div>
-
+<!--end center column-->
     
            
-        </div>
-
-    </div>
+       
     <script src ="../scripts/functions.js"></script>
  <?php include($_SERVER["DOCUMENT_ROOT"] . '/common/footer.php');?> 
