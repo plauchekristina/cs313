@@ -9,26 +9,17 @@
     <div class="container text-center">
         <div class="row">
             <div class="col-sm-12 panel panel-default text-left">
-                <div class="panel-body bold fun-quote" id="colorChanger">
+                <div class="panel-body">
                     <p> Hi there! I used to think I was indecisive, but now I'm not quite sure. </p>
-                    <div>
-                <label>Change the Background Color</label>
-        </div>
-        <div>
-                <input name="colorChange" 
-                       id="colorInput" 
-                       type="text" />
-                    <button onclick="changeColor()" type="button" class="btn btn-dark">Change Color</button>
-                </div>
 
             </div>
             </div>
 
-    </div>
-</div>
+   
+
             <!-- Left column -->
-            <div class="col-sm-3">
-                <div class="bold">
+            <div class="col-sm-3 well">
+                <div class="well">
                     <p>
                         <a href="#">Kristina</a>
                     </p>
@@ -43,10 +34,10 @@
 
                 <div class="row">
                     <div class="col-sm-12">
-                        <div class="panel panel-default text-left">
-                            <div class="panel-body bold clicker">
-                                If you want to see a JavaScript  alert, click the cool button below.
-                                <button onclick="clickMe()"type="button" class="btn btn-dark">Click Me</button>
+                        <div class="panel panel-default text-left well">
+                            <div class="panel-body">
+                            <h2>Content</h2>
+                            <p>Some content</p>
 
                             </div>
                         </div>
@@ -56,8 +47,8 @@
 
             </div>
 <!--end center column-->
-    
-           
+</div> 
+</div>        
        
     <script src ="../scripts/functions.js"></script>
  <?php include($_SERVER["DOCUMENT_ROOT"] . '/common/footer.php');?> 
