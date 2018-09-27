@@ -14,3 +14,15 @@ function changeColor() {
     div.style.backgroundColor = color;
 
 }
+
+function newQuote() {
+    var quotes = [
+        'Be Happy',
+        'People are more important than things.',
+        'You got this!',
+        'You learn more from children than you did from your parents'
+    ]
+
+    var randomNumber = Math.floor(Math.random() * (quotes.length));
+    document.getElementById('quoteDisplay').innerHTML = quotes[randomNumber];
+}
