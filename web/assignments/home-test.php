@@ -20,9 +20,9 @@
             <!-- Left column -->
             <div class="col-sm-3 well">
                 <div class="well">
-                    <p>
+                    <h2>
                         <a href="#">Kristina</a>
-                    </p>
+</h2>
                     <img src="../images/kp-profile.jpg" class="img-circle" height="65" width="65" alt="Avatar">
                 </div>
 
