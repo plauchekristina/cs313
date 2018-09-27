@@ -29,7 +29,7 @@
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav">
                     <li class="active">
-                        <a href="../hello.html">Home</a>
+                        <a href="../index.php">Home</a>
                     </li>
                     <li>
                         <a href="#">Assignments</a>

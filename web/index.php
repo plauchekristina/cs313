@@ -23,7 +23,7 @@
                     <h2>
                         <a href="#">Kristina</a>
 </h2>
-                    <img src="../web/images/kp-profile.jpg" class="img-circle" height="65" width="65" alt="Avatar">
+                    <img src="../images/kp-profile.jpg" class="img-circle" height="65" width="65" alt="Avatar">
                 </div>
 
 
