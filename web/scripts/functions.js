@@ -17,10 +17,12 @@ function changeColor() {
 
 function newQuote() {
     var quotes = [
-        'Be Happy',
+        'Be happy.',
         'People are more important than things.',
         'You got this!',
-        'You learn more from children than you did from your parents'
+        'You learn more from children than you did from your parents.',
+        'Assume best intent.',
+        'I used to think I was indecisive, but now I am not quite sure.'
     ]
 
     var randomNumber = Math.floor(Math.random() * (quotes.length));

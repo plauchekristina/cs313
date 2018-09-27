@@ -10,8 +10,8 @@
         <div class="row">
             <div class="col-sm-12 panel panel-default text-left">
                 <div  class="panel-body">
-                    <p> <strong>"Quote of the Day:"</strong> <span onload = "newQuote()"id="quoteDisplay">I used to think I was indecisive, but now I'm not quite sure.</span> </p>
-                <!--quote will display here -->
+                    <p> <strong>Quote of the Day:</strong> <span id="quoteDisplay"></span> </p>
+                    <button onclick="newQuote()"> New Quote</button>
                    
             </div>
             </div>
@@ -25,9 +25,9 @@
                         <a href="#">Kristina</a>
 </h2>
                     <img src="../images/kp-profile.jpg" class="img-circle" height="65" width="65" alt="Avatar">
-<br>
+<br><p> 
                     <?php 
-                    echo "Today is ".date("m/d/Y");?>
+                    echo "<strong>Today is:</strong> ".date("m/d/Y");?></p>
                 </div>
 
 
