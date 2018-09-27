@@ -26,7 +26,7 @@
 </h2>
                     <img src="../images/kp-profile.jpg" class="img-circle" height="65" width="65" alt="Avatar">
                     <?php 
-                    echo "Today is ".date("m/d/Y");
+                    echo "Today is ".date("m/d/Y");?>
                 </div>
 
 
