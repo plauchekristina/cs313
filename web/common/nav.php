@@ -23,13 +23,13 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand" href="#">
-                    <img src="../images/k-logo.svg">
+                    <img src="../images/k-logo-small.svg">
                 </a>
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav">
                     <li class="active">
-                        <a href="../index.php">Home</a>
+                        <a href="../hello.html">Home</a>
                     </li>
                     <li>
                         <a href="../week2.php">Assignments</a>
