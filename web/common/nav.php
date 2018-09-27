@@ -32,11 +32,9 @@
                         <a href="../index.php">Home</a>
                     </li>
                     <li>
-                        <a href="#">Assignments</a>
+                        <a href="../assignments.php">Assignments</a>
                     </li>
-                    <li>
-                        <a href="#">About Me</a>
-                    </li>
+                
                 </ul>
                 <form class="navbar-form navbar-right" role="search">
                     <div class="form-group input-group">
