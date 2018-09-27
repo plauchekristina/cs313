@@ -10,7 +10,7 @@
         <div class="row">
             <div class="col-sm-12 panel panel-default text-left">
                 <div  class="panel-body">
-                    <p> <strong>Quote of the Day:</strong> <span id="quoteDisplay"></span> </p>
+                    <p> <strong>Quote of the Day:</strong> <span id="quoteDisplay">People are more important than things. - Kristina Plauché</span> </p>
                     <button onclick="newQuote()"> New Quote</button>
                    
             </div>

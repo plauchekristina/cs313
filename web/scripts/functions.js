@@ -17,12 +17,11 @@ function changeColor() {
 
 function newQuote() {
     var quotes = [
-        'Be happy.',
-        'People are more important than things.',
-        'You got this!',
-        'You learn more from children than you did from your parents.',
-        'Assume best intent.',
-        'I used to think I was indecisive, but now I am not quite sure.'
+        'Be yourself; everyone else is already taken. - Oscar Wilde',
+        'In three words I can sum up everything I have learned about life: it goes on.- Robert Frost',
+        'An essential aspect of creativity is not being afraid to fail. - Edwin Land',
+        'I am so clever that sometimes I do not understand a single word of what I am saying.- Oscar Wilde',
+        'I used to think I was indecisive, but now I am not quite sure. - Author Unknown'
     ]
 
     var randomNumber = Math.floor(Math.random() * (quotes.length));
