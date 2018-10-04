@@ -5,7 +5,7 @@
     <title>Shopping Cart</title>
 </head>
 <body>
-    <form method="post" action="displayForm.php">
+    <form method="post" action="../assignments/displayform.php">
         Name: <input type="text" name="name"></br>
         Email: <input type="text" name="email"></br>
         Major:</br>
