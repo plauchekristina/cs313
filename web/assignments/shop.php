@@ -13,7 +13,7 @@ session_start();?>
         <div class="row">
             <div class="col-sm-12 panel panel-default text-left">
                 <div  class="panel-body">
-                <form method="post" action="../assignments/displayform.php">
+                <form method="post" action="../assignments/addToCart.php">
                 Name: <input type="text" name="name"></br>
                 Email: <input type="text" name="email"></br>
                 Major:</br>
