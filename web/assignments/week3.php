@@ -2,7 +2,7 @@
 <!---  ####### Body content begins ####### -->
 
 <head>
-    <title>Shopping Cart</title>
+    <title>Simple Form</title>
 </head>
 <body>
 <div class="container text-center">
