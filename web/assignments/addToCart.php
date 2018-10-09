@@ -3,7 +3,7 @@
 <?php 
 //start the session
 session_start();
-$products = $_POST["continent"];
+$continents = $_POST["continent"];
 foreach ($continents as $c){
     $_SESSION["items"];
 }
