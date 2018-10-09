@@ -13,31 +13,15 @@ session_start();?>
         <div class="row">
             <div class="col-sm-12 panel panel-default text-left">
                 <div  class="panel-body">
-                <form method="post" action="../assignments/addToCart.php">
-                Name: <input type="text" name="name"></br>
-                Email: <input type="text" name="email"></br>
-                Major:</br>
-                        <?php
-                            $majors = array("Computer Science"=>"cs", 
-                                            "Web Design and Development"=>"wdd",
-                                            "Computer Information Technology"=>"cit",
-                                            "Computer Engineering"=>"ce");
-                        foreach ($majors as $m => $m_code) {
-                            print "<input type=\"radio\" name=\"major\" value=\"" 
-                                . $m . "\" id=\"" . $m_code . "\"><label for=\"" . $m_code 
-                                . "\">" . $m . "</label><br />";
-                            }
-                        ?>
-                Comments: <textarea name="comments"></textarea></br></br>
-                <input type="checkbox" name="continent[]" value="na">North America</br>
-                <input type="checkbox" name="continent[]" value="sa">South America</br>
-                <input type="checkbox" name="continent[]" value="eu">Europe</br>
-                <input type="checkbox" name="continent[]" value="as">Asia</br>
-                <input type="checkbox" name="continent[]" value="au">Austrailia</br>
-                <input type="checkbox" name="continent[]" value="af">Africa</br>
-                <input type="checkbox" name="continent[]" value="an">Antarctica</br>
-                <input type="submit" name="submit" value="Submit">
-                        </form>
+                <p>Brother Burton, I am actively still working on this right now. 
+               I had a work trip last week for my company's annual conference. They have us scheduled from 8am-10pm for 9 days.
+               If you're thinking "What the?!"  It's in progress.</p> 
+                <form action="viewCart.php" method="post">
+                <input type="checkbox" name="product[]" value="Item 1">Item 1</br>
+                <input type="checkbox" name="product[]" value="Item 2">Item 2</br>
+                <input type="checkbox" name="product[]" value="Item 3">Item 3</br>
+                <input type="submit" name="submit" value="Add to Cart">
+                </form>
                    
             </div>
             </div>
