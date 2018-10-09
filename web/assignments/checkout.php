@@ -48,9 +48,11 @@ session_start();
           
       <input type="submit" class= "btn-primary" name="submit" value="Place Order">
         </form>
+        <div class="double-button">
         <form action="viewCart.php">
         <input type="submit" class= "btn-primary" value="Return to Cart">
     </form>
+    </div>
                    
             </div>
             </div>

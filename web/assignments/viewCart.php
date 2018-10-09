@@ -20,7 +20,12 @@ session_start();
         ?>
                 <form action="checkout.php">
                 <input type="submit" class= "btn-primary" value="Proceed to Checkout">
-            </form>
+                            </form>
+<div>
+                            <form action="viewCart.php" class="double-button">
+        <input type="submit" class= "btn-danger" value="Empty Cart">
+    </form>
+    </div>
 
 
                    
