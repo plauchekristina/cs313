@@ -31,7 +31,7 @@ session_start();
 ?>
          
         <form action="viewCart.php">
-        <input type="submit" class=".btn-primary" value="View Cart">
+        <input type="submit" class= "btn-primary" value="View Cart">
     </form>       
             </div>
             </div>

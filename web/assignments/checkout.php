@@ -19,15 +19,21 @@ session_start();
 ?>
         <form action="order-confirmation.php" method ="post"> 
             <div>
-          <label>First & Last Name:</label>   
+          <label>First & Last Name:</label> 
+          </div>
+          <div>  
               <input type="text" placeholder="Name" name="name">
             </div>
             <div>
               <label>Email:</label> 
+              </div>
+            <div>
               <input type="text" placeholder="Email" name="email">
             </div>
             <div>
-              <label>Address:</label>   
+              <label>Address:</label> 
+              </div>
+            <div>  
               <input type="text" placeholder="Street" name="street" >
             </div>
             <div>
@@ -40,7 +46,7 @@ session_start();
               <input type="text" placeholder="Zip Code" name="zip">
             </div>
           
-      <input type="submit" name="submit" value="Place Order">
+      <input type="submit" class= "btn-primary" name="submit" value="Place Order">
         </form>
                    
             </div>

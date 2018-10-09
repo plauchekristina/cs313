@@ -19,7 +19,7 @@ session_start();
         }
         ?>
                 <form action="checkout.php">
-                <input type="submit" class=".btn-primary" value="Proceed to Checkout">
+                <input type="submit" class= "btn-primary" value="Proceed to Checkout">
             </form>
 
 
