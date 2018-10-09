@@ -54,7 +54,7 @@ $continents = $_POST["continent"];
           print "$continentsDB[$c] <br />";
       }
   ?>
-  <button href="../assignments/viewCart.php"> View Cart</button>
+  <a href="../assignments/viewCart.php"> View Cart</a>
     </p>
                    
             </div>
