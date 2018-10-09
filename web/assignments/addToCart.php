@@ -1,62 +1,38 @@
 <?php include($_SERVER["DOCUMENT_ROOT"] . '/common/nav.php');?> 
 <!---  ####### Body content begins ####### -->
 <?php 
-//start the session
+//session start
 session_start();
-$continents = $_POST["continent"];
-foreach ($continents as $c){
-    $_SESSION["items"];
-}
 
 ?>
 
-<?php 
 
-$products = $_POST["continent"];
-?>
     <div class="container text-center">
         <div class="row">
             <div class="col-sm-12 panel panel-default text-left">
                 <div  class="panel-body">
           
-      <?php 
-$name = $_POST["name"];
-$email = $_POST["email"];
-$major = $_POST["major"];
-$comments = $_POST["comments"];
-$continents = $_POST["continent"];
+                <?php
+
+      $products = $_POST["product"];
+    foreach ($products as $product){
+        $_SESSION["items"] = $products;
+       } 
+
 ?>
 
-    <p>Name:
-        <?=$name ?>
-    </p>
-    <p>Email:
-        <a href="mailto:<?=$email ?>">
-            <?=$email ?>
-        </a>
-    </p>
-    <p>Major:
-        <?=$major ?>
-    </p>
-    <p>Comments:
-        <?=$comments ?>
-    </p>
-    <p>Continents:</br>
-        <?php
-      $continentsDB = array("na"=>"North America", 
-                          "sa"=>"South America",
-                          "eu"=>"Europe",
-                          "as"=>"Asia",
-                          "au"=>"Australia",
-                          "af"=>"Africa",
-                          "an"=>"Antartica");
-      foreach ($continents as $c){
-          print "$continentsDB[$c] <br />";
-      }
-  ?>
-  <a href="../assignments/viewCart.php"> View Cart</a>
-    </p>
-                   
+<h4>You have added the following to your cart:</h4>
+        
+        <?php 
+        $products = $_POST["product"];
+    foreach ($products as $product){
+        echo "$product <br>";
+}
+?>
+         
+        <form action="viewCart.php">
+        <input type="submit" class=".btn-primary" value="View Cart">
+    </form>       
             </div>
             </div>
 
