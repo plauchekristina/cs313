@@ -1,22 +1,60 @@
 <?php include($_SERVER["DOCUMENT_ROOT"] . '/common/nav.php');?> 
 <!---  ####### Body content begins ####### -->
 <?php 
+//start the session
+session_start();
+$products = $_POST["continent"];
+foreach ($continents as $c){
+    $_SESSION["items"];
+}
 
-$productss = $_POST["continent"];
+?>
+
+<?php 
+
+$products = $_POST["continent"];
 ?>
     <div class="container text-center">
         <div class="row">
             <div class="col-sm-12 panel panel-default text-left">
                 <div  class="panel-body">
-                <p>My Cart:</br>
+          
+      <?php 
+$name = $_POST["name"];
+$email = $_POST["email"];
+$major = $_POST["major"];
+$comments = $_POST["comments"];
+$continents = $_POST["continent"];
+?>
+
+    <p>Name:
+        <?=$name ?>
+    </p>
+    <p>Email:
+        <a href="mailto:<?=$email ?>">
+            <?=$email ?>
+        </a>
+    </p>
+    <p>Major:
+        <?=$major ?>
+    </p>
+    <p>Comments:
+        <?=$comments ?>
+    </p>
+    <p>Continents:</br>
         <?php
-      $cartItems = array("art1"=>"Grant's Art", 
-                          "art2"=>"Aden's Art",
-                          "art3"=>"Chase's Art");
-      foreach ($products as $p){
-          print "$cartItems[$p] <br />";
+      $continentsDB = array("na"=>"North America", 
+                          "sa"=>"South America",
+                          "eu"=>"Europe",
+                          "as"=>"Asia",
+                          "au"=>"Australia",
+                          "af"=>"Africa",
+                          "an"=>"Antartica");
+      foreach ($continents as $c){
+          print "$continentsDB[$c] <br />";
       }
-      ?>
+  ?>
+    </p>
                    
             </div>
             </div>

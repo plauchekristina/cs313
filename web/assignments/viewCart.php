@@ -1,10 +1,22 @@
 <?php include($_SERVER["DOCUMENT_ROOT"] . '/common/nav.php');?> 
 <!---  ####### Body content begins ####### -->
+<?php 
+    //start the session
+    session_start();
+?>
+
     <div class="container text-center">
         <div class="row">
             <div class="col-sm-12 panel panel-default text-left">
                 <div  class="panel-body">
-                    <p>hellow</p>
+              <?php
+              $items = $_SESSION["items"];
+              foreach ($items as $item){ 
+                  echo $item;
+              } 
+              ?>
+
+
                    
             </div>
             </div>

@@ -6,20 +6,47 @@ session_start();?>
         <div class="row">
             <div class="col-sm-12 panel panel-default text-left">
                 <div  class="panel-body">
-                <?php
-                // Set session variables
-                $_SESSION["favcolor"] = "green";
-                $_SESSION["favanimal"] = "cat";
-                echo "Session variables are set.";
-                ?>
-                <form method="post" action="../assignments/addToCart.php">
-                <input type="number" name="product[]" value="art1">Kids Art 1</br>
-                <input type="number" name="product[]" value="art2">Kids Art 2</br>
-                <input type="number" name="product[]" value="art3">Kids Art 3</br>
-                <input type="submit" value= "Add to Cart">
+              
+                    <!-- product gallery begins-->
+                    <body>
+<div class="container text-center">
+        <div class="row">
+            <div class="col-sm-12 panel panel-default text-left">
+                <div  class="panel-body">
+                <form method="post" action="../assignments/displayform.php">
+                Name: <input type="text" name="name"></br>
+                Email: <input type="text" name="email"></br>
+                Major:</br>
+                        <?php
+                            $majors = array("Computer Science"=>"cs", 
+                                            "Web Design and Development"=>"wdd",
+                                            "Computer Information Technology"=>"cit",
+                                            "Computer Engineering"=>"ce");
+                        foreach ($majors as $m => $m_code) {
+                            print "<input type=\"radio\" name=\"major\" value=\"" 
+                                . $m . "\" id=\"" . $m_code . "\"><label for=\"" . $m_code 
+                                . "\">" . $m . "</label><br />";
+                            }
+                        ?>
+                Comments: <textarea name="comments"></textarea></br></br>
+                <input type="checkbox" name="continent[]" value="na">North America</br>
+                <input type="checkbox" name="continent[]" value="sa">South America</br>
+                <input type="checkbox" name="continent[]" value="eu">Europe</br>
+                <input type="checkbox" name="continent[]" value="as">Asia</br>
+                <input type="checkbox" name="continent[]" value="au">Austrailia</br>
+                <input type="checkbox" name="continent[]" value="af">Africa</br>
+                <input type="checkbox" name="continent[]" value="an">Antarctica</br>
+                <input type="submit" name="submit" value="Submit">
+                        </form>
+                   
+            </div>
+            </div>
+</div>
+</div>
+   
+</body>
 
-                </form>
-                    <p>hellow</p>
+                         <!-- product gallery ends-->
                    
             </div>
             </div>
