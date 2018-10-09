@@ -41,10 +41,10 @@
                             <div class="panel-body">
                             <h2>Assignments</h2>
                             <ul>
-                                <li><a href="#">Week X</a>: Description
+                                <li><a href="../assignments/week3.php">Week 3 Form</a>: a simple form.
 
                                 </li>
-                                <li><a href="#">Week X</a>: Description
+                                <li><a href="../assignments/shoppingcart.php">Week 3 Shopping Cart</a>: a simple php shopping cart.
 
                                 </li>
                             </ul>
