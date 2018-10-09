@@ -44,7 +44,7 @@
                                 <li><a href="../assignments/week3.php">Week 3 Form</a>: a simple form.
 
                                 </li>
-                                <li><a href="../assignments/shoppingcart.php">Week 3 Shopping Cart</a>: a simple php shopping cart.
+                                <li><a href="../assignments/shop.php">Week 3 Shopping Cart</a>: a simple php shopping cart.
 
                                 </li>
                             </ul>
