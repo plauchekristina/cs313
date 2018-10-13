@@ -3,7 +3,9 @@
 <?php
 //session start
 session_start();
-  
+  if (isset($_POST["empty_cart"])){
+      unset($_SESSION["items"]);
+  }
 ?>
 
     <div class="container text-center">
@@ -22,10 +24,11 @@ session_start();
                 <input type="submit" class= "btn-primary" value="Proceed to Checkout">
                             </form>
 <div>
-                            <form action="viewCart.php" class="double-button">
-        <input type="submit" class= "btn-danger" value="Empty Cart">
+                            <form action="viewCart.php" class="double-button" method="post">
+        <input type="submit" name="empty_cart" class= "btn-danger" value="Empty Cart">
     </form>
     </div>
+    
 
 
                    
