@@ -34,7 +34,6 @@ CREATE TABLE orders
     orders_id serial PRIMARY KEY,
     orders_account_id INTEGER references account(account_id),
     orders_coop_id INTEGER references coop(coop_id),
-    orders_items_id INTEGER references item(item_id),
     orders_date DATE NOT NULL,
     orders_total NUMERIC NOT NULL,
     orders_full_qty INTEGER NOT NULL,
