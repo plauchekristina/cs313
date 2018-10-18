@@ -26,5 +26,17 @@ catch (PDOException $ex)
   die();
 }
 ?>
-<p>HI!</p></body>
+<p>HI!</p>
+<?php
+	foreach ($db->query('SELECT scripture_book, scripture_chapter, scripture_verse, scripture_content FROM scriptures') as $row)
+		{
+		  echo "<p><b>" . $row['scripture_book'] . " ";
+		  echo $row['scripture_chapter'];
+		  echo ":" . $row['scripture_verse'] . "</b> - ";
+		  echo "\"" . $row['scripture_content'] . "\"";
+		  echo '</p>';
+	}
+	?>
+
+</body>
 </html>
