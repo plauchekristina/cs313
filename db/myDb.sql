@@ -17,18 +17,6 @@ CREATE TABLE coop
     coop_full_budget INTEGER NOT NULL,
     coop_half_budget INTEGER NOT NULL
 );
-CREATE TABLE item
-(
-    item_id serial PRIMARY KEY,
-    item_name VARCHAR(80) NOT NULL,
-    item_count INTEGER NOT NULL,
-    item_unit VARCHAR(30) NOT NULL,
-    item_price NUMERIC NOT NULL,
-    item_full_qty INTEGER NOT NULL,
-    item_half_qty INTEGER NOT NULL,
-    item_order_qty INTEGER NOT NULL,
-    item_order_cost NUMERIC NOT NULL
-);
 CREATE TABLE orders
 (
     orders_id serial PRIMARY KEY,
@@ -39,10 +27,23 @@ CREATE TABLE orders
     orders_full_qty INTEGER NOT NULL,
     orders_half_qty INTEGER NOT NULL,
     orders_full_budget INTEGER NOT NULL,
-    orders_half_budgeT INTEGER NOT NULL,
+    orders_half_budget INTEGER NOT NULL,
     coop_name VARCHAR (80) NOT NULL
 );
-ALTER TABLE item
-ADD COLUMN item_orders_id INTEGER references orders
-(orders_id);
+CREATE TABLE item
+(
+    item_id serial PRIMARY KEY,
+    item_orders_id INTEGER references orders(orders_id),
+    item_name VARCHAR(80) NOT NULL,
+    item_count INTEGER NOT NULL,
+    item_unit VARCHAR(30) NOT NULL,
+    item_price NUMERIC NOT NULL,
+    item_full_qty INTEGER NOT NULL,
+    item_half_qty INTEGER NOT NULL,
+    item_order_qty INTEGER NOT NULL,
+    item_order_cost NUMERIC NOT NULL
+);
 
+
+
+ 
