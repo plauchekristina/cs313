@@ -21,3 +21,7 @@ catch (PDOException $ex)
  die();
 }
 ?>
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head><title>Connection</title></head>
+<body></body></html>
