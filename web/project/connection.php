@@ -28,20 +28,21 @@ catch (PDOException $ex)
 <body>
 	<h1> Scripture Resources </h1>
 	<?php
-	foreach ($db->query('SELECT book, chapter, verse, content FROM scriptures') as $row)
+	foreach ($db->query('SELECT scripture_book, scripture_chapter, scripture_verse, scripture_content FROM scriptures') as $row)
 		{
-		 echo "<p><b>" . $row['book'] . " ";
-		 echo $row['chapter'];
-		 echo ":" . $row['verse'] . "</b> - ";
-		 echo "\"" . $row['content'] . "\"";
+		 echo "<p><b>" . $row['scripture_book'] . " ";
+		 echo $row['scripture_chapter'];
+		 echo ":" . $row['scripture_verse'] . "</b> - ";
+		 echo "\"" . $row['scripture_content'] . "\"";
 		 echo '</p>';
 	}
 	?>
 ​
-	<form action="" method ="post" id="searchForm">
+
+	<!--<form action="" method ="post" id="searchForm">
 		<input type="text" name="search">
 		<input type="submit" name="submit" value="Search">
-	</form>
+	</form>-->
 	<?php
 ​
 	/*
