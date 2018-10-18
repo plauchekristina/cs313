@@ -7,7 +7,7 @@
 try
 {
   $dbUrl = getenv('DATABASE_URL');
-
+echo $dbUrl;
   $dbOpts = parse_url($dbUrl);
 
   $dbHost = $dbOpts["host"];
@@ -28,6 +28,7 @@ catch (PDOException $ex)
 ?>
 <p>HI!</p>
 <?php
+
 	foreach ($db->query('SELECT scripture_book, scripture_chapter, scripture_verse, scripture_content FROM scriptures') as $row)
 		{
 		  echo "<p><b>" . $row['scripture_book'] . " ";
