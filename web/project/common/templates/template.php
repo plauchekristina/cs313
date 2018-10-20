@@ -2,7 +2,7 @@
 <!---  ####### Body content begins ####### -->
 <div class="jumbotron">
         <div class="container text-center">
-            <h1>Assignments</h1>
+            <h1>CS 313 - Fall 2018</h1>
             <p>What I am doing...</p>
         </div>
     </div>
@@ -40,17 +40,7 @@
                         <div class="panel panel-default text-left well">
                             <div class="panel-body">
                             <h2>Assignments</h2>
-                            <ul>
-                                <li><a href="../assignments/week3.php">Week 3 Form</a>: a simple form.
-
-                                </li>
-                                <li><a href="../assignments/shop.php">Week 3 Shopping Cart</a>: a simple php shopping cart.
-
-                                </li>
-                                <li><a href="/web/connect.php">Week 4 Scriptures</a>: a simple php query display.
-
-                                </li>
-                            </ul>
+                            <p>Some content</p>
 
                             </div>
                         </div>
