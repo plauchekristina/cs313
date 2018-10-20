@@ -1,4 +1,4 @@
-<?php include($_SERVER["DOCUMENT_ROOT"] . '../project/common/nav.php');?> 
+<?php include($_SERVER["DOCUMENT_ROOT_"] . '/project/common/nav.php');?> 
 <!---  ####### Body content begins ####### -->
 <div class="jumbotron">
         <div class="container text-center">
@@ -53,4 +53,4 @@
 </div>        
        
     <script src ="../scripts/functions.js"></script>
- <?php include($_SERVER["DOCUMENT_ROOT"] . '../project/common/footer.php');?> 
+ <?php include($_SERVER["DOCUMENT_ROOT"] . '/project/common/footer.php');?> 
