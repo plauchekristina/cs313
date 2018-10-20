@@ -26,6 +26,16 @@ catch (PDOException $ex)
 }
 ?>
 <p>The database is connected!</p>
+<?php
 
+	foreach ($db->query('SELECT first_name, last_name, username, email FROM account') as $row)
+		{
+		  echo "<p><b>" . $row['username'] . " ";
+		  echo $row['first_name'];
+		  echo ":" . $row['last_name'] . "</b> - ";
+		  echo "\"" . $row['email'] . "\"";
+		  echo '</p>';
+    }
+  ?>
   </body>
   </html>

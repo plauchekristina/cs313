@@ -44,6 +44,15 @@ CREATE TABLE item
     item_order_cost NUMERIC NOT NULL
 );
 
+INSERT INTO account (first_name, last_name, username, email, user_password)
+VALUES (
+    'Kristina', 'Plauche', 'kristinaplauche', 'kristina@plauche.org', 'admin123'
+);
+
+INSERT INTO coop (coop_user_id, coop_name, coop_contact_name, coop_contact_email,coop_full_budget,coop_half_budget)
+VALUES (
+1, 'Farmers Market Baskets', 'Kristina', 'kristina@farmersmarketbaskets.com', 10, 5);
+
 
 
  
