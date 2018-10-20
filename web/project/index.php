@@ -1,4 +1,4 @@
-<?php include($_SERVER["DOCUMENT_ROOT_"] . '/project/common/nav.php');?> 
+<?php include('../project/common/nav.php');?> 
 <!---  ####### Body content begins ####### -->
 <div class="jumbotron">
         <div class="container text-center">
