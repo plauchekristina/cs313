@@ -34,6 +34,9 @@
                     <li>
                         <a href="../assignments.php">Assignments</a>
                     </li>
+                    <li>
+                        <a href="../project/index.php">Project</a>
+                    </li>
                 
                 </ul>
                 <form class="navbar-form navbar-right" role="search">
