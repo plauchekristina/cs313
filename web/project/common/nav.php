@@ -32,16 +32,16 @@
                         <a href="https://quiet-peak-48501.herokuapp.com/index.php">Class Home</a>
                     </li>
                     <li class="active">
-                        <a href="../index.php">Project Home</a>
+                        <a href="/index.php">Project Home</a>
                     </li>
                     <li>
-                        <a href="../order-form.php">Order Form</a>
+                        <a href="/order-form.php">Order Form</a>
                     </li>
                     <li>
                         <a href="../orders.php">Orders</a>
                     </li>
                     <li>
-                        <a href="../co-op.php">Co-op</a>
+                        <a href="../orders.php">Co-op</a>
                     </li>
                 
                 </ul>
@@ -57,7 +57,7 @@
                 </form>
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a href="../account.php">
+                        <a href="/account.php">
                             <span class="glyphicon glyphicon-user"></span> My Account</a>
                     </li>
                 </ul>
