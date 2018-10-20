@@ -38,10 +38,10 @@
                         <a href="/project/order-form.php">Order Form</a>
                     </li>
                     <li>
-                        <a href="project/orders.php">Orders</a>
+                        <a href="/project/orders.php">Orders</a>
                     </li>
                     <li>
-                        <a href="project/orders.php">Co-op</a>
+                        <a href="/project/orders.php">Co-op</a>
                     </li>
                 
                 </ul>
@@ -57,7 +57,7 @@
                 </form>
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a href="project/account.php">
+                        <a href="/project/account.php">
                             <span class="glyphicon glyphicon-user"></span> My Account</a>
                     </li>
                 </ul>
