@@ -29,7 +29,10 @@
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav">
                     <li class="active">
-                        <a href="../index.php">Home</a>
+                        <a href="https://quiet-peak-48501.herokuapp.com/index.php">Class Home</a>
+                    </li>
+                    <li class="active">
+                        <a href="../index.php">Project Home</a>
                     </li>
                     <li>
                         <a href="../order-form.php">Order Form</a>
