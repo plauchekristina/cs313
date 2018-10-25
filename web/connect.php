@@ -45,7 +45,7 @@ catch (PDOException $ex)
         <div> Verse: <input type="text" name="verse"></div>
          <div>Content: <input type="textarea" name="content"></div>
     <?php
-    foreach ($db->query('SELECT topic_name topic_id FROM topic') as $row)
+    foreach ($db->query('SELECT topic_name, topic_id FROM topic') as $row)
     {
       echo "<input type = 'checkbox' name= 'topic' value=" . $row['topic_name'] . ">". $row['topic_name'] ."</br>"
       ;
