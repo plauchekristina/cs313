@@ -49,7 +49,7 @@ catch (PDOException $ex)
     {
       echo "<input type = 'checkbox' name= 'topic' value=" . $row['topic_name'] . ">". $row['topic_name'] ."</br>"
       ;
-      echo "<input type = 'hidden' name= 'topic_id' value=" . $row['topic_id'] . ">". $row['topic_name'] ."</br>"
+      echo "<input type = 'hidden' name= 'topic_id' value=" . $row['topic_id'] . ">"
       ;
 }
 	?>
