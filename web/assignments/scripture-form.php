@@ -3,6 +3,7 @@
     <title>Scripture Form</title>
 </head>
 <body>
+
     <h1>Add New Scriptures</h1>
   
    
