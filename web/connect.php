@@ -51,7 +51,7 @@ catch (PDOException $ex)
       ;
 }
 	?>
-    <input type="hidden" name="topic_id" <?php echo value= "$topic_id ?>" >
+    <input type="hidden" name="topic_id" value = "<?php echo $topic_id; ?>"" >
  <div><input type="submit" name="submit" value="Submit"></div>
         </form>
 <?php 
