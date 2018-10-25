@@ -14,9 +14,9 @@
           <li>Content: <input type="textarea" name="content"></li>
           <?php
           
-              foreach ($db->query('SELECT name FROM topic') as $row)
+              foreach ($db->query('SELECT topic_name FROM topic') as $row)
                   {
-                    echo "<li><input type = 'checkbox' name=" . $row['name'] . "><li> ";
+                    echo "<li><input type = 'checkbox' name =" . $row['topic_name'] . "><li> ";
                     ;
               }
             ?>
