@@ -39,7 +39,7 @@ catch (PDOException $ex)
     }
     foreach ($db->query('SELECT topic_name FROM topic') as $row)
     {
-      echo "<li><input type = 'checkbox' name=" . $row['topic_name'] . "><li> ";
+      echo "<li><input type = 'checkbox' name=" . $row['topic_name'] . " value=" . $row['topic_name'] . ">". $row['topic_name'] . "<li> ";
       ;
 }
 	?>
