@@ -49,9 +49,11 @@ catch (PDOException $ex)
     {
       echo "<input type = 'checkbox' name= 'topic' value=" . $row['topic_name'] . ">". $row['topic_name'] ."</br>"
       ;
+      echo "<input type = 'checkbox' name= 'topic_id' value=" . $row['topic_id'] . ">". $row['topic_name'] ."</br>"
+      ;
 }
 	?>
-    <input type="hidden" name="topic_id" value = "<?php echo $topic_id; ?>"" >
+    
  <div><input type="submit" name="submit" value="Submit"></div>
         </form>
 <?php 
