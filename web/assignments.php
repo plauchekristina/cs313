@@ -47,7 +47,7 @@
                                 <li><a href="../assignments/shop.php">Week 3 Shopping Cart</a>: a simple php shopping cart.
 
                                 </li>
-                                <li><a href="/web/connect.php">Week 4 Scriptures</a>: a simple php query display.
+                                <li><a href="connect.php">Week 4 Scriptures</a>: a simple php query display.
 
                                 </li>
                             </ul>
