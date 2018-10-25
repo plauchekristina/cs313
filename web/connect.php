@@ -37,6 +37,11 @@ catch (PDOException $ex)
 		  echo "\"" . $row['scripture_content'] . "\"";
 		  echo '</p>';
     }
+    foreach ($db->query('SELECT name FROM topic') as $row)
+    {
+      echo "<li><input type = 'checkbox' name=" . $row['name'] . "><li> ";
+      ;
+}
 	?>
 <p>Search Form</p>
 <?php 
