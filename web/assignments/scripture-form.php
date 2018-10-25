@@ -4,26 +4,26 @@
 </head>
 <body>
     <h1>Add New Scriptures</h1>
-  <ul>
-    <?php
-      <ul>
-        <form name="insert" action="insert.php" method ="POST">
-          <li>Book: <input type="text" name="book"></li>
-          <li>Chapter: <input type="text" name="chapter"></li>
-          <li>Verse: <input type="text" name="verse"></li>
-          <li>Content: <input type="textarea" name="content"></li>
+  
+   
+     
+ <form name="insert" action="insert.php" method ="POST">
+         <div>Book: <input type="text" name="book"></div> 
+         <div>Chapter: <input type="text" name="chapter"></div>
+        <div> Verse: <input type="text" name="verse"></div>
+         <div>Content: <input type="textarea" name="content"></div>
           <?php
           
-              foreach ($db->query('SELECT topic_name FROM topic') as $row)
-                  {
-                    echo "<li><input type = 'checkbox' name =" . $row['topic_name'] . "><li> ";
-                    ;
-              }
+          foreach ($db->query('SELECT topic_name FROM topic') as $row)
+          {
+            echo "<input type = 'checkbox' name= 'topic' value=" . $row['topic_name'] . ">". $row['topic_name'] ."</br>"
+            ;
+      }
             ?>
-          <li><input type="submit" name="submit" value=""></li>
+          <div><input type="submit" name="submit" value="Submit"></div>
         </form>
-      </ul>
-    ?>
-  </ul>
+  
+    
+ 
 </body>
 </html>
