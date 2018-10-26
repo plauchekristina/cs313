@@ -1,5 +1,9 @@
 <?php 
 $topic_id= htmlspecialchars($_POST ['topic_id']);
+$scripture_book= htmlspecialchars($_POST ['scripture_book']);
+$scripture_chapter= htmlspecialchars($_POST ['scripture_chapter']);
+$scripture_verse= htmlspecialchars($_POST ['scripture_verse']);
+$scripture_content= htmlspecialchars($_POST ['scripture_content']);
 
 echo "$topic_id";
 
