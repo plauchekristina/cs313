@@ -6,6 +6,11 @@ $scripture_verse= htmlspecialchars($_POST ['scripture_verse']);
 $scripture_content= htmlspecialchars($_POST ['scripture_content']);
 
 echo "$topic_id";
+echo "$scripture_book";
+echo "$scripture_chapter";
+echo "$scripture_verse";
+echo "$scripture_content";
+
 
 
 require('connect.php');
