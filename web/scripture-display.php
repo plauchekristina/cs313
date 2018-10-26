@@ -4,7 +4,7 @@
 <head><title>Connection</title></head>
 <body>
 <?php
-require('connect.php');
+//require('connect.php');
 ?>
 <p>HI!</p>
 <?php
