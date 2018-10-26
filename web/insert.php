@@ -15,7 +15,7 @@ echo "$scripture_content";
 
 require('connect.php');
 
-$db = get_db();
+$db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
 $stmt = $db->prepare ('INSERT INTO scriptures(scripture_book, scripture_chapter, scripture_verse, scripture_content ) 
 VALUES (:scripture_book,:scripture_chapter, :scripture_verse, :scripture_content)');
 $stmt -> bindValue(':scripture_book', $scripture_book, PDO::PARAM_STR);
