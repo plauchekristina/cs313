@@ -20,10 +20,10 @@ require('connect.php');
     ?>
     <h1>Add New Scriptures</h1>
      <form name="insert" action="insert.php" method ="POST">
-         <div>Book: <input type="text" name="scripture_book"></div> 
-         <div>Chapter: <input type="text" name="scripture_chapter"></div>
-        <div> Verse: <input type="text" name="scripture_verse"></div>
-         <div>Content: <input type="textarea" name="scripture_content"></div>
+         <div>Book: <input type="text" name="scripture_book" value="Genesis"></div> 
+         <div>Chapter: <input type="text" name="scripture_chapter" value="1"></div>
+        <div> Verse: <input type="text" name="scripture_verse" value="1"></div>
+         <div>Content: <input type="textarea" name="scripture_content" value="Let there by light"></div>
     <?php
     foreach ($db->query('SELECT topic_name, topic_id FROM topic') as $row)
     {
