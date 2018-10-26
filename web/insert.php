@@ -43,5 +43,5 @@ catch (Exception $e) {
     echo $e;
 }
 
-
+//UPDATE table_name SET column1=data1, column2=data2....WHERE id=1
 ?>
