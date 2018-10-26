@@ -105,11 +105,11 @@ catch (PDOException $ex)
 
 // 7. That's "all". ;) 
 
-$stmt = $db->prepare('SELECT * FROM table WHERE scripture_id=:scripture_id AND scripture_book=:scripture_book');
-$stmt->bindValue(':scripture_id', $id, PDO::PARAM_INT);
-$stmt->bindValue(':scripture_book', $book, PDO::PARAM_STR);
-$stmt->execute();
-$rows = $stmt->fetchAll(PDO::FETCH_ASSOC); 
+//$stmt = $db->prepare('SELECT * FROM table WHERE scripture_id=:scripture_id AND scripture_book=:scripture_book');
+//$stmt->bindValue(':scripture_id', $id, PDO::PARAM_INT);
+//$stmt->bindValue(':scripture_book', $book, PDO::PARAM_STR);
+//$stmt->execute();
+//$rows = $stmt->fetchAll(PDO::FETCH_ASSOC); 
 ?>
 </body>
 </html>
