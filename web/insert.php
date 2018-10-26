@@ -15,13 +15,26 @@ echo "$scripture_content";
 
 require('connect.php');
 
-$db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
+//$db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
 $stmt = $db->prepare ('INSERT INTO scriptures(scripture_book, scripture_chapter, scripture_verse, scripture_content ) 
 VALUES (:scripture_book,:scripture_chapter, :scripture_verse, :scripture_content)');
 $stmt -> bindValue(':scripture_book', $scripture_book, PDO::PARAM_STR);
 $stmt -> bindValue(':scripture_chapter', $scripture_chapter, PDO::PARAM_INT);
 $stmt -> bindValue(':scripture_verse', $scripture_verse, PDO::PARAM_INT);
 $stmt -> bindValue(':scripture_content', $scripture_content, PDO::PARAM_STR);
+
+try {
+    $stmt->execute();
+    $last_id = $db->lastInsertId();
+}
+catch (Exception $e) {
+    echo $e;
+}
+
+$stmt = $db->prepare ('INSERT INTO scripture_topic(scripture_id, topic_id ) 
+VALUES (:scripture_id,:topic_id)');
+$stmt -> bindValue(':scripture_id', $last_id, PDO::PARAM_INT);
+$stmt -> bindValue(':topic_id', $topic_id, PDO::PARAM_INT);
 
 try {
     $stmt->execute();
