@@ -22,8 +22,13 @@ $stmt -> bindValue(':scripture_book', $scripture_book, PDO::PARAM_STR);
 $stmt -> bindValue(':scripture_chapter', $scripture_chapter, PDO::PARAM_INT);
 $stmt -> bindValue(':scripture_verse', $scripture_verse, PDO::PARAM_INT);
 $stmt -> bindValue(':scripture_content', $scripture_content, PDO::PARAM_STR);
-$stmt->execute();
 
+try {
+    $stmt->execute();
+}
+catch (Exception $e) {
+    echo $e;
+}
 
 
 ?>
