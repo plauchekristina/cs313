@@ -46,18 +46,7 @@
                                 <li>Username</li>
                                 <li>Password</li>
                             </ul>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-            </div>
-<!--end center column-->
-</div> 
-</div> 
-<h2>Account List</h2>
+                            <h2>Account List</h2>
 <ul>
 <?php
 
@@ -70,7 +59,18 @@
 		  echo '</li>';
     }
   ?>
-  </ul>       
+  </ul>   
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+<!--end center column-->
+</div> 
+</div> 
+    
        
     <script src ="../scripts/functions.js"></script>
     <?php include($_SERVER["DOCUMENT_ROOT"] . '/project/common/footer.php');?>  
