@@ -31,6 +31,7 @@ catch (Exception $e) {
     echo $e;
 }
 
+// separate instance for insert statement
 $stmt = $db->prepare ('INSERT INTO scripture_topic(scripture_id, topic_id ) 
 VALUES (:scripture_id,:topic_id)');
 $stmt -> bindValue(':scripture_id', $last_id, PDO::PARAM_INT);
