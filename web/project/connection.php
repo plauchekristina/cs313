@@ -3,7 +3,6 @@
 <head><title>Connection</title></head>
 <body>
 <?php
-
 try
 {
   $dbUrl = getenv('DATABASE_URL');

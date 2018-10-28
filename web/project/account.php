@@ -56,7 +56,21 @@
             </div>
 <!--end center column-->
 </div> 
-</div>        
+</div> 
+<h2>Account List</h2>
+<ul>
+<?php
+
+	foreach ($db->query('SELECT first_name, last_name, username, email FROM account') as $row)
+		{
+		  echo "<li><b>Username: </b>" . $row['username'] . "<ul><li><b>Name:</b> ";
+		  echo $row['first_name'];
+		  echo " " . $row['last_name'] . " </li>";
+		  echo "<li><b>Email:</b>" . $row['email'] . "</li></ul>";
+		  echo '</li>';
+    }
+  ?>
+  </ul>       
        
     <script src ="../scripts/functions.js"></script>
     <?php include($_SERVER["DOCUMENT_ROOT"] . '/project/common/footer.php');?>  
