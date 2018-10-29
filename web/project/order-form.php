@@ -43,7 +43,7 @@ session_start();
             <div class="thumbnail text-left"> 
             <h4>Half Portions</h4>
             <div class="d-inline row">
-            <div class="form-group col-sm-6 d-inline row">
+            <div class="form-group col-sm-6">
                 <label># Ordered:</label> 
                 <div> 
             <input type="number" id="half-count" size="10" placeholder="# ordered" onchange="orderQuantities()" aria-label="enter number of half portions ordered">
@@ -100,7 +100,7 @@ session_start();
                 <h4>Item 1</h4>
 
               
-               
+                <div class="d-inline row">       
         <div class="col-sm-2">
                 <label># Per Full:</label> 
             <div> 
@@ -113,6 +113,7 @@ session_start();
                 <input type="number" id="per-half" placeholder="#" onchange="orderQuantities()">
             </div>
         </div> 
+</div>
    
         <div class="d-inline row">
             <div class="form-group col-sm-5">
