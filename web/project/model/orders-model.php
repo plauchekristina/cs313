@@ -12,7 +12,15 @@ $orders_full_qty= htmlspecialchars($_POST ['full-count']);
 $orders_full_budget= htmlspecialchars($_POST ['full-budget']);
 $orders_half_qty= htmlspecialchars($_POST ['half-count']);
 $orders_half_budget= htmlspecialchars($_POST ['half-budget']);
-
+ 
+$item_name= htmlspecialchars($_POST ['item-name']);
+$item_count= htmlspecialchars($_POST ['item-count']);
+$item_unit= htmlspecialchars($_POST ['item-unit']);
+$item_price= htmlspecialchars($_POST ['item-price']);
+$item_full_qty= htmlspecialchars($_POST ['per-full']);
+$item_half_qty= htmlspecialchars($_POST ['per-half']);
+$item_order_qty= htmlspecialchars($_POST ['item-quantity']);
+$item_order_cost= htmlspecialchars($_POST ['item-total']);
    
   
 
@@ -38,15 +46,7 @@ $orders_half_budget= htmlspecialchars($_POST ['half-budget']);
          catch (Exception $e) {
           echo $e;
       }
-    
-      $item_name= htmlspecialchars($_POST ['item-name']);
-      $item_count= htmlspecialchars($_POST ['item-count']);
-      $item_unit= htmlspecialchars($_POST ['item-unit']);
-      $item_price= htmlspecialchars($_POST ['item-price']);
-      $item_full_qty= htmlspecialchars($_POST ['per-full']);
-      $item_half_qty= htmlspecialchars($_POST ['per-half']);
-      $item_order_qty= htmlspecialchars($_POST ['item-quantity']);
-      $item_order_cost= htmlspecialchars($_POST ['item-total']);
+   
 
 
       // The SQL statement
@@ -59,7 +59,7 @@ $orders_half_budget= htmlspecialchars($_POST ['half-budget']);
   // and tells the database the type of data it is
   $stmt -> bindValue(':item_orders_id', $last_id, PDO::PARAM_INT);
   $stmt->bindValue(':item_name', $item_name, PDO::PARAM_STR);
-  $stmt->bindValue(':orders_total', $item_count, PDO::PARAM_STR);
+  $stmt->bindValue(':orders_total', $item_count, PDO::PARAM_INT);
   $stmt->bindValue(':item_unit', $item_unit, PDO::PARAM_STR);
   $stmt->bindValue(':item_price', $item_price, PDO::PARAM_INT);
   $stmt->bindValue(':item_full_qty', $item_full_qty, PDO::PARAM_INT);
