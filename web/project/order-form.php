@@ -5,12 +5,12 @@ session_start();
 
 ?>
 <!---  ####### Body content begins ####### -->
-<div class="container text-center">
+<!--<div class="container text-center">
 <div class="row">
-   <!-- <div class="col-sm-12 panel panel-default text-left">
+   <div class="col-sm-12 panel panel-default text-left">
         <div class="panel-body">
             <div class="bg-success">
-        <h2>Amount Left to Spend:<span id="over-under"></span>+$x.xx</h2>
+        <h2>Amount Left to Spend:<span id="over-under"></span></h2>
         </div>
         </div>
 
@@ -177,7 +177,7 @@ session_start();
     
 </div>
 
-<script src ="../project/scripts/order-form.js"></script>
+
 <script src ="../project/scripts/order-quantities.js"></script>      
        
     <script src ="../scripts/functions.js"></script>
