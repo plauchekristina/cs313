@@ -30,7 +30,6 @@ $orders_half_budget= htmlspecialchars($_POST ['half-budget']);
       $stmt->bindValue(':orders_half_qty', $forders_half_qty, PDO::PARAM_INT);
       $stmt->bindValue(':orders_full_budget', $orders_full_budget, PDO::PARAM_INT);
       $stmt->bindValue(':orders_half_budget', $orders_half_budget, PDO::PARAM_INT);
-      $stmt->bindValue(':coop_half_budget', $half_budget, PDO::PARAM_INT);
       // Insert the data
       try {
           $stmt->execute();
@@ -39,8 +38,6 @@ $orders_half_budget= htmlspecialchars($_POST ['half-budget']);
          catch (Exception $e) {
           echo $e;
       }
-    
-
     
       $item_name= htmlspecialchars($_POST ['item-name']);
       $item_count= htmlspecialchars($_POST ['item-count']);
@@ -53,13 +50,14 @@ $orders_half_budget= htmlspecialchars($_POST ['half-budget']);
 
 
       // The SQL statement
-      $sql = 'INSERT INTO item (item_name, item_count, item_unit, item_price, item_full_qty, item_half_qty, item_order_qty, item_order_cost)
-      VALUES (:item_name, :item_count, :item_unit, :item_price, :item_full_qty, :item_half_qty, :item_order_qty, :item_order_cost)';
+      $sql = 'INSERT INTO item (item_orders_id, item_name, item_count, item_unit, item_price, item_full_qty, item_half_qty, item_order_qty, item_order_cost)
+      VALUES (:item_orders_id, :item_name, :item_count, :item_unit, :item_price, :item_full_qty, :item_half_qty, :item_order_qty, :item_order_cost)';
   // Create the prepared statement using the db connection
   $stmt = $db->prepare($sql);
   // The next lines replace the placeholders in the SQL
   // statement with the actual values in the variables
   // and tells the database the type of data it is
+  $stmt -> bindValue(':item_orders_id', $last_id, PDO::PARAM_INT);
   $stmt->bindValue(':item_name', $item_name, PDO::PARAM_STR);
   $stmt->bindValue(':orders_total', $item_count, PDO::PARAM_STR);
   $stmt->bindValue(':item_unit', $item_unit, PDO::PARAM_STR);

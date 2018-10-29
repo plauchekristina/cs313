@@ -69,14 +69,11 @@ session_start();
                     <div class="panel-body">
                         <form class="form-header" action = "model/orders-model.php" method ="post">
                         <div class="input-group-lg">
-                                <input class="form-control input-lg" type="text" id="co-op-name" placeholder="Co-op Name"><?php echo $_SESSION['clientData']['clientFirstname'];?>  
+                                <input class="form-control input-lg" type="text" id="co-op-name" placeholder="Co-op Name">  
                         </div>
                         
-                                <input class="form-control" type="text" name ="contact-name" id="contact-name" placeholder="Contact Name">
-                                <div class="form-inline">
-                                <input class="form-control" type="phone" name="contact-phone" id="contact-phone" placeholder="Contact Phone">
-                                <input class="form-control" type="email" name="contact-email" id="contact-email" placeholder="Contact Email">
-                                </div>
+                              
+                              
                                 <div>
                                     <label>Date:</label>                                           
                                     <input type="text" name=="order-date" id="order-date" placeholder="mm/dd/yyyy">
@@ -128,7 +125,7 @@ session_start();
                         <input type="number" name="item-count" id="item-count" placeholder="#" onchange="orderQuantities()">
                 </div>
             </div>
-            <div class="form-group col-sm-2">
+            <div class="form-group col-sm-1">
                         <label>Unit:</label> 
                 <div> 
                         <select name="item-unit" id="item-unit">
@@ -155,7 +152,7 @@ session_start();
                 </div>
             </div> 
             <!-- -->
-            <div class="form-group col-sm-1">
+            <div class="form-group col-sm-2">
                         <label>Total:</label> 
                 <div> 
                     <input type="number" name="item-total" id="item-total" readonly >
