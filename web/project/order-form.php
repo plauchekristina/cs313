@@ -69,7 +69,7 @@ session_start();
                     <div class="panel-body">
                         <form class="form-header" action = "model/orders-model.php" method ="post">
                         <div class="input-group-lg">
-                                <input class="form-control input-lg" type="text" id="co-op-name" readonly placeholder="Co-op Name"><?php echo $_SESSION['clientData']['clientFirstname'];?>  
+                                <input class="form-control input-lg" type="text" id="co-op-name" placeholder="Co-op Name"><?php echo $_SESSION['clientData']['clientFirstname'];?>  
                         </div>
                         
                                 <input class="form-control" type="text" name ="contact-name" id="contact-name" placeholder="Contact Name">
