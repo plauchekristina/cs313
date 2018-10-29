@@ -35,7 +35,7 @@ $item_order_cost= htmlspecialchars($_POST ['item-total']);
       $stmt->bindValue(':orders_date', $orders_date, PDO::PARAM_STR);
       $stmt->bindValue(':orders_total', $orders_total, PDO::PARAM_INT);
       $stmt->bindValue(':orders_full_qty', $orders_full_qty, PDO::PARAM_INT);
-      $stmt->bindValue(':orders_half_qty', $forders_half_qty, PDO::PARAM_INT);
+      $stmt->bindValue(':orders_half_qty', $orders_half_qty, PDO::PARAM_INT);
       $stmt->bindValue(':orders_full_budget', $orders_full_budget, PDO::PARAM_INT);
       $stmt->bindValue(':orders_half_budget', $orders_half_budget, PDO::PARAM_INT);
       // Insert the data
