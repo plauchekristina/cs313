@@ -5,9 +5,9 @@ session_start();
 
 ?>
 <!---  ####### Body content begins ####### -->
-<!--<div class="container text-center">
+<div class="container text-center">
 <div class="row">
-   <div class="col-sm-12 panel panel-default text-left">
+   <!--<div class="col-sm-12 panel panel-default text-left">
         <div class="panel-body">
             <div class="bg-success">
         <h2>Amount Left to Spend:<span id="over-under"></span></h2>
