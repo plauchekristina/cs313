@@ -77,14 +77,14 @@
         <label for="full_portion_budget">Full Portion Budget</label>
                 </div>
                 <div>
-                <input name="full_portion_budget" id="full_portion_budget" type="text" <?php if (isset($coop_full_budget)) {
+                <input name="full_portion_budget" id="full_portion_budget" type="number" <?php if (isset($coop_full_budget)) {
                 echo "value='$coop_full_budget'";} ?> required>
         </div>
         <div>
         <label for="halfportion_budget">Half Portion Budget</label>
                 </div>
                 <div>
-                <input name="half_portion_budget" id="full_portion_budget" type="text" <?php if (isset($coop_half_budget)) {
+                <input name="half_portion_budget" id="full_portion_budget" type="number" <?php if (isset($coop_half_budget)) {
                 echo "value='$coop_half_budget'";} ?> required>
         </div>
         <div>
