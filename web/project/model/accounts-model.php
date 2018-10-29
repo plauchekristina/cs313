@@ -51,13 +51,13 @@ function checkExistingEmail($email) {
   $username= htmlspecialchars($_POST ['username']);
   $user_password= htmlspecialchars($_POST ['user_password']); 
   
-   function regClient($first_name, $last_name, $email, $username, $user_password){
-    // Create a connection object using the acme connection function
-    //$db = acmeConnect();
+ 
+
+    //$db = dbConnect();
     // The SQL statement
     $sql = 'INSERT INTO account (first_name, last_name, email, username, user_password)
         VALUES (:first_name, :last_name, :email, :username, :user_password)';
-    // Create the prepared statement using the acme connection
+    // Create the prepared statement using the db connection
     $stmt = $db->prepare($sql);
     // The next four lines replace the placeholders in the SQL
     // statement with the actual values in the variables
@@ -76,8 +76,8 @@ function checkExistingEmail($email) {
     }
     // Ask how many rows changed as a result of our insert
    
-   }
    
+   /*
    // Get client data based on an email address
    function getClient($email){
   
@@ -122,13 +122,13 @@ function checkExistingEmail($email) {
    
    ///update account
    function updateClient($first_name, $last_name, $email, $account_id){
-    // Create a connection object using the acme connection function
+    // Create a connection object using the db connection function
 
     // The SQL statement
     $sql = 'UPDATE account SET first_name = :first_name, last_name = :last_name,
         email = :email
         WHERE account_id = :account_id';
-    // Create the prepared statement using the acme connection
+    // Create the prepared statement using the db connection
     $stmt = $db->prepare($sql);
     // The next four lines replace the placeholders in the SQL
     // statement with the actual values in the variables
@@ -148,12 +148,12 @@ function checkExistingEmail($email) {
    
    ///update account
    function updatePassword($user_password, $account_id){
-    // Create a connection object using the acme connection function
+    // Create a connection object using the db connection function
  
     // The SQL statement
     $sql = 'UPDATE account SET user_password = :user_password
         WHERE account_id = :account_id';
-    // Create the prepared statement using the acme connection
+    // Create the prepared statement using the db connection
     $stmt = $db->prepare($sql);
     // The next four lines replace the placeholders in the SQL
     // statement with the actual values in the variables
@@ -167,5 +167,5 @@ function checkExistingEmail($email) {
     $stmt->closeCursor();
     // Return the indication of success (rows changed)
     return $rowsChanged;
-   }
+   }*/
 ?>
