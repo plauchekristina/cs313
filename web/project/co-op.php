@@ -57,10 +57,10 @@
         </div>
       
         <div>
-                <label for="cont_email">Contact Email</label>
+                <label for="contact_email">Contact Email</label>
         </div>
         <div>
-                <input type="contact_email" name="contact_email" id="contact_email" required >
+                <input type="email" name="contact_email" id="contact_email" required >
         </div>
         <div>
         <label for="full_portion_budget">Full Portion Budget</label>
