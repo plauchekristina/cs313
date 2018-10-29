@@ -25,8 +25,8 @@ $orders_half_budget= htmlspecialchars($_POST ['half-budget']);
       // statement with the actual values in the variables
       // and tells the database the type of data it is
       $stmt->bindValue(':orders_date', $orders_date, PDO::PARAM_STR);
-      $stmt->bindValue(':orders_total', $orders_total, PDO::PARAM_STR);
-      $stmt->bindValue(':orders_full_qty', $orders_full_qty, PDO::PARAM_STR);
+      $stmt->bindValue(':orders_total', $orders_total, PDO::PARAM_INT);
+      $stmt->bindValue(':orders_full_qty', $orders_full_qty, PDO::PARAM_INT);
       $stmt->bindValue(':orders_half_qty', $forders_half_qty, PDO::PARAM_INT);
       $stmt->bindValue(':orders_full_budget', $orders_full_budget, PDO::PARAM_INT);
       $stmt->bindValue(':orders_half_budget', $orders_half_budget, PDO::PARAM_INT);
