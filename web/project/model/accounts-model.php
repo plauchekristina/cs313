@@ -42,7 +42,7 @@ function checkExistingEmail($email) {
    
    }
    
-   require('connection.php');
+   require('../connection.php');
    function regClient($first_name, $last_name, $email, $user_password){
     // Create a connection object using the acme connection function
     //$db = acmeConnect();
