@@ -21,7 +21,7 @@ session_start();
               Order Data
         </h3>
         <p><strong>Order Budget: </strong><span id="target-total"></span></p>
-        
+        <form action = "model/orders-model.php" method ="post">
         <div class="thumbnail text-left">
             <h4>Full Portions</h4>
           <div class="d-inline row">
@@ -67,7 +67,7 @@ session_start();
             <div class="col-sm-12">
                 <div class="panel panel-default text-left">
                     <div class="panel-body">
-                        <form class="form-header" action = "model/orders-model.php" method ="post">
+                        <div class="form-header">
                         <div class="input-group-lg">
                                 <input class="form-control input-lg" type="text" id="co-op-name" >  
                         </div>
@@ -76,7 +76,7 @@ session_start();
                               
                                 <div>
                                     <label>Date:</label>                                           
-                                    <input type="date" name=="order-date" id="order-date" >
+                                    <input type="date" name="order-date" id="order-date" >
                                 </div>
                                
                     
