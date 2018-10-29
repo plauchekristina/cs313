@@ -150,18 +150,14 @@
     <!-- Right column -->
     <div class="col-sm-2 well">
         <div class="thumbnail">
-            <p>About Us</p>
-            <img src="images/bushel-logo-wh-gr.svg" alt="Co-op" width="400" height="300">
-            <p>
-                <strong>Co-op Service</strong>
-            </p>
-
+            <p>More Info</p>
+        
         </div>
     </div>
 </div>
 
-<script src ="/scripts/order-form.js"></script>
-<script src ="/scripts/order-quantities.js"></script>      
+<script src ="../project/scripts/order-form.js"></script>
+<script src ="../project/scripts/order-quantities.js"></script>      
        
     <script src ="../scripts/functions.js"></script>
     <?php include($_SERVER["DOCUMENT_ROOT"] . '/project/common/footer.php');?> 

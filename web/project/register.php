@@ -60,6 +60,8 @@
         </div>
         <div>
         <label for="username">Username</label>
+                </div>
+                <div>
                 <input name="username" id="username" type="text" <?php if (isset($username)) {
                 echo "value='$username'";} ?> required>
         </div>
