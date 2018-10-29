@@ -24,8 +24,8 @@ session_start();
         
         <div class="thumbnail text-left">
             <h4>Full Portions</h4>
-            <form class="d-inline row">
-                <div class="form-group col-sm-6">
+          
+                <div class="form-group col-sm-6 d-inline row">
                 <label># Ordered:</label> 
                 <div>   
                 <input type="number" id="full-count" size="10" placeholder="# ordered" onchange="orderQuantities()" aria-label="enter number of full portions ordered">                   
@@ -37,13 +37,13 @@ session_start();
                     <input type="number" id="full-budget" size="10" value ="10" readonly placeholder="budget" aria-label="enter budget per full portion">
                     </div>
                 </div>
-                </form>
+            
             </div>
             
             <div class="thumbnail text-left"> 
             <h4>Half Portions</h4>
-            <form class="d-inline row">
-            <div class="form-group col-sm-6">
+          
+            <div class="form-group col-sm-6 d-inline row">
                 <label># Ordered:</label> 
                 <div> 
             <input type="number" id="half-count" size="10" placeholder="# ordered" onchange="orderQuantities()" aria-label="enter number of half portions ordered">
@@ -55,7 +55,7 @@ session_start();
             <input type="number" id="half-budget" size="10" value = "5" readonly aria-label="enter budget per half portion">
             </div>
                 </div>    
-        </form>
+    
         </div>
         <!--<button type="button" onclick="orderTarget()">Calculate</button> -->
     </div>
@@ -67,9 +67,9 @@ session_start();
             <div class="col-sm-12">
                 <div class="panel panel-default text-left">
                     <div class="panel-body">
-                        <form class="form-header">
+                        <form class="form-header" action = "model/orders-model.php" method ="post">
                         <div class="input-group-lg">
-                                <input class="form-control input-lg" type="text" id="co-op-name" placeholder="Co-op Name"><?php echo $_SESSION['clientData']['clientFirstname'];?>  
+                                <input class="form-control input-lg" type="text" id="co-op-name" readonly placeholder="Co-op Name"><?php echo $_SESSION['clientData']['clientFirstname'];?>  
                         </div>
                         
                                 <input class="form-control" type="text" id="contact-name" placeholder="Contact Name">
@@ -81,9 +81,9 @@ session_start();
                                     <label>Date:</label>                                           
                                     <input type="text" id="order-date" placeholder="mm/dd/yyyy">
                                 </div>
-                                <input type="submit" name="submit" id="regbtn" value="Save" class="btn-success">  
+                               
                     
-                        </form>
+                       
 
                     </div>
                 </div>
@@ -100,7 +100,7 @@ session_start();
                 <h4>Item 1</h4>
 
               
-                <form class="form-inline row" action = "model/orders-model.php" method="post">
+               
         <div class="col-sm-2">
                 <label># Per Full:</label> 
             <div> 
@@ -113,9 +113,9 @@ session_start();
                 <input type="number" id="per-half" placeholder="#" onchange="orderQuantities()">
             </div>
         </div> 
-    </form>
-        <form class="d-inline row">
-            <div class="form-group col-sm-5">
+   
+    
+            <div class="form-group col-sm-5 d-inline row">
                     <label>Item Name:</label> 
                 <div> 
                     <input type="text" id="item-name" size="40" placeholder="Item name/description">
@@ -127,7 +127,7 @@ session_start();
                         <input type="number" id="item-count" placeholder="#" onchange="orderQuantities()">
                 </div>
             </div>
-            <div class="form-group col-sm-1">
+            <div class="form-group col-sm-12">
                         <label>Unit:</label> 
                 <div> 
                         <select id="item-unit">
@@ -139,7 +139,7 @@ session_start();
                 </div>
             </div>
             <!-- -->
-            <div class="form-group col-sm-1">
+            <div class="form-group col-sm-2">
                         <label>Price:</label> 
                 <div> 
                     <input type="number" id="item-price" placeholder="$0.00" onchange="orderQuantities()">
@@ -159,7 +159,8 @@ session_start();
                 <div> 
                     <input type="number" id="item-total" readonly >
                 </div>
-            </div>     
+            </div>  
+            <input type="submit" name="submit" id="regbtn" value="Save" class="btn-success">     
         </form>
        
             </div>
