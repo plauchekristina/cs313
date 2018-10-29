@@ -7,14 +7,14 @@ session_start();
 <!---  ####### Body content begins ####### -->
 <div class="container text-center">
 <div class="row">
-    <div class="col-sm-12 panel panel-default text-left">
+   <!-- <div class="col-sm-12 panel panel-default text-left">
         <div class="panel-body">
             <div class="bg-success">
         <h2>Amount Left to Spend:<span id="over-under"></span>+$x.xx</h2>
         </div>
         </div>
 
-    </div>
+    </div> -->
     <!-- Left column -->
     <div class="col-sm-3 well text-left">
         <h3>
@@ -81,7 +81,7 @@ session_start();
                                     <label>Date:</label>                                           
                                     <input type="text" id="order-date" placeholder="mm/dd/yyyy">
                                 </div>
-                            
+                                <input type="submit" name="submit" id="regbtn" value="Save" class="btn-success">  
                     
                         </form>
 
@@ -91,14 +91,16 @@ session_start();
         </div>
 <!-- ####### ORDER FORM BEGINS-->
 <div class="panel panel-default">
-<h3>Item 1</h3>               
+              
 <div class="row">
 
 <div class="col-sm-12">
     <div class="well">
         <div class="thumbnail text-left"> 
-                <h4>Item Data</h4>
-                <form class="form-inline row">
+                <h4>Item 1</h4>
+
+              
+                <form class="form-inline row" action = "model/orders-model.php" method="post">
         <div class="col-sm-2">
                 <label># Per Full:</label> 
             <div> 
@@ -116,7 +118,7 @@ session_start();
             <div class="form-group col-sm-5">
                     <label>Item Name:</label> 
                 <div> 
-                    <input type="text" id="item-name" size="30" placeholder="Item name/description">
+                    <input type="text" id="item-name" size="40" placeholder="Item name/description">
                 </div>    
             </div>
             <div class="form-group col-sm-1">
@@ -137,7 +139,7 @@ session_start();
                 </div>
             </div>
             <!-- -->
-            <div class="form-group col-sm-2">
+            <div class="form-group col-sm-1">
                         <label>Price:</label> 
                 <div> 
                     <input type="number" id="item-price" placeholder="$0.00" onchange="orderQuantities()">
@@ -145,14 +147,14 @@ session_start();
             
             </div>
                 <!-- -->
-                <div class="form-group col-sm-2">
+                <div class="form-group col-sm-1">
                         <label>Quantity:</label> 
                 <div> 
                     <input type="number" id="item-quantity" readonly >
                 </div>
             </div> 
             <!-- -->
-            <div class="form-group col-sm-2">
+            <div class="form-group col-sm-1">
                         <label>Total:</label> 
                 <div> 
                     <input type="number" id="item-total" readonly >
