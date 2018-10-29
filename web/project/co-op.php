@@ -39,6 +39,7 @@
                         <div class="panel panel-default text-left well">
                             <div class="panel-body">
                             <h2>Co-Op Details</h2>
+                    
                             <p>Info goes here:</p>
                             <ul>
                                 <li> Co-op Name</li>
@@ -47,6 +48,48 @@
                                 <li>Full Portion Budget</li>
                                 <li>Half Portion Budget</li>
                             </ul>
+                            <form action="model/accounts-model.php" method="POST">
+
+        <div class="fail-message"><p>All fields are required</p></div>
+        <div>
+                <label for="co_op_name">Co-op Name</label>
+        </div>
+        <div>
+                <input name="co_op_name" id="co_op_name" type="text" <?php if (isset($co_op_name)) {
+                echo "value='$co_op_name'";} ?> required>
+        </div>
+        <div>
+                <label for="contact_name">Contact Name</label>
+        </div>
+        <div>
+                <input name="contact_name" id="contact_name" type="text" <?php if (isset($contact_name)) {
+                echo "value='$contact_name'";} ?> required>
+        </div>
+      
+        <div>
+                <label for="cont_email">Contact Email</label>
+        </div>
+        <div>
+                <input type="contact_email" name="contact_email" id="contact_email" <?php if (isset($contact_email)) {
+                echo "value='$contact_email'";} ?> required >
+        </div>
+        <div>
+        <label for="full_portion_budget">Full Portion Budget</label>
+                </div>
+                <div>
+                <input name="full_portion_budget" id="full_portion_budget" type="text" <?php if (isset($full_portion_budget)) {
+                echo "value='$full_portion_budget'";} ?> required>
+        </div>
+        <div>
+            <!--<input type ="hidden" name="account_id" <"<"?php if (isset($account_id)) {
+                echo "value='$account_id'";} ?> >"-->
+            <label>&nbsp;</label>
+            <input type="submit" name="submit" id="regbtn" value="Register" class="register">
+            <!-- Add the action name-value pair -->
+            <input type="hidden" name="action" value="coop-register">
+        </div>
+               
+            </form>
 
                             </div>
                         </div>
