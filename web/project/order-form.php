@@ -28,13 +28,13 @@ session_start();
                 <div class="form-group col-sm-6">
                 <label># Ordered:</label> 
                 <div>   
-                <input type="number" name="full-count" id="full-count" size="10" placeholder="# ordered" value ="200" aria-label="enter number of full portions ordered">                   
+                <input type="number" name="full-count" id="full-count" size="10"  aria-label="enter number of full portions ordered">                   
                 </div>    
             </div>
                 <div class="form-group col-sm-6">
                     <label>Budget Per:</label> 
                     <div> 
-                    <input type="number" name="full-budget" id="full-budget" size="10" value ="10" readonly placeholder="budget" aria-label="enter budget per full portion">
+                    <input type="number" name="full-budget" id="full-budget" size="10" value ="10" readonly  aria-label="enter budget per full portion">
                     </div>
                 </div>
 </div>
@@ -46,7 +46,7 @@ session_start();
             <div class="form-group col-sm-6">
                 <label># Ordered:</label> 
                 <div> 
-            <input type="number" name=="half-count" id="half-count" size="10" placeholder="# ordered" onchange="orderQuantities()" aria-label="enter number of half portions ordered">
+            <input type="number" name=="half-count" id="half-count" size="10"  onchange="orderQuantities()" aria-label="enter number of half portions ordered">
             </div>    
             </div>
                 <div class="form-group col-sm-6">
@@ -69,14 +69,14 @@ session_start();
                     <div class="panel-body">
                         <form class="form-header" action = "model/orders-model.php" method ="post">
                         <div class="input-group-lg">
-                                <input class="form-control input-lg" type="text" id="co-op-name" placeholder="Co-op Name">  
+                                <input class="form-control input-lg" type="text" id="co-op-name" >  
                         </div>
                         
                               
                               
                                 <div>
                                     <label>Date:</label>                                           
-                                    <input type="date" name=="order-date" id="order-date" placeholder="mm/dd/yyyy">
+                                    <input type="date" name=="order-date" id="order-date" >
                                 </div>
                                
                     
