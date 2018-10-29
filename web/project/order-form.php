@@ -99,13 +99,13 @@ session_start();
         <div class="thumbnail text-left"> 
                 <h4>Item Data</h4>
                 <form class="form-inline row">
-        <div class="col-sm-6">
+        <div class="col-sm-2">
                 <label># Per Full:</label> 
             <div> 
                 <input type="number" id="per-full" placeholder="#" >
             </div>    
         </div>
-         <div class="col-sm-6">
+         <div class="col-sm-2">
                 <label># Per Half:</label> 
             <div> 
                 <input type="number" id="per-half" placeholder="#" >
