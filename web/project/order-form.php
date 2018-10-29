@@ -46,13 +46,13 @@ session_start();
             <div class="form-group col-sm-6">
                 <label># Ordered:</label> 
                 <div> 
-            <input type="number" name=="half-count" id="half-count" size="10"  onchange="orderQuantities()" aria-label="enter number of half portions ordered">
+            <input type="number" name="half-count" id="half-count" size="10"  onchange="orderQuantities()" aria-label="enter number of half portions ordered">
             </div>    
             </div>
                 <div class="form-group col-sm-6">
                     <label>Budget Per:</label> 
                     <div> 
-            <input type="number" ="half-budget" id="half-budget" size="10" value = "5" readonly aria-label="enter budget per half portion">
+            <input type="number" name="half-budget" id="half-budget" size="10" value = "5" readonly aria-label="enter budget per half portion">
             </div>
                 </div>    
 </div>
@@ -140,7 +140,7 @@ session_start();
             <div class="form-group col-sm-2">
                         <label>Price:</label> 
                 <div> 
-                    <input type="number" name=="item-price" id="item-price" placeholder="$0.00" onchange="orderQuantities()">
+                    <input type="number" name="item-price" id="item-price" placeholder="$0.00" onchange="orderQuantities()">
                 </div>
             
             </div>
