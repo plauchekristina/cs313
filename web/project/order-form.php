@@ -181,8 +181,8 @@ session_start();
     
 </div>
 
-<!--
- <script src ="../project/scripts/order-quantities.js"></script>  -->    
+
+ <script src ="../project/scripts/order-quantities.js"></script>    
        
     <script src ="../scripts/functions.js"></script>
     <?php include($_SERVER["DOCUMENT_ROOT"] . '/project/common/footer.php');?> 
