@@ -32,11 +32,13 @@ $orders_date= htmlspecialchars($_POST [order-date]);
       // Insert the data
       try {
         $stmt->execute();
-         //$last_id = $db->lastInsertId();
+         $last_id = $db->lastInsertId();
       }
          catch (Exception $e) {
           echo $e;
       }
+
+
       $item_name= htmlspecialchars($_POST ['item-name']);
       $item_count=($_POST ['item-count']);
       $item_unit=($_POST ['item-unit']);
@@ -54,7 +56,7 @@ $orders_date= htmlspecialchars($_POST [order-date]);
   // The next lines replace the placeholders in the SQL
   // statement with the actual values in the variables
   // and tells the database the type of data it is
-  $stmt -> bindValue(':item_orders_id', $last_id, PDO::PARAM_INT);
+  $stmt->bindValue(':item_orders_id', $last_id, PDO::PARAM_INT);
   $stmt->bindValue(':item_name', $item_name, PDO::PARAM_STR);
   $stmt->bindValue(':orders_total', $item_count, PDO::PARAM_INT);
   $stmt->bindValue(':item_unit', $item_unit, PDO::PARAM_STR);
