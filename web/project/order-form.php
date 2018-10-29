@@ -28,13 +28,13 @@ session_start();
                 <div class="form-group col-sm-6">
                 <label># Ordered:</label> 
                 <div>   
-                <input type="number" id="full-count" size="10" placeholder="# ordered" onchange="orderQuantities()" aria-label="enter number of full portions ordered">                   
+                <input type="number" name="full-count" id="full-count" size="10" placeholder="# ordered" onchange="orderQuantities()" aria-label="enter number of full portions ordered">                   
                 </div>    
             </div>
                 <div class="form-group col-sm-6">
                     <label>Budget Per:</label> 
                     <div> 
-                    <input type="number" id="full-budget" size="10" value ="10" readonly placeholder="budget" aria-label="enter budget per full portion">
+                    <input type="number" name="full-budget" id="full-budget" size="10" value ="10" readonly placeholder="budget" aria-label="enter budget per full portion">
                     </div>
                 </div>
 </div>
@@ -46,13 +46,13 @@ session_start();
             <div class="form-group col-sm-6">
                 <label># Ordered:</label> 
                 <div> 
-            <input type="number" id="half-count" size="10" placeholder="# ordered" onchange="orderQuantities()" aria-label="enter number of half portions ordered">
+            <input type="number" name=="half-count" id="half-count" size="10" placeholder="# ordered" onchange="orderQuantities()" aria-label="enter number of half portions ordered">
             </div>    
             </div>
                 <div class="form-group col-sm-6">
                     <label>Budget Per:</label> 
                     <div> 
-            <input type="number" id="half-budget" size="10" value = "5" readonly aria-label="enter budget per half portion">
+            <input type="number" ="half-budget" id="half-budget" size="10" value = "5" readonly aria-label="enter budget per half portion">
             </div>
                 </div>    
 </div>
@@ -72,14 +72,14 @@ session_start();
                                 <input class="form-control input-lg" type="text" id="co-op-name" readonly placeholder="Co-op Name"><?php echo $_SESSION['clientData']['clientFirstname'];?>  
                         </div>
                         
-                                <input class="form-control" type="text" id="contact-name" placeholder="Contact Name">
+                                <input class="form-control" type="text" name ="contact-name" id="contact-name" placeholder="Contact Name">
                                 <div class="form-inline">
-                                <input class="form-control" type="phone" id="contact-phone" placeholder="Contact Phone">
-                                <input class="form-control" type="email" id="contact-email" placeholder="Contact Email">
+                                <input class="form-control" type="phone" name="contact-phone" id="contact-phone" placeholder="Contact Phone">
+                                <input class="form-control" type="email" name="contact-email" id="contact-email" placeholder="Contact Email">
                                 </div>
                                 <div>
                                     <label>Date:</label>                                           
-                                    <input type="text" id="order-date" placeholder="mm/dd/yyyy">
+                                    <input type="text" name=="order-date" id="order-date" placeholder="mm/dd/yyyy">
                                 </div>
                                
                     
@@ -104,13 +104,13 @@ session_start();
         <div class="col-sm-2">
                 <label># Per Full:</label> 
             <div> 
-                <input type="number" id="per-full" placeholder="#" onchange="orderQuantities()">
+                <input type="number" name="per-full" id="per-full" placeholder="#" onchange="orderQuantities()">
             </div>    
         </div>
          <div class="col-sm-2">
                 <label># Per Half:</label> 
             <div> 
-                <input type="number" id="per-half" placeholder="#" onchange="orderQuantities()">
+                <input type="number" name="per-half" id="per-half" placeholder="#" onchange="orderQuantities()">
             </div>
         </div> 
 </div>
@@ -119,19 +119,19 @@ session_start();
             <div class="form-group col-sm-5">
                     <label>Item Name:</label> 
                 <div> 
-                    <input type="text" id="item-name" size="40" placeholder="Item name/description">
+                    <input type="text" name="item-name" id="item-name" size="40" placeholder="Item name/description">
                 </div>    
             </div>
             <div class="form-group col-sm-1">
                         <label>Count:</label> 
                 <div> 
-                        <input type="number" id="item-count" placeholder="#" onchange="orderQuantities()">
+                        <input type="number" name="item-count" id="item-count" placeholder="#" onchange="orderQuantities()">
                 </div>
             </div>
             <div class="form-group col-sm-2">
                         <label>Unit:</label> 
                 <div> 
-                        <select id="item-unit">
+                        <select name="item-unit" id="item-unit">
 
                             <option value="count">count</option>
                             <option value="pound">pound</option>
@@ -143,7 +143,7 @@ session_start();
             <div class="form-group col-sm-2">
                         <label>Price:</label> 
                 <div> 
-                    <input type="number" id="item-price" placeholder="$0.00" onchange="orderQuantities()">
+                    <input type="number" name=="item-price" id="item-price" placeholder="$0.00" onchange="orderQuantities()">
                 </div>
             
             </div>
@@ -151,23 +151,24 @@ session_start();
                 <div class="form-group col-sm-1">
                         <label>Quantity:</label> 
                 <div> 
-                    <input type="number" id="item-quantity" readonly >
+                    <input type="number" name="item-quantity" id="item-quantity" readonly >
                 </div>
             </div> 
             <!-- -->
             <div class="form-group col-sm-1">
                         <label>Total:</label> 
                 <div> 
-                    <input type="number" id="item-total" readonly >
+                    <input type="number" name="item-total" id="item-total" readonly >
                 </div>
             </div>  
 </div>
            
        
             </div>
-            <input type="submit" name="submit" id="regbtn" value="Save" class="btn-success">     
-        </form>
+           
         </div>
+        <input type="submit" name="submit" id="regbtn" value="Save" class="btn-success">     
+        </form>
     </div>
 </div>
 

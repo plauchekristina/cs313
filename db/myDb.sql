@@ -28,7 +28,6 @@ CREATE TABLE orders
     orders_half_qty INTEGER NOT NULL,
     orders_full_budget INTEGER NOT NULL,
     orders_half_budget INTEGER NOT NULL,
-    coop_name VARCHAR (80) NOT NULL
 );
 CREATE TABLE item
 (
@@ -43,15 +42,15 @@ CREATE TABLE item
     item_order_qty INTEGER NOT NULL,
     item_order_cost NUMERIC NOT NULL
 );
-
-INSERT INTO account (first_name, last_name, username, email, user_password)
-VALUES (
-    'Kristina', 'Plauche', 'kristinaplauche', 'kristina@plauche.org', 'admin123'
+INSERT INTO account
+    (first_name, last_name, username, email, user_password)
+VALUES
+    ( 'Kristina', 'Plauche', 'kristinaplauche', 'kristina@plauche.org', 'admin123'
 );
-
-INSERT INTO coop (coop_user_id, coop_name, coop_contact_name, coop_contact_email,coop_full_budget,coop_half_budget)
-VALUES (
-1, 'Farmers Market Baskets', 'Kristina', 'kristina@farmersmarketbaskets.com', 10, 5);
+INSERT INTO coop
+    (coop_user_id, coop_name, coop_contact_name, coop_contact_email,coop_full_budget,coop_half_budget)
+VALUES
+    ( 1, 'Farmers Market Baskets', 'Kristina', 'kristina@farmersmarketbaskets.com', 10, 5);
 
 
 
