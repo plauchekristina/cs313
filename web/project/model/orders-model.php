@@ -7,20 +7,20 @@ require('../connection.php');
 var_dump($_POST);
 
 $orders_date= htmlspecialchars($_POST ['order-date']);
-$orders_total= htmlspecialchars($_POST ['orders_total']);
-$orders_full_qty= htmlspecialchars($_POST ['full-count']);
-$orders_full_budget= htmlspecialchars($_POST ['full-budget']);
-$orders_half_qty= htmlspecialchars($_POST ['half-count']);
-$orders_half_budget= htmlspecialchars($_POST ['half-budget']);
+$orders_total= ($_POST ['orders_total']);
+$orders_full_qty= ($_POST ['full-count']);
+$orders_full_budget= ($_POST ['full-budget']);
+$orders_half_qty= ($_POST ['half-count']);
+$orders_half_budget= ($_POST ['half-budget']);
  
 $item_name= htmlspecialchars($_POST ['item-name']);
-$item_count= htmlspecialchars($_POST ['item-count']);
-$item_unit= htmlspecialchars($_POST ['item-unit']);
-$item_price= htmlspecialchars($_POST ['item-price']);
-$item_full_qty= htmlspecialchars($_POST ['per-full']);
-$item_half_qty= htmlspecialchars($_POST ['per-half']);
-$item_order_qty= htmlspecialchars($_POST ['item-quantity']);
-$item_order_cost= htmlspecialchars($_POST ['item-total']);
+$item_count= ($_POST ['item-count']);
+$item_unit= ($_POST ['item-unit']);
+$item_price= ($_POST ['item-price']);
+$item_full_qty= ($_POST ['per-full']);
+$item_half_qty= ($_POST ['per-half']);
+$item_order_qty= ($_POST ['item-quantity']);
+$item_order_cost= ($_POST ['item-total']);
    
   
 
