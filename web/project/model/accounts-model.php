@@ -3,7 +3,7 @@
 /*
  * Library of Functions
  */
-
+require('../connection.php');
 function checkEmail($email) {
     $valEmail = filter_var($email, FILTER_VALIDATE_EMAIL);
     return $valEmail;
@@ -27,7 +27,7 @@ function checkPassword($user_password) {
 
 // Check for an existing email address
 function checkExistingEmail($email) {
-    $db = acmeConnect();
+  
     $sql = 'SELECT email FROM account WHERE email = :email';
     $stmt = $db->prepare($sql);
     $stmt->bindValue(':email', $email, PDO::PARAM_STR);
@@ -42,7 +42,7 @@ function checkExistingEmail($email) {
    
    }
    
-   require('../connection.php');
+  
    function regClient($first_name, $last_name, $email, $user_password){
     // Create a connection object using the acme connection function
     //$db = acmeConnect();
@@ -70,7 +70,7 @@ function checkExistingEmail($email) {
    
    // Get client data based on an email address
    function getClient($email){
-    $db = acmeConnect();
+  
     $sql = 'SELECT account_id, first_name, last_name, email, username, user_password 
             FROM account
             WHERE email = :email';
@@ -88,7 +88,7 @@ function checkExistingEmail($email) {
    
    // Get client information by client email
    function getClientInfo($email){
-    $db = acmeConnect();
+
     $sql = 'SELECT * FROM account WHERE email = :email';
     $stmt = $db->prepare($sql);
     $stmt->bindValue(':email', $email, PDO::PARAM_INT);
@@ -100,7 +100,7 @@ function checkExistingEmail($email) {
    
    // Get client information by client ID
    function getClientById($account_id){
-    $db = acmeConnect();
+  
     $sql = 'SELECT * FROM account WHERE account_id = :account_id';
     $stmt = $db->prepare($sql);
     $stmt->bindValue(':account_id', $account_id, PDO::PARAM_INT);
@@ -113,7 +113,7 @@ function checkExistingEmail($email) {
    ///update account
    function updateClient($first_name, $last_name, $email, $account_id){
     // Create a connection object using the acme connection function
-    $db = acmeConnect();
+
     // The SQL statement
     $sql = 'UPDATE account SET first_name = :first_name, last_name = :last_name,
         email = :email
@@ -139,7 +139,7 @@ function checkExistingEmail($email) {
    ///update account
    function updatePassword($user_password, $account_id){
     // Create a connection object using the acme connection function
-    $db = acmeConnect();
+ 
     // The SQL statement
     $sql = 'UPDATE account SET user_password = :user_password
         WHERE account_id = :account_id';
