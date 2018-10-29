@@ -13,6 +13,14 @@ $orders_half_qty=($_POST ['half-count']);
 $orders_half_budget= ($_POST ['half-budget']);
 $orders_date= htmlspecialchars($_POST [order-date]);
  
+$item_name= htmlspecialchars($_POST ['item-name']);
+$item_count=($_POST ['item-count']);
+$item_unit=($_POST ['item-unit']);
+$item_price=($_POST ['item-price']);
+$item_full_qty=($_POST ['per-full']);
+$item_half_qty=($_POST ['per-half']);
+$item_order_qty=($_POST ['item-quantity']);
+$item_order_cost=($_POST ['item-total']);
   
 
       // The SQL statement
@@ -39,14 +47,6 @@ $orders_date= htmlspecialchars($_POST [order-date]);
       }
 
 
-      $item_name= htmlspecialchars($_POST ['item-name']);
-      $item_count=($_POST ['item-count']);
-      $item_unit=($_POST ['item-unit']);
-      $item_price=($_POST ['item-price']);
-      $item_full_qty=($_POST ['per-full']);
-      $item_half_qty=($_POST ['per-half']);
-      $item_order_qty=($_POST ['item-quantity']);
-      $item_order_cost=($_POST ['item-total']);
 
       // The SQL statement
       $sql = 'INSERT INTO item (item_orders_id, item_name, item_count, item_unit, item_price, item_full_qty, item_half_qty, item_order_qty, item_order_cost)
