@@ -42,12 +42,12 @@ function checkExistingEmail($email) {
    
    }
    
-   
+   require('connection.php');
    function regClient($first_name, $last_name, $email, $user_password){
     // Create a connection object using the acme connection function
-    $db = acmeConnect();
+    //$db = acmeConnect();
     // The SQL statement
-    $sql = 'INSERT INTO account (first_name, last_name,email, user_password)
+    $sql = 'INSERT INTO account (first_name, last_name, email, user_password)
         VALUES (:first_name, :last_name, :email, :user_password)';
     // Create the prepared statement using the acme connection
     $stmt = $db->prepare($sql);
