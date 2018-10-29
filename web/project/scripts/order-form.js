@@ -1,3 +1,4 @@
+document.body.onload = orderTarget;
 function orderTarget() {
     // Get the order counts and budgets per portion from user.
     var fullCount = parseFloat(document.getElementById('full-count').value);

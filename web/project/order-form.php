@@ -116,26 +116,46 @@ session_start();
             <div class="form-group col-sm-5">
                     <label>Item Name:</label> 
                 <div> 
-                    <input type="text" id="item-name" placeholder="Item name/description">
+                    <input type="text" id="item-name" size="50" placeholder="Item name/description">
                 </div>    
             </div>
-            <div class="form-group col-sm-2">
+            <div class="form-group col-sm-1">
                         <label>Count:</label> 
                 <div> 
                         <input type="number" id="item-count" placeholder="#">
                 </div>
             </div>
-            <div class="form-group col-sm-2">
+            <div class="form-group col-sm-1">
                         <label>Unit:</label> 
                 <div> 
-                        <input type="number" id="item-unit" placeholder="Count">
+                        <select id="item-unit">
+
+                            <option value="count">count</option>
+                            <option value="pound">pound</option>
+                            <option value="each">each</option>
+</select>
                 </div>
             </div>
-            <div class="form-group col-sm-3">
+            <!-- -->
+            <div class="form-group col-sm-2">
                         <label>Price:</label> 
                 <div> 
                     <input type="number" id="item-price" placeholder="$0.00">
                 </div>
+                <!-- -->
+                <div class="form-group col-sm-2">
+                        <label>Quantity:</label> 
+                <div> 
+                    <input type="number" id="item-quantity" readonly >
+                </div>
+            </div> 
+            <!-- -->
+            <div class="form-group col-sm-2">
+                        <label>Total:</label> 
+                <div> 
+                    <input type="number" id="item-total" readonly >
+                </div>
+            </div> 
             </div>    
         </form>
         <button type="button" onclick="orderQuantities()">Calculate</button> 
