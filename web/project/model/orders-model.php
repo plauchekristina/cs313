@@ -25,7 +25,7 @@ $item_order_cost= ($_POST ['item-total']);
   
 
       // The SQL statement
-      $sql = 'INSERT INTO orders (orders_date, orders_total, orders_full_qty, orders_half_qty, orders_full_budget, orders_half_budget)
+      $sql = 'INSERT INTO orderz (orders_date, orders_total, orders_full_qty, orders_half_qty, orders_full_budget, orders_half_budget)
           VALUES (:orders_date, :orders_total, :orders_full_qty, :orders_half_qty, :orders_full_budget, :orders_half_budget)';
       // Create the prepared statement using the db connection
       $stmt = $db->prepare($sql);

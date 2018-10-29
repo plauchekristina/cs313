@@ -51,7 +51,16 @@ INSERT INTO coop
     (coop_user_id, coop_name, coop_contact_name, coop_contact_email,coop_full_budget,coop_half_budget)
 VALUES
     ( 1, 'Farmers Market Baskets', 'Kristina', 'kristina@farmersmarketbaskets.com', 10, 5);
-
-
-
+CREATE TABLE orderz
+(
+    orders_id serial PRIMARY KEY,
+    orders_account_id INTEGER,
+    orders_coop_id INTEGER,
+    orders_date VARCHAR(30) NOT NULL,
+    orders_total INTEGER NOT NULL,
+    orders_full_qty INTEGER NOT NULL,
+    orders_half_qty INTEGER NOT NULL,
+    orders_full_budget INTEGER NOT NULL,
+    orders_half_budget INTEGER NOT NULL
+);
  
