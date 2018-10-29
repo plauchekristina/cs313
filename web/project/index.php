@@ -41,6 +41,7 @@
                             <h2>New Order</h2>
                             <p>Form goes here</p>
 <p><a href="/project/connection.php">See that database is connected</a></p>
+<p><a href="/project/register.php">Register</a></p>
                             </div>
                         </div>
                     </div>

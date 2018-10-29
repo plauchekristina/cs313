@@ -1,11 +1,7 @@
 <?php include('../project/common/nav.php');?> 
+
 <!---  ####### Body content begins ####### -->
-<?php // Create or access a Session
- session_start();
- 
-// Get the database connection file
-require_once('connection.php');
-require('/model/user-accounts.php');?>
+
 <div class="jumbotron">
         <div class="container text-center">
             <h1>Register</h1>
