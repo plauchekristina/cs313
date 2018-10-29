@@ -41,7 +41,7 @@
                         <a href="/project/orders.php">Orders</a>
                     </li>
                     <li>
-                        <a href="/project/orders.php">Co-op</a>
+                        <a href="/project/co-op.php">Co-op</a>
                     </li>
                 
                 </ul>
