@@ -93,24 +93,6 @@ session_start();
 <div class="panel panel-default">
 <h3>Item 1</h3>               
 <div class="row">
-<div class="col-sm-3">
-<div class="well">
-    <form class="form-inline row">
-        <div class="col-sm-6">
-                <label># Per Full:</label> 
-            <div> 
-                <input type="number" id="per-full" placeholder="#" >
-            </div>    
-        </div>
-         <div class="col-sm-6">
-                <label># Per Half:</label> 
-            <div> 
-                <input type="number" id="per-half" placeholder="#" >
-            </div>
-        </div> 
-    </form>
-</div>
-</div>
 
 <div class="col-sm-9">
     <div class="well">
