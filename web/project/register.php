@@ -41,7 +41,7 @@
                         <div class="panel panel-default text-left well">
                             <div class="panel-body">
                           <!--- Form Begins-->
-                          <form action="user-accounts.php" method="POST">
+                          <form action="model/accounts-model.php" method="POST">
            <h2>Register</h2>
         <div class="fail-message"><p>All fields are required</p></div>
         <div>
@@ -59,6 +59,7 @@
                 echo "value='$last_name'";} ?> required>
         </div>
         <div>
+        <label for="username">Username</label>
                 <input name="username" id="username" type="text" <?php if (isset($username)) {
                 echo "value='$username'";} ?> required>
         </div>
