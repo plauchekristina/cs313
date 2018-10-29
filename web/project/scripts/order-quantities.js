@@ -13,8 +13,8 @@ function orderQuantities() {
     var itemTotal = itemQuantity * itemPrice;
 
     //Display the quantity to order to the user
-    document.getElementById('item-quantity').innerHTML = itemQuantity;
-    document.getElementById('item-total').innerHTML = itemTotal.toFixed(2);
+    document.getElementById('item-quantity').value = itemQuantity;
+    document.getElementById('item-total').value = itemTotal.toFixed(2);
     document.getElementById('item-1-totals').innerHTML = "Quantity:" + itemQuantity + " Total: $" + itemTotal.toFixed(2);
 
 

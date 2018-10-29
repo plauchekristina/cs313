@@ -28,7 +28,7 @@ session_start();
                 <div class="form-group col-sm-6">
                 <label># Ordered:</label> 
                 <div>   
-                <input type="number" id="full-count" size="10" placeholder="# ordered" aria-label="enter number of full portions ordered">                   
+                <input type="number" id="full-count" size="10" placeholder="# ordered" onchange="orderQuantities()" aria-label="enter number of full portions ordered">                   
                 </div>    
             </div>
                 <div class="form-group col-sm-6">
@@ -46,7 +46,7 @@ session_start();
             <div class="form-group col-sm-6">
                 <label># Ordered:</label> 
                 <div> 
-            <input type="number" id="half-count" size="10" placeholder="# ordered" aria-label="enter number of half portions ordered">
+            <input type="number" id="half-count" size="10" placeholder="# ordered" onchange="orderQuantities()" aria-label="enter number of half portions ordered">
             </div>    
             </div>
                 <div class="form-group col-sm-6">
@@ -57,7 +57,7 @@ session_start();
                 </div>    
         </form>
         </div>
-        <button type="button" onclick="orderTarget()">Calculate</button> 
+        <!--<button type="button" onclick="orderTarget()">Calculate</button> -->
     </div>
 
     <!-- Center column -->
@@ -102,13 +102,13 @@ session_start();
         <div class="col-sm-2">
                 <label># Per Full:</label> 
             <div> 
-                <input type="number" id="per-full" placeholder="#" >
+                <input type="number" id="per-full" placeholder="#" onchange="orderQuantities()">
             </div>    
         </div>
          <div class="col-sm-2">
                 <label># Per Half:</label> 
             <div> 
-                <input type="number" id="per-half" placeholder="#" >
+                <input type="number" id="per-half" placeholder="#" onchange="orderQuantities()">
             </div>
         </div> 
     </form>
@@ -122,7 +122,7 @@ session_start();
             <div class="form-group col-sm-1">
                         <label>Count:</label> 
                 <div> 
-                        <input type="number" id="item-count" placeholder="#">
+                        <input type="number" id="item-count" placeholder="#" onchange="orderQuantities()">
                 </div>
             </div>
             <div class="form-group col-sm-1">
@@ -140,7 +140,7 @@ session_start();
             <div class="form-group col-sm-2">
                         <label>Price:</label> 
                 <div> 
-                    <input type="number" id="item-price" placeholder="$0.00">
+                    <input type="number" id="item-price" placeholder="$0.00" onchange="orderQuantities()">
                 </div>
             
             </div>
@@ -159,8 +159,7 @@ session_start();
                 </div>
             </div>     
         </form>
-        <button type="button" onclick="orderQuantities()">Calculate</button> 
-        <h4 id="item-1-totals"></h4>
+       
             </div>
         </div>
     </div>
