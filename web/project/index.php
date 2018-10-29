@@ -39,9 +39,8 @@
                         <div class="panel panel-default text-left well">
                             <div class="panel-body">
                             <h2>Project Info</h2>
-                            <p>Registration is functioning, but not login yet. Feel free to look around. The order form is there with
-                                some functionality to do calculcations, but it isn't going into the datbase yet. The co-op is going in to 
-                                database right now.
+                            <p>Registration, making an order (see the javascript doing the calculations) is functioning, but not login yet. 
+                                This is no little project. It is taking a long time to get everyting running.
                             </p>
 <p><a href="/project/register.php">Register</a></p>
                             </div>
