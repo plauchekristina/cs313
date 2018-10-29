@@ -39,23 +39,15 @@
                         <div class="panel panel-default text-left well">
                             <div class="panel-body">
                             <h2>Co-Op Details</h2>
-                    
-                            <p>Info goes here:</p>
-                            <ul>
-                                <li> Co-op Name</li>
-                                <li>Contact Name</li>
-                                <li>Contact Email</li>
-                                <li>Full Portion Budget</li>
-                                <li>Half Portion Budget</li>
-                            </ul>
+                
                             <form action="model/co-op-model.php" method="POST">
 
         <div class="fail-message"><p>All fields are required</p></div>
         <div>
-                <label for="co_op_name">Co-op Name</label>
+                <label for="coop_name">Co-op Name</label>
         </div>
         <div>
-                <input name="co_op_name" id="co_op_name" type="text" required>
+                <input name="coop_name" id="coop_name" type="text" required>
         </div>
         <div>
                 <label for="contact_name">Contact Name</label>
@@ -86,9 +78,8 @@
             <!--<input type ="hidden" name="account_id" <"<"?php if (isset($account_id)) {
                 echo "value='$account_id'";} ?> >"-->
             <label>&nbsp;</label>
-            <input type="submit" name="submit" id="regbtn" value="Register" class="register">
-            <!-- Add the action name-value pair -->
-            <input type="hidden" name="action" value="coop-register">
+            <input type="submit" name="submit" id="regbtn" value="Save" class="register">
+           
         </div>
                
             </form>

@@ -8,7 +8,7 @@ var_dump($_POST);
 
 
 
-    $co_op_name= htmlspecialchars($_POST ['co_op_name']);
+    $coop_name= htmlspecialchars($_POST ['coop_name']);
     $contact_name= htmlspecialchars($_POST ['contact_name']);
     $contact_email= htmlspecialchars($_POST ['contact_email']);
     $full_budget= htmlspecialchars($_POST ['full_portion_budget']);
