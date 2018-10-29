@@ -5,6 +5,8 @@
  */
 require('../connection.php');
 var_dump($_POST);
+
+/*
 function checkEmail($email) {
     $valEmail = filter_var($email, FILTER_VALIDATE_EMAIL);
     return $valEmail;
@@ -25,7 +27,7 @@ function checkPassword($user_password) {
  * New function will handle site registrations.
  */
 
-
+/*
 // Check for an existing email address
 function checkExistingEmail($email) {
   
@@ -41,15 +43,20 @@ function checkExistingEmail($email) {
      return 1;
     }
    
-   }
-   
+}
+  */
+  $first_name= htmlspecialchars($_POST ['first_name']);
+  $last_name= htmlspecialchars($_POST ['last_name']);
+  $email= htmlspecialchars($_POST ['email']);
+  $username= htmlspecialchars($_POST ['username']);
+  $user_password= htmlspecialchars($_POST ['user_password']); 
   
-   function regClient($first_name, $last_name, $email, $user_password){
+   function regClient($first_name, $last_name, $email, $username, $user_password){
     // Create a connection object using the acme connection function
     //$db = acmeConnect();
     // The SQL statement
-    $sql = 'INSERT INTO account (first_name, last_name, email, user_password)
-        VALUES (:first_name, :last_name, :email, :user_password)';
+    $sql = 'INSERT INTO account (first_name, last_name, email, username, user_password)
+        VALUES (:first_name, :last_name, :email, :username, :user_password)';
     // Create the prepared statement using the acme connection
     $stmt = $db->prepare($sql);
     // The next four lines replace the placeholders in the SQL
@@ -58,15 +65,17 @@ function checkExistingEmail($email) {
     $stmt->bindValue(':first_name', $first_name, PDO::PARAM_STR);
     $stmt->bindValue(':last_name', $last_name, PDO::PARAM_STR);
     $stmt->bindValue(':email', $email, PDO::PARAM_STR);
+    $stmt->bindValue(':username', $email, PDO::PARAM_STR);
     $stmt->bindValue(':user_password', $user_password, PDO::PARAM_STR);
     // Insert the data
-    $stmt->execute();
+    try {
+        $stmt->execute();
+    }
+       catch (Exception $e) {
+        echo $e;
+    }
     // Ask how many rows changed as a result of our insert
-    $rowsChanged = $stmt->rowCount();
-    // Close the database interaction
-    $stmt->closeCursor();
-    // Return the indication of success (rows changed)
-    return $rowsChanged;
+   
    }
    
    // Get client data based on an email address
