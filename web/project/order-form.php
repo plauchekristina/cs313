@@ -34,7 +34,7 @@ session_start();
                 <div class="form-group col-sm-6">
                     <label>Budget Per:</label> 
                     <div> 
-                    <input type="number" id="full-budget" size="10" placeholder="budget" aria-label="enter budget per full portion">
+                    <input type="number" id="full-budget" size="10" value ="10" readonly placeholder="budget" aria-label="enter budget per full portion">
                     </div>
                 </div>
                 </form>
@@ -46,7 +46,7 @@ session_start();
             <div class="form-group col-sm-6">
                 <label># Ordered:</label> 
                 <div> 
-            <input type="number" id="half-count" size="10" placeholder="# ordered" value ="10" readonly aria-label="enter number of half portions ordered">
+            <input type="number" id="half-count" size="10" placeholder="# ordered" aria-label="enter number of half portions ordered">
             </div>    
             </div>
                 <div class="form-group col-sm-6">
@@ -116,7 +116,7 @@ session_start();
             <div class="form-group col-sm-5">
                     <label>Item Name:</label> 
                 <div> 
-                    <input type="text" id="item-name" size="50" placeholder="Item name/description">
+                    <input type="text" id="item-name" size="30" placeholder="Item name/description">
                 </div>    
             </div>
             <div class="form-group col-sm-1">
@@ -142,6 +142,8 @@ session_start();
                 <div> 
                     <input type="number" id="item-price" placeholder="$0.00">
                 </div>
+            
+            </div>
                 <!-- -->
                 <div class="form-group col-sm-2">
                         <label>Quantity:</label> 
@@ -155,8 +157,7 @@ session_start();
                 <div> 
                     <input type="number" id="item-total" readonly >
                 </div>
-            </div> 
-            </div>    
+            </div>     
         </form>
         <button type="button" onclick="orderQuantities()">Calculate</button> 
         <h4 id="item-1-totals"></h4>
