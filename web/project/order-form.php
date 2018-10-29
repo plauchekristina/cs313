@@ -28,7 +28,7 @@ session_start();
                 <div class="form-group col-sm-6">
                 <label># Ordered:</label> 
                 <div>   
-                <input type="number" name="full-count" id="full-count" size="10" placeholder="# ordered" onchange="orderQuantities()" aria-label="enter number of full portions ordered">                   
+                <input type="number" name="full-count" id="full-count" size="10" placeholder="# ordered" value ="200" aria-label="enter number of full portions ordered">                   
                 </div>    
             </div>
                 <div class="form-group col-sm-6">
