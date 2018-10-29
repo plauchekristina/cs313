@@ -1,4 +1,9 @@
 <?php include('../project/common/nav.php');?>
+<?php 
+//session start
+session_start();
+
+?>
 <!---  ####### Body content begins ####### -->
 <div class="container text-center">
 <div class="row">
@@ -41,13 +46,13 @@
             <div class="form-group col-sm-6">
                 <label># Ordered:</label> 
                 <div> 
-            <input type="number" id="half-count" size="10" placeholder="# ordered" aria-label="enter number of half portions ordered">
+            <input type="number" id="half-count" size="10" placeholder="# ordered" value ="10" readonly aria-label="enter number of half portions ordered">
             </div>    
             </div>
                 <div class="form-group col-sm-6">
                     <label>Budget Per:</label> 
                     <div> 
-            <input type="number" id="half-budget" size="10" placeholder="budget"  aria-label="enter budget per half portion">
+            <input type="number" id="half-budget" size="10" value = "5" readonly aria-label="enter budget per half portion">
             </div>
                 </div>    
         </form>
@@ -64,7 +69,7 @@
                     <div class="panel-body">
                         <form class="form-header">
                         <div class="input-group-lg">
-                                <input class="form-control input-lg" type="text" id="co-op-name" placeholder="Co-op Name">
+                                <input class="form-control input-lg" type="text" id="co-op-name" placeholder="Co-op Name"><?php echo $_SESSION['clientData']['clientFirstname'];?>  
                         </div>
                         
                                 <input class="form-control" type="text" id="contact-name" placeholder="Contact Name">
@@ -111,6 +116,20 @@
     <div class="well">
         <div class="thumbnail text-left"> 
                 <h4>Item Data</h4>
+                <form class="form-inline row">
+        <div class="col-sm-6">
+                <label># Per Full:</label> 
+            <div> 
+                <input type="number" id="per-full" placeholder="#" >
+            </div>    
+        </div>
+         <div class="col-sm-6">
+                <label># Per Half:</label> 
+            <div> 
+                <input type="number" id="per-half" placeholder="#" >
+            </div>
+        </div> 
+    </form>
         <form class="d-inline row">
             <div class="form-group col-sm-5">
                     <label>Item Name:</label> 

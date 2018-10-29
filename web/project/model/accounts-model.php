@@ -79,22 +79,22 @@ function checkExistingEmail($email) {
     // Ask how many rows changed as a result of our insert
    
    
-   /*
+   
    // Get client data based on an email address
-   function getClient($email){
+   function getClient($username){
   
     $sql = 'SELECT account_id, first_name, last_name, email, username, user_password 
             FROM account
-            WHERE email = :email';
+            WHERE username = :username';
     $stmt = $db->prepare($sql);
-    $stmt->bindValue(':email', $email, PDO::PARAM_STR);
+    $stmt->bindValue(':username', $username, PDO::PARAM_STR);
     $stmt->execute();
     $clientData = $stmt->fetch(PDO::FETCH_ASSOC);
     $stmt->closeCursor();
     return $clientData;
    }
    
-   
+   /*
    
    // selecting client data based on Id
    
