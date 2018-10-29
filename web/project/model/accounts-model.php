@@ -4,6 +4,7 @@
  * Library of Functions
  */
 require('../connection.php');
+var_dump($_POST);
 function checkEmail($email) {
     $valEmail = filter_var($email, FILTER_VALIDATE_EMAIL);
     return $valEmail;
