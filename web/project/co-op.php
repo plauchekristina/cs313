@@ -55,37 +55,37 @@
                 <label for="co_op_name">Co-op Name</label>
         </div>
         <div>
-                <input name="co_op_name" id="co_op_name" type="text" <?php if (isset($co_op_name)) {
-                echo "value='$co_op_name'";} ?> required>
+                <input name="co_op_name" id="co_op_name" type="text" <?php if (isset($coop_name)) {
+                echo "value='$coop_name'";} ?> required>
         </div>
         <div>
                 <label for="contact_name">Contact Name</label>
         </div>
         <div>
-                <input name="contact_name" id="contact_name" type="text" <?php if (isset($contact_name)) {
-                echo "value='$contact_name'";} ?> required>
+                <input name="contact_name" id="contact_name" type="text" <?php if (isset($coop_contact_name)) {
+                echo "value='$coop_contact_name'";} ?> required>
         </div>
       
         <div>
                 <label for="cont_email">Contact Email</label>
         </div>
         <div>
-                <input type="contact_email" name="contact_email" id="contact_email" <?php if (isset($contact_email)) {
-                echo "value='$contact_email'";} ?> required >
+                <input type="contact_email" name="contact_email" id="contact_email" <?php if (isset($coop_contact_email)) {
+                echo "value='$coop_contact_email'";} ?> required >
         </div>
         <div>
         <label for="full_portion_budget">Full Portion Budget</label>
                 </div>
                 <div>
-                <input name="full_portion_budget" id="full_portion_budget" type="text" <?php if (isset($full_portion_budget)) {
-                echo "value='$full_portion_budget'";} ?> required>
+                <input name="full_portion_budget" id="full_portion_budget" type="text" <?php if (isset($coop_full_budget)) {
+                echo "value='$coop_full_budget'";} ?> required>
         </div>
         <div>
         <label for="halfportion_budget">Half Portion Budget</label>
                 </div>
                 <div>
-                <input name="half_portion_budget" id="full_portion_budget" type="text" <?php if (isset($full_portion_budget)) {
-                echo "value='$half_portion_budget'";} ?> required>
+                <input name="half_portion_budget" id="full_portion_budget" type="text" <?php if (isset($coop_half_budget)) {
+                echo "value='$coop_half_budget'";} ?> required>
         </div>
         <div>
             <!--<input type ="hidden" name="account_id" <"<"?php if (isset($account_id)) {
