@@ -76,7 +76,7 @@ session_start();
                               
                                 <div>
                                     <label>Date:</label>                                           
-                                    <input type="text" name=="order-date" id="order-date" placeholder="mm/dd/yyyy">
+                                    <input type="date" name=="order-date" id="order-date" placeholder="mm/dd/yyyy">
                                 </div>
                                
                     
