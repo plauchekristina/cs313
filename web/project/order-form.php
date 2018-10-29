@@ -167,7 +167,7 @@ session_start();
         <div class="form-group col-sm-2">
                         <label>Order Total:</label> 
                 <div> 
-                    <input type="number" name="orders-total" id="orders-total" onchange="orderQuantities()" readonly >
+                    <input type="number" name="orders-total" id="orders-total" onchange="orderQuantities()" value ="500">
                 </div>
             </div> 
         <input type="submit" name="submit" id="regbtn" value="Save" class="btn-success">     
