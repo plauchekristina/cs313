@@ -48,7 +48,7 @@
                                 <li>Full Portion Budget</li>
                                 <li>Half Portion Budget</li>
                             </ul>
-                            <form action="model/accounts-model.php" method="POST">
+                            <form action="model/co-op-model.php" method="POST">
 
         <div class="fail-message"><p>All fields are required</p></div>
         <div>
