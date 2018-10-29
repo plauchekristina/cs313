@@ -61,7 +61,7 @@ session_start();
     </div>
 
     <!-- Center column -->
-    <div class="col-sm-7">
+    <div class="col-sm-9">
 <!-- #### HEADER #####-->
         <div class="row">
             <div class="col-sm-12">
@@ -94,7 +94,7 @@ session_start();
 <h3>Item 1</h3>               
 <div class="row">
 
-<div class="col-sm-9">
+<div class="col-sm-12">
     <div class="well">
         <div class="thumbnail text-left"> 
                 <h4>Item Data</h4>
@@ -148,13 +148,7 @@ session_start();
 </div>
 </div>
 
-    <!-- Right column -->
-    <div class="col-sm-2 well">
-        <div class="thumbnail">
-            <p>More Info</p>
-        
-        </div>
-    </div>
+    
 </div>
 
 <script src ="../project/scripts/order-form.js"></script>
