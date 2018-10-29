@@ -34,7 +34,7 @@ $orders_date= htmlspecialchars($_POST ['order-date']);
       // Insert the data
       try {
         $stmt->execute();
-         $last_id = $db->lastInsertId();
+         //$last_id = $db->lastInsertId();
       }
          catch (Exception $e) {
           echo $e;
