@@ -128,7 +128,7 @@ session_start();
                         <input type="number" id="item-count" placeholder="#" onchange="orderQuantities()">
                 </div>
             </div>
-            <div class="form-group col-sm-12">
+            <div class="form-group col-sm-2">
                         <label>Unit:</label> 
                 <div> 
                         <select id="item-unit">
