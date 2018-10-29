@@ -164,6 +164,12 @@ session_start();
             </div>
            
         </div>
+        <div class="form-group col-sm-2">
+                        <label>Order Total:</label> 
+                <div> 
+                    <input type="number" name="orders-total" id="item-total" readonly >
+                </div>
+            </div> 
         <input type="submit" name="submit" id="regbtn" value="Save" class="btn-success">     
         </form>
     </div>

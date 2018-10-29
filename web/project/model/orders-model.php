@@ -7,7 +7,7 @@ require('../connection.php');
 var_dump($_POST);
 
 $orders_date= htmlspecialchars($_POST ['order-date']);
-$orders_total= ($_POST ['orders_total']);
+$orders_total= ($_POST ['orders-total']);
 $orders_full_qty= ($_POST ['full-count']);
 $orders_full_budget= ($_POST ['full-budget']);
 $orders_half_qty= ($_POST ['half-count']);
