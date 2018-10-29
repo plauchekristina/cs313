@@ -81,6 +81,13 @@
                 echo "value='$full_portion_budget'";} ?> required>
         </div>
         <div>
+        <label for="halfportion_budget">Half Portion Budget</label>
+                </div>
+                <div>
+                <input name="half_portion_budget" id="full_portion_budget" type="text" <?php if (isset($full_portion_budget)) {
+                echo "value='$half_portion_budget'";} ?> required>
+        </div>
+        <div>
             <!--<input type ="hidden" name="account_id" <"<"?php if (isset($account_id)) {
                 echo "value='$account_id'";} ?> >"-->
             <label>&nbsp;</label>
