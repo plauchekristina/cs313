@@ -39,10 +39,10 @@ session_start();
                 </div>
 </div>
             </div>
-            <div class="d-inline row">
+           
             <div class="thumbnail text-left"> 
             <h4>Half Portions</h4>
-          
+            <div class="d-inline row">
             <div class="form-group col-sm-6 d-inline row">
                 <label># Ordered:</label> 
                 <div> 
@@ -161,10 +161,11 @@ session_start();
                 </div>
             </div>  
 </div>
-            <input type="submit" name="submit" id="regbtn" value="Save" class="btn-success">     
-        </form>
+           
        
             </div>
+            <input type="submit" name="submit" id="regbtn" value="Save" class="btn-success">     
+        </form>
         </div>
     </div>
 </div>
