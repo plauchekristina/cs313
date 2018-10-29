@@ -24,8 +24,8 @@ session_start();
         
         <div class="thumbnail text-left">
             <h4>Full Portions</h4>
-          
-                <div class="form-group col-sm-6 d-inline row">
+          <div class="d-inline row">
+                <div class="form-group col-sm-6">
                 <label># Ordered:</label> 
                 <div>   
                 <input type="number" id="full-count" size="10" placeholder="# ordered" onchange="orderQuantities()" aria-label="enter number of full portions ordered">                   
@@ -37,9 +37,9 @@ session_start();
                     <input type="number" id="full-budget" size="10" value ="10" readonly placeholder="budget" aria-label="enter budget per full portion">
                     </div>
                 </div>
-            
+</div>
             </div>
-            
+            <div class="d-inline row">
             <div class="thumbnail text-left"> 
             <h4>Half Portions</h4>
           
@@ -55,7 +55,7 @@ session_start();
             <input type="number" id="half-budget" size="10" value = "5" readonly aria-label="enter budget per half portion">
             </div>
                 </div>    
-    
+</div>
         </div>
         <!--<button type="button" onclick="orderTarget()">Calculate</button> -->
     </div>
@@ -114,8 +114,8 @@ session_start();
             </div>
         </div> 
    
-    
-            <div class="form-group col-sm-5 d-inline row">
+        <div class="d-inline row">
+            <div class="form-group col-sm-5">
                     <label>Item Name:</label> 
                 <div> 
                     <input type="text" id="item-name" size="40" placeholder="Item name/description">
@@ -160,6 +160,7 @@ session_start();
                     <input type="number" id="item-total" readonly >
                 </div>
             </div>  
+</div>
             <input type="submit" name="submit" id="regbtn" value="Save" class="btn-success">     
         </form>
        
