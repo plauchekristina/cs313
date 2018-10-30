@@ -5,6 +5,7 @@
  */
 require('../connection.php');
 var_dump($_POST);
+var_dump($_SESSION);
 
 /*
 function checkEmail($email) {
@@ -80,7 +81,7 @@ function checkExistingEmail($email) {
    
    
    
-   // Get client data based on an email address
+   // Get client data based on an username
    function getClient($username){
   
     $sql = 'SELECT account_id, first_name, last_name, email, username, user_password 
@@ -94,6 +95,8 @@ function checkExistingEmail($email) {
     return $clientData;
    }
    
+
+
    /*
    
    // selecting client data based on Id

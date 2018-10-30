@@ -1,9 +1,5 @@
 <?php include('../project/common/nav.php');?>
-<?php 
-//session start
-session_start();
 
-?>
 <!---  ####### Body content begins ####### -->
 <div class="container text-center">
 <div class="row">

@@ -5,6 +5,7 @@
  */
 require('../connection.php');
 var_dump($_POST);
+var_dump($_SESSION);
 
 $orders_total=($_POST ['orders-total']);
 $orders_full_qty=($_POST ['full-count']);
@@ -22,9 +23,6 @@ $item_half_qty=($_POST ['per-half']);
 $item_order_qty=($_POST ['item-quantity']);
 $item_order_cost=($_POST ['item-total']);
 
-echo "item-name";
-echo "item-count";
-echo "item-unit";
 
   
 
