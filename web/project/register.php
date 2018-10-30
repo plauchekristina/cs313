@@ -31,12 +31,7 @@
 <br><p> 
                     <?php 
                     echo "<strong>Today is:</strong> ".date("m/d/Y");?></p>
-                    <p>            <?php
-// Set session variables
-$_SESSION["favcolor"] = "green";
-$_SESSION["favanimal"] = "cat";
-echo "Session variables are set.";
-?></p>
+                    
                 </div>
 
 
