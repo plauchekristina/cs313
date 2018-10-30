@@ -2,8 +2,8 @@
 
 <!---  ####### Body content begins ####### -->
 <?php session_start(); 
-$_SESSION['username']=$_POST['username'];
-echo $SESSION['username'];
+$_SESSION['test']=1;
+echo $SESSION['test'];
 
  ?>
 <div class="jumbotron">
