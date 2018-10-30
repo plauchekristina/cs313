@@ -6,7 +6,10 @@
 require('../connection.php');
 var_dump($_POST);
 //session start
-
+echo $_SESSION["first_name"];
+echo $_SESSION["last_name"];
+echo $_SESSION["email"];
+echo $_SESSION["username"];
 var_dump($_SESSION);
 
 
@@ -55,10 +58,7 @@ function checkExistingEmail($email) {
   $username= htmlspecialchars($_POST ['username']);
   $user_password= htmlspecialchars($_POST ['user_password']); 
   
-  echo $_SESSION["first_name"];
-  echo $_SESSION["last_name"];
-  echo $_SESSION["email"];
-  echo $_SESSION["username"];
+  
 
     //$db = dbConnect();
     // The SQL statement

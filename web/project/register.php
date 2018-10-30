@@ -2,22 +2,8 @@
 
 <!---  ####### Body content begins ####### -->
 <?php session_start(); 
-if (isset($_POST["first_name"])){
-    $clientData = $_POST["first_name"];
-    $_SESSION["first_name"] += $clientData;
-}
-if (isset($_POST["last_name"])){
-    $clientData = $_POST["last_name"];
-    $_SESSION["last_name"] += $clientData;
-}
-if (isset($_POST["email"])){
-    $clientData = $_POST["email"];
-    $_SESSION["email"] += $clientData;
-}
-if (isset($_POST["username"])){
-    $clientData = $_POST["username"];
-    $_SESSION["username"] += $clientData;
-}
+$_SESSION['username']=$_POST['username'];
+echo $SESSION['username'];
 
  ?>
 <div class="jumbotron">
