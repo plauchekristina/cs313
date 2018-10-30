@@ -1,11 +1,10 @@
+<?php session_start();
+
+ ?>
 <?php include('../project/common/nav.php');?> 
 
 <!---  ####### Body content begins ####### -->
-<?php session_start(); 
-$_SESSION['test']=1;
-echo $SESSION['test'];
 
- ?>
 <div class="jumbotron">
         <div class="container text-center">
             <h1>Register</h1>
@@ -38,6 +37,13 @@ echo $SESSION['test'];
             </div>
 
             <!-- Center column -->
+
+            <?php
+// Set session variables
+$_SESSION["favcolor"] = "green";
+$_SESSION["favanimal"] = "cat";
+echo "Session variables are set.";
+?>
             <div class="col-sm-9">
 
                 <div class="row">

@@ -6,7 +6,7 @@
 require('../connection.php');
 var_dump($_POST);
 //session start
-echo $_SESSION['test'];
+$_SESSION['test']=1;
 var_dump($_SESSION);
 
 
