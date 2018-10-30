@@ -31,6 +31,12 @@
 <br><p> 
                     <?php 
                     echo "<strong>Today is:</strong> ".date("m/d/Y");?></p>
+                    <p>            <?php
+// Set session variables
+$_SESSION["favcolor"] = "green";
+$_SESSION["favanimal"] = "cat";
+echo "Session variables are set.";
+?></p>
                 </div>
 
 
@@ -38,12 +44,7 @@
 
             <!-- Center column -->
 
-            <?php
-// Set session variables
-$_SESSION["favcolor"] = "green";
-$_SESSION["favanimal"] = "cat";
-echo "Session variables are set.";
-?>
+
             <div class="col-sm-9">
 
                 <div class="row">
