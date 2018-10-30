@@ -55,10 +55,10 @@ function checkExistingEmail($email) {
   $username= htmlspecialchars($_POST ['username']);
   $user_password= htmlspecialchars($_POST ['user_password']); 
   
-  $_SESSION["first_name"]=$first_name;
-  $_SESSION["last_name"]=$first_name;
-  $_SESSION["email"]=$email;
-  $_SESSION["username"]=$username;
+  echo $_SESSION["first_name"];
+  echo $_SESSION["last_name"];
+  echo $_SESSION["email"];
+  echo $_SESSION["username"];
 
     //$db = dbConnect();
     // The SQL statement
