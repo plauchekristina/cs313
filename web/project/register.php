@@ -1,7 +1,11 @@
 <?php include('../project/common/nav.php');?> 
 
 <!---  ####### Body content begins ####### -->
-<?php session_start(); ?>
+<?php session_start(); 
+  $_SESSION["first_name"]=$first_name;
+  $_SESSION["last_name"]=$first_name;
+  $_SESSION["email"]=$email;
+  $_SESSION["username"]=$username;?>
 <div class="jumbotron">
         <div class="container text-center">
             <h1>Register</h1>
