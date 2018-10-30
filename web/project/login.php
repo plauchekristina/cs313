@@ -7,7 +7,7 @@
 
 <div class="jumbotron">
         <div class="container text-center">
-            <h1>Register</h1>
+            <h1>Login</h1>
         </div>
     </div>
     <div class="container text-center">
@@ -47,23 +47,11 @@
                         <div class="panel panel-default text-left well">
                             <div class="panel-body">
                           <!--- Form Begins-->
-                          <form action="model/accounts-model.php" method="POST">
+                          <form action="controller/accounts-controller.php" method="POST">
+                          <input type="hidden" name="action" value="login_user">
            <h2>Register</h2>
         <div class="fail-message"><p>All fields are required</p></div>
-        <div>
-                <label for="first_name">First Name</label>
-        </div>
-        <div>
-                <input name="first_name" id="first_name" type="text" <?php if (isset($first_name)) {
-                echo "value='$first_name'";} ?> required>
-        </div>
-        <div>
-                <label for="last_name">Last Name</label>
-        </div>
-        <div>
-                <input name="last_name" id="last_name" type="text" <?php if (isset($last_name)) {
-                echo "value='$last_name'";} ?> required>
-        </div>
+        
         <div>
         <label for="username">Username</label>
                 </div>
@@ -71,13 +59,7 @@
                 <input name="username" id="username" type="text" <?php if (isset($username)) {
                 echo "value='$username'";} ?> required>
         </div>
-        <div>
-                <label for="email">Email</label>
-        </div>
-        <div>
-                <input type="email" name="email" id="email" <?php if (isset($email)) {
-                echo "value='$email'";} ?> required >
-        </div>
+
         <div>
                 <label for="user_password">Password</label>
                 <p>Passwords must be at least 8 characters and contain at least 1 number, 1 capital letter, and 1 special character</p>
@@ -87,9 +69,9 @@
         </div>
         <div>
             <label>&nbsp;</label>
-            <input type="submit" name="submit" id="regbtn" value="Register" class="register">
+            <input type="submit" name="submit" id="regbtn" value="Login" class="btn-success">
             <!-- Add the action name-value pair -->
-            <input type="hidden" name="action" value="register">
+            
         </div>
                
             </form>
