@@ -31,7 +31,7 @@
 <br><p> 
                     <?php 
                     echo "<strong>Today is:</strong> ".date("m/d/Y");?></p>
-                    <?php 
+                    <?php var_dump($clientData);
 echo $_SESSION['clientData']['first_name'] ?>
                 </div>
 
@@ -50,7 +50,7 @@ echo $_SESSION['clientData']['first_name'] ?>
                           <!--- Form Begins-->
                           <form action="controller/accounts-controller.php" method="POST">
                           <input type="hidden" name="action" value="login_user">
-           <h2>Register</h2>
+           <h2>Login</h2>
         <div class="fail-message"><p>All fields are required</p></div>
         
         <div>
