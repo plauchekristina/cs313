@@ -1,7 +1,7 @@
 <?php include('../project/common/nav.php');?> 
 
 <!---  ####### Body content begins ####### -->
-
+<?php session_start(); ?>
 <div class="jumbotron">
         <div class="container text-center">
             <h1>Register</h1>
