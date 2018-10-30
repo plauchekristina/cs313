@@ -7,7 +7,7 @@ require('../connection.php');
 var_dump($_POST);
 //session start
 $userSession = $_POST["username"];
-print_r($_SESSION);
+
 
 
 /*
@@ -178,3 +178,4 @@ function checkExistingEmail($email) {
    }*/
 ?>
 <?php echo $userSession ?>
+<?php echo $clientData ?>
