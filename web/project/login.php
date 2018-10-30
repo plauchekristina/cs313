@@ -31,7 +31,8 @@
 <br><p> 
                     <?php 
                     echo "<strong>Today is:</strong> ".date("m/d/Y");?></p>
-                    
+                    <?php 
+echo $_SESSION['clientData']['first_name'] ?>
                 </div>
 
 
