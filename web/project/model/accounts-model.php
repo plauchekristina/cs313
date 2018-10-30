@@ -63,4 +63,5 @@ $userSession = $_POST["username"];
    
 ?>
 <?php echo $userSession ?>
-<?php echo $clientData ?>
+<?php $_SESSION['clientData']=$clientData;
+echo $_SESSION['clientData']['first_name'] ?>
