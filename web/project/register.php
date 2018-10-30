@@ -2,10 +2,24 @@
 
 <!---  ####### Body content begins ####### -->
 <?php session_start(); 
-  $_SESSION["first_name"]=$first_name;
-  $_SESSION["last_name"]=$first_name;
-  $_SESSION["email"]=$email;
-  $_SESSION["username"]=$username;?>
+if (isset($_POST["first_name"])){
+    $clientData = $_POST["first_name"];
+    $_SESSION["first_name"] += $clientData;
+}
+if (isset($_POST["last_name"])){
+    $clientData = $_POST["last_name"];
+    $_SESSION["last_name"] += $clientData;
+}
+if (isset($_POST["email"])){
+    $clientData = $_POST["email"];
+    $_SESSION["email"] += $clientData;
+}
+if (isset($_POST["username"])){
+    $clientData = $_POST["username"];
+    $_SESSION["username"] += $clientData;
+}
+
+ ?>
 <div class="jumbotron">
         <div class="container text-center">
             <h1>Register</h1>

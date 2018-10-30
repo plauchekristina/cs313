@@ -9,6 +9,7 @@ var_dump($_POST);
 
 var_dump($_SESSION);
 
+
 /*
 function checkEmail($email) {
     $valEmail = filter_var($email, FILTER_VALIDATE_EMAIL);
