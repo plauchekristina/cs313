@@ -45,12 +45,10 @@ $userID=$_SESSION['client']['account_id'];?>
                             <form action="model/co-op-model.php" method="POST">
 
         <div class="fail-message"><p>All fields are required</p></div>
-        <div>
-                <label for="account_id">Account ID</label>
-        </div>
-        <div>
-                <input name="account_id" id="account_id" type="text" required readonly value = "<?php echo $_SESSION['client']['account_id'];?>">
-        </div>
+       
+   
+        <input name="account_id" id="account_id" type="hidden" required value = "<?php echo $_SESSION['client']['account_id'];?>">
+   
         <div>
                 <label for="coop_name">Co-op Name</label>
         </div>

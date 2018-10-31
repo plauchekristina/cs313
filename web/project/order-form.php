@@ -109,7 +109,7 @@ $userID=$_SESSION['client']['account_id'];?>
             </div>
         </div> 
 </div>
-   
+<input name="account_id" id="account_id" type="hidden" required value = "<?php echo $_SESSION['client']['account_id'];?>">
         <div class="d-inline row">
             <div class="form-group col-sm-5">
                     <label>Item Name:</label> 
