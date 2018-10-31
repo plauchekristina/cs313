@@ -27,7 +27,8 @@ var_dump($_POST);
     // Insert the data
     try {
         $stmt->execute();
-        $_SESSION['user_id']=$userId;
+        $_SESSION['account_id']=$userId;
+        echo $userId;
         header('Location:../dashboard.php'); 
     }
        catch (Exception $e) {
