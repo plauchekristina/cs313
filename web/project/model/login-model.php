@@ -28,13 +28,12 @@ var_dump($_POST);
     // Insert the data
     try {
         $stmt->execute();
-       echo $userId;
       
     }
        catch (Exception $e) {
         echo $e;
     }
-    header('Location:../login.php');
+    header('Location:../dashboard.php');
 
 
   
