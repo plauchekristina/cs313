@@ -27,12 +27,16 @@ var_dump($_POST);
     // Insert the data
     try {
         $stmt->execute();
-        $_SESSION['user_id']=$userId;
+      
     }
        catch (Exception $e) {
         echo $e;
     }
-header('location: ../dashboard.php');
+
+    if 
+
+    $_SESSION['user_id']=$userId;
+header('Location: ../dashboard.php');
    
     
     

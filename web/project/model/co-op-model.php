@@ -37,6 +37,6 @@ var_dump($_POST);
          catch (Exception $e) {
           echo $e;
       }
-    
+      header('Location: ../dashboard.php'); 
 ?>
 
