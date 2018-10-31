@@ -36,9 +36,9 @@ var_dump($_POST);
 
 
   
-    var_dump($_SESSION);
+   print_r($_SESSION);
 
-   
-    
+    header('Location: ../dashboard.php'); 
+  
     
 ?>
