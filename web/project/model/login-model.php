@@ -8,7 +8,7 @@ var_dump($_POST);
 //session start
 //$userSession = $_POST["username"];
 
-
+/* 
   $username= htmlspecialchars($_POST ['username']);
   $user_password= htmlspecialchars($_POST ['user_password']); 
   
@@ -23,8 +23,7 @@ var_dump($_POST);
     // statement with the actual values in the variables
     // and tells the database the type of data it is
     $stmt->bindValue(':username', $username, PDO::PARAM_STR);
-    $stmt->bindValue(':user_password', $user_password, PDO::PARAM_STR);
-    $stmt->bindValue(':account_id', $userId, PDO::PARAM_STR);
+  
     // Insert the data
     try {
         $stmt->execute();
@@ -32,7 +31,7 @@ var_dump($_POST);
     }
        catch (Exception $e) {
         echo $e;
-    }
+    } */
     header('Location:../dashboard.php');
 
 
