@@ -38,7 +38,7 @@
                         <a href="/project/order-form.php">Order Form</a>
                     </li>
                     <li>
-                        <a href="/project/orders.php">Orders</a>
+                        <a href="/project/dashboard.php">Dashboard</a>
                     </li>
                     <li>
                         <a href="/project/co-op.php">Co-op</a>

@@ -28,7 +28,7 @@
                     <?php 
                     echo "<strong>Today is:</strong> ".date("m/d/Y");?></p>
                 </div>
-
+<?php var_dump($_SESSION);?>
 
             </div>
 

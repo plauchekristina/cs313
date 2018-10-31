@@ -41,7 +41,7 @@ var_dump($_POST);
         echo $e;
     }
 
-   header('location:login.php');
+   header('location:../login.php');
     // Ask how many rows changed as a result of our insert
    
    
