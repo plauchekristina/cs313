@@ -26,6 +26,7 @@ var_dump($_POST);
     // Insert the data
     try {
         $stmt->execute();
+        $account_id = $stmt->fetch(PDO::FETCH_ASSOC);
         $_SESSION['username'] = $username;
       
     }
