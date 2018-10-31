@@ -10,7 +10,9 @@
         <div class="row">
             <div class="col-sm-12 panel panel-default text-left">
                 <div  class="panel-body">
-                    <p></p>
+                    <p><?php if isset($_SESSION['username']) {
+                        echo $username;
+                        }?></p>
                    
             </div>
             </div>
