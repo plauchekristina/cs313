@@ -1,5 +1,7 @@
-<?php session_start();?>
-<?php include('../project/common/nav.php');?> 
+<?php session_start();
+$userID=$_SESSION['client']['account_id'];?>
+<?php include('../project/common/nav.php');
+?> 
 <!---  ####### Body content begins ####### -->
 <div class="jumbotron">
         <div class="container text-center">
@@ -28,7 +30,7 @@
                     <?php 
                     echo "<strong>Today is:</strong> ".date("m/d/Y");?></p>
                 </div>
-<?php echo "Username: ".$_SESSION['username']; echo $_SESSION['client']['account_id'];?>
+<?php echo "Username: ".$_SESSION['username']; echo "<br/>Id: ".$_SESSION['client']['account_id'];?>
 
             </div>
 

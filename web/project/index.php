@@ -40,10 +40,11 @@
                         <div class="panel panel-default text-left well">
                             <div class="panel-body">
                             <h2>Project Info</h2>
-                            <p>Registration, making an order (see the javascript doing the calculations) is functioning, but not login yet. 
+                            <p>Registration, making an order (see the javascript doing the calculations) is functioning, and login-sort of. Use password SUPERuser1!  username fruitbasket. 
                                 This is no little project. It is taking a long time to get everyting running.
                             </p>
 <p><a href="/project/register.php">Register</a></p>
+<p><a href="/project/login.php">Login</a></p>
                             </div>
                         </div>
                     </div>
