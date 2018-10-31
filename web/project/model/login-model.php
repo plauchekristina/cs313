@@ -16,7 +16,7 @@ var_dump($_POST);
 
     //$db = dbConnect();
     // The SQL statement
-    $sql = 'SELECT (account_id) FROM account WHERE username = :username)';
+    $sql = 'SELECT account_id FROM account WHERE username = :username';
     // Create the prepared statement using the db connection
     $stmt = $db->prepare($sql);
     // The next four lines replace the placeholders in the SQL
@@ -28,6 +28,7 @@ var_dump($_POST);
     try {
         $stmt->execute();
         $_SESSION['user_id']=$userId;
+        header('Location:../dashboard.php'); 
     }
        catch (Exception $e) {
         echo $e;
@@ -38,7 +39,7 @@ var_dump($_POST);
   
    print_r($_SESSION);
 
-    header('Location: ../dashboard.php'); 
+    
   
     
 ?>
