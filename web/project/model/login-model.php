@@ -25,7 +25,8 @@ var_dump($_POST);
     $stmt->bindValue(':username', $username, PDO::PARAM_STR);
     // Insert the data
     try {
-        $client = $stmt->execute();
+        $stmt->execute();
+        $client= $stmt->fetch();
         $_SESSION['username'] = $username;
         $_SESSION['client']=$client;
       
