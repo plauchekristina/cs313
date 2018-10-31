@@ -10,9 +10,7 @@
         <div class="row">
             <div class="col-sm-12 panel panel-default text-left">
                 <div  class="panel-body">
-                    <p><?php if isset($_SESSION['username']) {
-                        echo $username;
-                        }?></p>
+                    <p></p>
                    
             </div>
             </div>
@@ -30,7 +28,7 @@
                     <?php 
                     echo "<strong>Today is:</strong> ".date("m/d/Y");?></p>
                 </div>
-<?php var_dump($_SESSION);?>
+<?php var_dump($_SESSION); echo $_SESSION['username'];?>
 
             </div>
 
