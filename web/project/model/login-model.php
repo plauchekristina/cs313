@@ -24,21 +24,21 @@ var_dump($_POST);
     // and tells the database the type of data it is
     $stmt->bindValue(':username', $username, PDO::PARAM_STR);
     $stmt->bindValue(':user_password', $user_password, PDO::PARAM_STR);
+    $stmt->bindValue(':account_id', $userId, PDO::PARAM_STR);
     // Insert the data
     try {
         $stmt->execute();
-        $_SESSION['account_id']=$userId;
-        echo $userId;
-        header('Location:../dashboard.php'); 
+       echo $userId;
+      
     }
        catch (Exception $e) {
         echo $e;
     }
-
+    header('Location:../login.php');
 
 
   
-   print_r($_SESSION);
+
 
     
   
