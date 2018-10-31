@@ -8,13 +8,13 @@ var_dump($_POST);
 //session start
 //$userSession = $_POST["username"];
 
-/* 
+
   $username= htmlspecialchars($_POST ['username']);
   $user_password= htmlspecialchars($_POST ['user_password']); 
   
-  
 
-    //$db = dbConnect();
+
+/*     //$db = dbConnect();
     // The SQL statement
     $sql = 'SELECT account_id FROM account WHERE username = :username';
     // Create the prepared statement using the db connection
