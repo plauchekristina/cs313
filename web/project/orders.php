@@ -1,3 +1,4 @@
+<?php session_start();?>
 <?php include('../project/common/nav.php');?> 
 <!---  ####### Body content begins ####### -->
 <div class="jumbotron">

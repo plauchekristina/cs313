@@ -1,6 +1,4 @@
-<?php session_start();
-
- ?>
+<?php session_start();?>
 <?php include('../project/common/nav.php');?> 
 
 <!---  ####### Body content begins ####### -->
@@ -31,8 +29,7 @@
 <br><p> 
                     <?php 
                     echo "<strong>Today is:</strong> ".date("m/d/Y");?></p>
-                    <?php var_dump($clientData);
-echo $_SESSION['clientData']['first_name'] ?>
+                  
                 </div>
 
 
@@ -48,8 +45,8 @@ echo $_SESSION['clientData']['first_name'] ?>
                         <div class="panel panel-default text-left well">
                             <div class="panel-body">
                           <!--- Form Begins-->
-                          <form action="controller/accounts-controller.php" method="POST">
-                          <input type="hidden" name="action" value="login_user">
+                          <form action="model/login-model.php" method="POST">
+                          
            <h2>Login</h2>
         <div class="fail-message"><p>All fields are required</p></div>
         
