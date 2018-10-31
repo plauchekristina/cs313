@@ -27,15 +27,15 @@ var_dump($_POST);
     // Insert the data
     try {
         $stmt->execute();
-      
+        $_SESSION['user_id']=$userId;
     }
        catch (Exception $e) {
         echo $e;
     }
 
-    if 
 
-    $_SESSION['user_id']=$userId;
+
+  
     var_dump($_SESSION);
 
    
