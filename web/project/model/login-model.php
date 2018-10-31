@@ -28,7 +28,7 @@ var_dump($_POST);
     try {
         $stmt->execute();
         $_SESSION['username'] = $username;
-        $_SESSION['account_id'] = $account_id;
+      
     }
        catch (Exception $e) {
         echo $e;
