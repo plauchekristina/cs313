@@ -23,7 +23,6 @@ var_dump($_POST);
     // statement with the actual values in the variables
     // and tells the database the type of data it is
     $stmt->bindValue(':username', $username, PDO::PARAM_STR);
-    $stmt->bindValue(':account_id', $account_id, PDO::PARAM_STR);
     // Insert the data
     try {
         $stmt->execute();
