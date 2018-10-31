@@ -14,7 +14,7 @@ var_dump($_POST);
   
 
 
-/*     //$db = dbConnect();
+    //$db = dbConnect();
     // The SQL statement
     $sql = 'SELECT account_id FROM account WHERE username = :username';
     // Create the prepared statement using the db connection
@@ -31,7 +31,7 @@ var_dump($_POST);
     }
        catch (Exception $e) {
         echo $e;
-    } */
+    }
     header('Location:../dashboard.php');
 
 
