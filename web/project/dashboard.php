@@ -28,7 +28,7 @@
                     <?php 
                     echo "<strong>Today is:</strong> ".date("m/d/Y");?></p>
                 </div>
-<?php echo "Username: ".$_SESSION['username'] echo $_SESSION['client']['account_id'];?>
+<?php echo "Username: ".$_SESSION['username']; echo $_SESSION['client']['account_id'];?>
 
             </div>
 
