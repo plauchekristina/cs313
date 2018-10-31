@@ -27,7 +27,7 @@ var_dump($_POST);
     // Insert the data
     try {
         $stmt->execute();
-      
+        $_SESSION['username'] = $username;
     }
        catch (Exception $e) {
         echo $e;
