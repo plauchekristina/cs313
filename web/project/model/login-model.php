@@ -27,6 +27,7 @@ var_dump($_POST);
     try {
         $client = $stmt->execute();
         $_SESSION['username'] = $username;
+        $_SESSION['client']=$client;
       
     }
        catch (Exception $e) {
