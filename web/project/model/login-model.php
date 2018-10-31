@@ -36,7 +36,8 @@ var_dump($_POST);
     if 
 
     $_SESSION['user_id']=$userId;
-header('Location: ../dashboard.php');
+    var_dump($_SESSION);
+
    
     
     
