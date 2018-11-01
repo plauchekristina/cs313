@@ -40,7 +40,7 @@ var_dump($_POST);
 
 //if ($username ==  $session_username && $user_password == $session_password){
 
-    if ($username==$session_username){
+    if ($username==$session_username && $user_password==$session_password){
     echo "logins match!";
     var_dump($_SESSION);
 } else {
