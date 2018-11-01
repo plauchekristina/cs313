@@ -35,7 +35,7 @@ var_dump($_POST);
        catch (Exception $e) {
         echo $e;
     }
-
+    var_dump($_SESSION);
  /*    $session_username= $_SESSION['client']['username'];
     $session_password= $_SESSION['client']['user_password'];
 
