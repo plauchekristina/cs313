@@ -46,7 +46,7 @@ var_dump($_POST);
     var_dump($_SESSION);
 }
 
-//header('Location:../dashboard.php');
+header('Location:../dashboard.php');
 
  
 
