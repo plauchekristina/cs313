@@ -35,13 +35,13 @@ var_dump($_POST);
         echo $e;
     }
 
-if $username = $_SESSION['client']['username'] && $user_password = $_SESSION['client']['user_password']{
+/* if $username = $_SESSION['client']['username'] && $user_password = $_SESSION['client']['user_password']{
     echo "logins match!";
     var_dump($_SESSION);
 } else {
     echo "BAMP, wrong! login doesn't match";
     var_dump($_SESSION);
-}
+} */
 
 
 
