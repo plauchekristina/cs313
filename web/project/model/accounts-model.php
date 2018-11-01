@@ -16,7 +16,7 @@ var_dump($_POST);
   $email= htmlspecialchars($_POST ['email']);
   $username= htmlspecialchars($_POST ['username']);
   $user_password= htmlspecialchars($_POST ['user_password']); 
-  
+  $hashedPassword = password_hash($user_password, PASSWORD_DEFAULT);
   
 
     //$db = dbConnect();

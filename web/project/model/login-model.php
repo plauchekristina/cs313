@@ -11,7 +11,7 @@ var_dump($_POST);
 
   $username= htmlspecialchars($_POST ['username']);
   $user_password= htmlspecialchars($_POST ['user_password']); 
-  
+
 
 
     //$db = dbConnect();
@@ -35,17 +35,22 @@ var_dump($_POST);
         echo $e;
     }
 
-/* if $username = $_SESSION['client']['username'] && $user_password = $_SESSION['client']['user_password']{
+    $session_username= $_SESSION['client']['username'];
+    $session_password= $_SESSION['client']['user_password'];
+
+//if ($username ==  $session_username && $user_password == $session_password){
+
+    if ($username==$session_username){
     echo "logins match!";
     var_dump($_SESSION);
 } else {
     echo "BAMP, wrong! login doesn't match";
     var_dump($_SESSION);
-} */
+}
 
+header('Location:../dashboard.php');
 
-
-   // header('Location:../dashboard.php');
+ 
 
 
   
