@@ -35,7 +35,7 @@ var_dump($_POST);
         echo $e;
     }
 
- /*    $session_username= $_SESSION['client']['username'];
+    $session_username= $_SESSION['client']['username'];
     $session_password= $_SESSION['client']['user_password'];
 
     if ($username==$session_username && $user_password==$session_password){
@@ -44,9 +44,9 @@ var_dump($_POST);
 } else {
     echo "BAMP, wrong! login doesn't match";
     var_dump($_SESSION);
-} */
+}
 
-header('Location:../dashboard.php');
+//header('Location:../dashboard.php');
 
  
 
