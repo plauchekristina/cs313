@@ -16,14 +16,13 @@ var_dump($_POST);
 
     //$db = dbConnect();
     // The SQL statement
-    $sql = 'SELECT * FROM account WHERE username = :username AND user_password = :user_password';
+    $sql = 'SELECT * FROM account WHERE username = :username';
     // Create the prepared statement using the db connection
     $stmt = $db->prepare($sql);
     // The next four lines replace the placeholders in the SQL
     // statement with the actual values in the variables
     // and tells the database the type of data it is
     $stmt->bindValue(':username', $username, PDO::PARAM_STR);
-    $stmt->bindValue(':password', $user_password, PDO::PARAM_STR);
     // Insert the data
     try {
         $stmt->execute();
@@ -35,7 +34,7 @@ var_dump($_POST);
        catch (Exception $e) {
         echo $e;
     }
-    var_dump($_SESSION);
+
  /*    $session_username= $_SESSION['client']['username'];
     $session_password= $_SESSION['client']['user_password'];
 
