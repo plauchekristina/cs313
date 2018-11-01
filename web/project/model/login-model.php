@@ -40,13 +40,13 @@ var_dump($_POST);
 
     if ($username==$session_username && $user_password==$session_password){
     echo "logins match!";
-    var_dump($_SESSION);
+    header('Location:../dashboard.php');
 } else {
     echo "BAMP, wrong! login doesn't match";
     var_dump($_SESSION);
 }
 
-header('Location:../dashboard.php');
+
 
  
 
