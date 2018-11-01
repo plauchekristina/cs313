@@ -34,7 +34,18 @@ var_dump($_POST);
        catch (Exception $e) {
         echo $e;
     }
-    header('Location:../dashboard.php');
+
+if $username = $_SESSION['client']['username'] && $user_password = $_SESSION['client']['user_password']{
+    echo "logins match!";
+    var_dump($_SESSION);
+} else {
+    echo "BAMP, wrong! login doesn't match";
+    var_dump($_SESSION);
+}
+
+
+
+   // header('Location:../dashboard.php');
 
 
   
