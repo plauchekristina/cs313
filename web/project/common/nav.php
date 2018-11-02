@@ -58,9 +58,9 @@
                     </div>
                 </form>
                 <ul class="nav navbar-nav navbar-right">
-                    <li><?php echo "Welcome, ".$_SESSION['client']['first_name'];?>
+                    <li>
                         <a href="/project/account.php">
-                            <span class="glyphicon glyphicon-user"></span> My Account</a>
+                            <span class="glyphicon glyphicon-user"></span><?php if(isset($_SESSION['client'])){echo "Welcome, ".$_SESSION['client']['first_name'];}?> My Account</a>
                     </li>
                 </ul>
             </div>
