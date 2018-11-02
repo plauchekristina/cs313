@@ -1,5 +1,5 @@
 <?php session_start();
-$userID=$_SESSION['client']['account_id'];?>
+$userId=$_SESSION['client']['account_id'];?>
 <?php include('../project/common/nav.php');?>
 
 <!---  ####### Body content begins ####### -->
@@ -20,6 +20,8 @@ $userID=$_SESSION['client']['account_id'];?>
         </h3>
         <p><strong>Order Budget: </strong><span id="target-total"></span></p>
         <form action = "model/orders-model.php" method ="post">
+        <input name="account_id" id="account_id" type="hidden"  value = "<?php echo $userId?>">
+        <input name="coop_id" id="coop_id" type="hidden" value = "2">
         <div class="thumbnail text-left">
             <h4>Full Portions</h4>
           <div class="d-inline row">
@@ -109,7 +111,7 @@ $userID=$_SESSION['client']['account_id'];?>
             </div>
         </div> 
 </div>
-<input name="account_id" id="account_id" type="hidden" required value = "<?php echo $_SESSION['client']['account_id'];?>">
+<input name="account_id" id="account_id" type="hidden"  value = "<?php echo $_SESSION['client']['account_id'];?>">
         <div class="d-inline row">
             <div class="form-group col-sm-5">
                     <label>Item Name:</label> 
@@ -178,7 +180,8 @@ $userID=$_SESSION['client']['account_id'];?>
 
     
 </div>
-
+</div>
+</div>
 
  <script src ="../project/scripts/order-quantities.js"></script>    
        

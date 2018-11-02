@@ -39,22 +39,12 @@ var_dump($_POST);
     $session_password= $_SESSION['client']['user_password'];
 
     if ($username==$session_username && $user_password==$session_password){
-    echo "logins match!";
     header('Location:../dashboard.php');
 } else {
-    echo "BAMP, wrong! login doesn't match";
-    var_dump($_SESSION);
+    $_SESSION['message']=$message;
+    $message = "Your username and password didn't match. Please try again.";
+    header('Location:../login.php');
 }
 
-
-
- 
-
-
-  
-
-
-    
-  
     
 ?>

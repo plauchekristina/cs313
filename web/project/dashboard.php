@@ -23,14 +23,14 @@ $userID=$_SESSION['client']['account_id'];?>
             <div class="col-sm-3 well">
                 <div class="well">
                     <h2>
-                        <a href="#">Date</a>
+                        <?php echo "Welcome, ".$_SESSION['first_name'];?>
 </h2>
                     
 <br><p> 
                     <?php 
                     echo "<strong>Today is:</strong> ".date("m/d/Y");?></p>
                 </div>
-<?php echo "Username: ".$_SESSION['username']; echo "<br/>Id: ".$_SESSION['client']['account_id'];?>
+<?php  echo "<br/>Id: ".$_SESSION['client']['account_id'];?>
 
             </div>
 
