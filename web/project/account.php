@@ -47,7 +47,15 @@
                                 <li>Username: <?php echo $_SESSION['client']['username'];?></li>
                             </ul>
 <p><a href="#">Update</a></p>
-                          
+<h2>Co-Op Info:</h2>
+                            <ul>
+                                <li>Co-op Name: <?php echo $_SESSION['coop']['coop_name'];?></li>
+                                <li>Contact Name: <?php echo $_SESSION['coop']['coop_contact_name'];?></li>
+                                <li>Contact Email: <?php echo $_SESSION['coop']['coop_email'];?> </li>
+                                <li>Full Budget: <?php echo $_SESSION['coop']['coop_full_budget'];?></li>
+                                <li>Half Budget: <?php echo $_SESSION['coop']['coop_half_budget'];?></li>
+                            </ul>
+<p><a href="#">Update</a></p>
 <!-- <ul>
 <! <?php
 /* require('connection.php');
