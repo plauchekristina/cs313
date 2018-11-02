@@ -1,5 +1,7 @@
 <?php session_start();
-$userID=$_SESSION['client']['account_id'];?>
+if (!isset($_SESSION['client'])){
+    header('Location:login.php');
+}?>
 <?php include('../project/common/nav.php');?> 
 <!---  ####### Body content begins ####### -->
 <div class="jumbotron">

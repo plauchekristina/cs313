@@ -41,7 +41,7 @@
                         <a href="/project/dashboard.php">Dashboard</a>
                     </li>
                     <li>
-                        <a href="/project/co-op.php">Co-op</a>
+                        <a href="/project/logout.php">Logout</a>
                     </li>
                 
                 </ul>
