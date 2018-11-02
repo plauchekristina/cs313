@@ -60,10 +60,12 @@ try {
 
     if ($username==$session_username && $user_password==$session_password){
     header('Location:../dashboard.php');
+    die();
 } else {
     $_SESSION['message']=$message;
     $message = "Your username and password didn't match. Please try again.";
     header('Location:../login.php');
+    die();
 }
 
     

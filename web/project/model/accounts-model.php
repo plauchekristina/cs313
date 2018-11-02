@@ -46,17 +46,5 @@ var_dump($_POST);
     // Ask how many rows changed as a result of our insert
    
    
-   
-   // Get client data based on an username
- 
-    //$sql = 'SELECT *  FROM account WHERE username = :username';
-   // $stmt = $db->prepare($sql);
-   // $stmt->bindValue(':username', $username, PDO::PARAM_STR);
-   // $stmt->execute();
-   // $clientData = $stmt->fetchAll(PDO::FETCH_ASSOC);
-   // var_dump($clientData);
-   //php echo $userSession
-   //php $_SESSION['clientData']=$clientData;
-   //echo "clientData begins: " .$clientData 
     
 ?>

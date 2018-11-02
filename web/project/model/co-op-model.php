@@ -40,5 +40,6 @@ var_dump($_POST);
           echo $e;
       }
       header('Location: ../dashboard.php'); 
+      die();
 ?>
 
