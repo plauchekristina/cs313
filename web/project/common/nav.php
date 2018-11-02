@@ -56,7 +56,7 @@
                     </div>
                 </form>
                 <ul class="nav navbar-nav navbar-right">
-                    <li>
+                    <li><?php echo "Welcome, ".$_SESSION['client']['first_name'];?>
                         <a href="/project/account.php">
                             <span class="glyphicon glyphicon-user"></span> My Account</a>
                     </li>
