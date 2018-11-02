@@ -168,7 +168,7 @@ $_SESSION['coop_data'];?>
         <div class="form-group col-sm-2">
                         <label>Order Total:</label> 
                 <div> 
-                    <input type="number" name="grand-total" id="grand-total" onchange="orderQuantities()">
+                    <input type="number" name="grand-total" id="grand-total" >
                 </div>
             </div> 
         <input type="submit" name="submit" id="regbtn" value="Save" class="btn-success">     
