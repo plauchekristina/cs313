@@ -15,13 +15,14 @@ function orderQuantities() {
     var itemTotal = itemQuantity * itemPrice;
     var targetTotal = (fullCount * fullBudget) + (halfCount * halfBudget);
     var amountLeft = targetTotal - itemTotal;
+    var grandTotal = itemQuantity * itemPrice * 1.05;
 
     //Display the quantity to order to the user
     document.getElementById('item-quantity').value = itemQuantity;
     document.getElementById('item-total').value = itemTotal.toFixed(2);
     document.getElementById('target-total').innerHTML = "$" + targetTotal.toFixed(2);
     document.getElementById('over-under').innerHTML = "$" + amountLeft.toFixed(2);
-    document.getElementById('grand-total').value = itemTotal.toFixed(2);
+    document.getElementById('grand-total').value = grandTotal.toFixed(2);
 
 
 
