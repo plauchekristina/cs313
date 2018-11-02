@@ -35,7 +35,7 @@ $_SESSION['coop_data'];?>
                 <div class="form-group col-sm-6">
                     <label>Budget Per:</label> 
                     <div> 
-                    <input type="number" name="full-budget" id="full-budget" size="10" value ="10" readonly  value = "<?php echo $_SESSION['coop_data']['coop_full_budget'];?>">
+                    <input type="number" name="full-budget" id="full-budget" size="10" readonly  value = "<?php echo $_SESSION['coop_data']['coop_full_budget'];?>">
                     </div>
                 </div>
 </div>
