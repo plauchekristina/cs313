@@ -1,4 +1,7 @@
-<?php session_start();?>
+<?php session_start();
+if (!isset($_SESSION['client'])){
+    header('Location:login.php');
+}?>
 <?php include('../project/common/nav.php');?> 
 <!---  ####### Body content begins ####### -->
 <div class="jumbotron">

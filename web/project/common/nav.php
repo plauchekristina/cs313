@@ -40,9 +40,11 @@
                     <li>
                         <a href="/project/dashboard.php">Dashboard</a>
                     </li>
-                    <li>
-                        <a href="/project/logout.php">Logout</a>
-                    </li>
+                   
+                    <?if (!isset($_SESSION['client'])){echo "<li><a href='/project/logout.php'>Logout</a></li>";}
+                    else{echo"<li><a href='/project/login.php'>Login</a></li>";}?>
+
+                    
                 
                 </ul>
                 <form class="navbar-form navbar-right" role="search">
