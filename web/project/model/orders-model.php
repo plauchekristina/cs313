@@ -7,7 +7,30 @@ var_dump($_POST);
 var_dump($_SESSION);
 
 $account_id=htmlspecialchars($_POST ['account_id']);
-$coop_id=htmlspecialchars($_POST ['coop_id']);
+
+
+// The SQL statement
+$sql = 'SELECT coop_id FROM coop WHERE account_id = :coop_user_id';
+// Create the prepared statement using the db connection
+$stmt = $db->prepare($sql);
+// The next four lines replace the placeholders in the SQL
+// statement with the actual values in the variables
+// and tells the database the type of data it is
+$stmt->bindValue(':coop_user_id', $account_id, PDO::PARAM_STR);
+// Insert the data
+try {
+    $stmt->execute();
+    $coop_id= $stmt->fetch();
+    $_SESSION['coop_id'] = $coop_id; 
+}
+   catch (Exception $e) {
+    echo $e;
+}
+
+
+
+
+
 $orders_total=($_POST ['orders-total']);
 $orders_full_qty=($_POST ['full-count']);
 $orders_full_budget=($_POST ['full-budget']);
