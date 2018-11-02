@@ -35,8 +35,8 @@ $item_order_cost=($_POST ['item-total']);
       // The next lines replace the placeholders in the SQL
       // statement with the actual values in the variables
       // and tells the database the type of data it is
-      $stmt->bindValue(':orders_account_id', $orders_account_id, PDO::PARAM_INT);
-      $stmt->bindValue(':orders_coop_id', $orders_coop_id, PDO::PARAM_INT);
+      $stmt->bindValue(':orders_account_id', $account_id, PDO::PARAM_INT);
+      $stmt->bindValue(':orders_coop_id', $coop_id, PDO::PARAM_INT);
       $stmt->bindValue(':orders_total', $orders_total, PDO::PARAM_INT);
       $stmt->bindValue(':orders_full_qty', $orders_full_qty, PDO::PARAM_INT);
       $stmt->bindValue(':orders_half_qty', $orders_half_qty, PDO::PARAM_INT);

@@ -23,7 +23,7 @@ $userID=$_SESSION['client']['account_id'];?>
             <div class="col-sm-3 well">
                 <div class="well">
                     <h2>
-                        <?php echo "Welcome, ".$_SESSION['first_name'];?>
+                        <?php echo "Welcome, ".$_SESSION['client']['first_name'];?>
 </h2>
                     
 <br><p> 
