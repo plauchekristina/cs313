@@ -34,7 +34,7 @@ var_dump($_POST);
        catch (Exception $e) {
         echo $e;
     }
-
+///get coop data as array
 $account_id= $_SESSION['client']['account_id'];
 
     // The SQL statement for pulling the co-op data to save to the session
@@ -54,11 +54,12 @@ try {
    catch (Exception $e) {
     echo $e;
 }
-
+//getting logged in part
     $session_username= $_SESSION['client']['username'];
     $session_password= $_SESSION['client']['user_password'];
 
-    if ($username==$session_username && $user_password==$session_password){
+    if ( password_verify($user_password, $session_password)){
+        $_SESSION['client']['user_password']=NULL;
     header('Location:../dashboard.php');
     die();
 } else {
