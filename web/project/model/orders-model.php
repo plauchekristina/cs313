@@ -104,6 +104,6 @@ $item_order_cost=($_POST ['item-total']);
       echo $e;
   }
 
- header('Location:../dashboard.php');
- die();
+ //header('Location:../dashboard.php');
+ //die();
 ?>
