@@ -46,7 +46,12 @@ $account_id=$_SESSION['client']['account_id'];?>
                             require('connection.php');
                                 foreach ($db->query('SELECT * FROM orders') as $row)
                                     {
-                                      echo "<li><b>Order #: </b>" . $row['orders_id'] . "<p>View</p></b> ";
+                                        if ($row['orders_id']=$account_id){
+                                            echo "<li><b>Order #: </b>" . $row['orders_id'] . "<a href='#'>View</a></li> ";
+                                        } else {
+                                            echo "<p>No orders could be found</p>";
+                                        }
+                                     
                             
                                 }
                               ?>
