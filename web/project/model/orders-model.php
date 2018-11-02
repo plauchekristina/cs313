@@ -10,13 +10,13 @@ $account_id=htmlspecialchars($_POST ['account_id']);
 
 
 // The SQL statement
-$sql = 'SELECT coop_id FROM coop WHERE account_id = :coop_user_id';
+$sql = 'SELECT coop_id FROM coop WHERE coop_user_id = :account_id';
 // Create the prepared statement using the db connection
 $stmt = $db->prepare($sql);
 // The next four lines replace the placeholders in the SQL
 // statement with the actual values in the variables
 // and tells the database the type of data it is
-$stmt->bindValue(':coop_user_id', $account_id, PDO::PARAM_STR);
+$stmt->bindValue(':account_id', $account_id, PDO::PARAM_STR);
 // Insert the data
 try {
     $stmt->execute();
