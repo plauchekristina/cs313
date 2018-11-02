@@ -71,14 +71,15 @@ $_SESSION['coop'];?>
                     <div class="panel-body">
                         <div class="form-header">
                         <div class="input-group-lg">
-                                <input class="form-control input-lg" type="text" id="co-op-name" >  
+                                <input class="form-control input-lg" type="text" id="co-op-name" value="<?php echo $_SESSION['coop']['coop_name'];?>">  
                         </div>
                         
                               
                               
                                 <div>
                                     <label>Date:</label>                                           
-                                    <input type="date" name="order-date" id="order-date" >
+                                    <input type="text" name="order-date" id="order-date" value ="<?php 
+                    echo "<strong>Today is:</strong> ".date("m/d/Y");?>">
                                 </div>
                                
                     
