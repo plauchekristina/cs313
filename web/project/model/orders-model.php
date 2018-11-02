@@ -16,7 +16,7 @@ $stmt = $db->prepare($sql);
 // The next four lines replace the placeholders in the SQL
 // statement with the actual values in the variables
 // and tells the database the type of data it is
-$stmt->bindValue(':account_id', $account_id, PDO::PARAM_STR);
+$stmt->bindValue(':account_id', $account_id, PDO::PARAM_INT);
 // Insert the data
 try {
     $stmt->execute();
@@ -103,5 +103,5 @@ $item_order_cost=($_POST ['item-total']);
       echo $e;
   }
 
-  
+ // header('Location:../dashboard.php');
 ?>
