@@ -1,6 +1,5 @@
 <?php session_start();
-$userId=$_SESSION['client']['account_id'];
-require('../connection.php');?>
+$userId=$_SESSION['client']['account_id'];?>
 <?php include('../project/common/nav.php');?>
 
 <!---  ####### Body content begins ####### -->
