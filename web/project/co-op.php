@@ -47,7 +47,7 @@ $userID=$_SESSION['client']['account_id'];?>
         <div class="fail-message"><p>All fields are required</p></div>
        
    
-        <input name="account_id" id="account_id" type="hidden" required value = "<?php echo $_SESSION['client']['account_id'];?>">
+        <input name="account_id" id="account_id" type="hidden"  value = "<?php echo $_SESSION['client']['account_id'];?>">
    
         <div>
                 <label for="coop_name">Co-op Name</label>

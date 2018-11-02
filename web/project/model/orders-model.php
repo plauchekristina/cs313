@@ -6,7 +6,8 @@ require('../connection.php');
 var_dump($_POST);
 var_dump($_SESSION);
 
-$orders_account_id=htmlspecialchars($_POST ['account_id']);
+$account_id=htmlspecialchars($_POST ['account_id']);
+$coop_id=htmlspecialchars($_POST ['coop_id']);
 $orders_total=($_POST ['orders-total']);
 $orders_full_qty=($_POST ['full-count']);
 $orders_full_budget=($_POST ['full-budget']);
@@ -27,14 +28,15 @@ $item_order_cost=($_POST ['item-total']);
   
 
       // The SQL statement
-      $sql = 'INSERT INTO orders (orders_account_id, orders_total, orders_full_qty, orders_half_qty, orders_full_budget, orders_half_budget, orders_date)
-          VALUES (:orders_account_id, :orders_total, :orders_full_qty, :orders_half_qty, :orders_full_budget, :orders_half_budget, :orders_date)';
+      $sql = 'INSERT INTO orders (orders_account_id, orders_coop_id, orders_total, orders_full_qty, orders_half_qty, orders_full_budget, orders_half_budget, orders_date)
+          VALUES (:orders_account_id, :orders_coop_id, :orders_total, :orders_full_qty, :orders_half_qty, :orders_full_budget, :orders_half_budget, :orders_date)';
       // Create the prepared statement using the db connection
       $stmt = $db->prepare($sql);
       // The next lines replace the placeholders in the SQL
       // statement with the actual values in the variables
       // and tells the database the type of data it is
       $stmt->bindValue(':orders_account_id', $orders_account_id, PDO::PARAM_INT);
+      $stmt->bindValue(':orders_coop_id', $orders_coop_id, PDO::PARAM_INT);
       $stmt->bindValue(':orders_total', $orders_total, PDO::PARAM_INT);
       $stmt->bindValue(':orders_full_qty', $orders_full_qty, PDO::PARAM_INT);
       $stmt->bindValue(':orders_half_qty', $orders_half_qty, PDO::PARAM_INT);
