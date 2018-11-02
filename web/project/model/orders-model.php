@@ -20,8 +20,9 @@ $stmt->bindValue(':account_id', $account_id, PDO::PARAM_INT);
 // Insert the data
 try {
     $stmt->execute();
-    $coop_id= $stmt->fetch();
-    $_SESSION['coop_id'] = $coop_id; 
+    $coop_data= $stmt->fetch();
+    $_SESSION['coop'] = $coop_data;
+    $coop_id= $_SESSION['coop']['coop_id']; 
 }
    catch (Exception $e) {
     echo $e;
