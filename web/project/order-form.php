@@ -35,7 +35,7 @@ $_SESSION['coop_data'];?>
                 <div class="form-group col-sm-6">
                     <label>Budget Per:</label> 
                     <div> 
-                    <input type="number" name="full-budget" id="full-budget" size="10" readonly  value = "<?php echo $_SESSION['coop_data']['coop_full_budget'];?>">
+                    <input type="number" name="full-budget" id="full-budget" size="10" readonly  value = "10">
                     </div>
                 </div>
 </div>
@@ -168,7 +168,7 @@ $_SESSION['coop_data'];?>
         <div class="form-group col-sm-2">
                         <label>Order Total:</label> 
                 <div> 
-                    <input type="number" name="orders-total" id="orders-total" onchange="orderQuantities()" value ="500">
+                    <input type="number" name="grand-total" id="grand-total" onchange="orderQuantities()">
                 </div>
             </div> 
         <input type="submit" name="submit" id="regbtn" value="Save" class="btn-success">     

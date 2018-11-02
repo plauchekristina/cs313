@@ -21,7 +21,7 @@ function orderQuantities() {
     document.getElementById('item-total').value = itemTotal.toFixed(2);
     document.getElementById('target-total').innerHTML = "$" + targetTotal.toFixed(2);
     document.getElementById('over-under').innerHTML = "$" + amountLeft.toFixed(2);
-    document.getElementById('orders-total').value = itemTotal.toFixed(2);
+    document.getElementById('grand-total').value = itemTotal.toFixed(2);
 
 
 
