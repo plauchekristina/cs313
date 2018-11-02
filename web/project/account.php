@@ -39,18 +39,18 @@
                     <div class="col-sm-12">
                         <div class="panel panel-default text-left well">
                             <div class="panel-body">
-                            <p>Info goes here:</p>
+                            <h2>Account Info:</h2>
                             <ul>
                                 <li>First Name: <?php echo $_SESSION['client']['first_name'];?></li>
                                 <li>Last Name: <?php echo $_SESSION['client']['last_name'];?></li>
                                 <li>Email: <?php echo $_SESSION['client']['email'];?> </li>
                                 <li>Username: <?php echo $_SESSION['client']['username'];?></li>
-                                <li>Password</li>
                             </ul>
-                            <h2>Account List</h2>
-<ul>
-<?php
-require('connection.php');
+<p><a href="#">Update</a></p>
+                          
+<!-- <ul>
+<! <?php
+/* require('connection.php');
 	foreach ($db->query('SELECT first_name, last_name, username, email FROM account') as $row)
 		{
 		  echo "<li><b>Username: </b>" . $row['username'] . "<ul><li><b>Name:</b> ";
@@ -58,9 +58,9 @@ require('connection.php');
 		  echo " " . $row['last_name'] . " </li>";
 		  echo "<li><b>Email:</b>" . $row['email'] . "</li></ul>";
 		  echo '</li>';
-    }
-  ?>
-  </ul>   
+    } */
+  ?> 
+  </ul>  -->
                             </div>
                         </div>
                     </div>
