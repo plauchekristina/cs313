@@ -1,5 +1,6 @@
 <?php session_start();
-$userId=$_SESSION['client']['account_id'];?>
+$userId=$_SESSION['client']['account_id'];
+$_SESSION['coop_data'];?>
 <?php include('../project/common/nav.php');?>
 
 <!---  ####### Body content begins ####### -->
@@ -34,7 +35,7 @@ $userId=$_SESSION['client']['account_id'];?>
                 <div class="form-group col-sm-6">
                     <label>Budget Per:</label> 
                     <div> 
-                    <input type="number" name="full-budget" id="full-budget" size="10" value ="10" readonly  aria-label="enter budget per full portion">
+                    <input type="number" name="full-budget" id="full-budget" size="10" value ="10" readonly  value = "<?php echo $_SESSION['coop_data']['coop_full_budget'];?>">
                     </div>
                 </div>
 </div>
@@ -52,7 +53,7 @@ $userId=$_SESSION['client']['account_id'];?>
                 <div class="form-group col-sm-6">
                     <label>Budget Per:</label> 
                     <div> 
-            <input type="number" name="half-budget" id="half-budget" size="10" value = "5" readonly aria-label="enter budget per half portion">
+            <input type="number" name="half-budget" id="half-budget" size="10" value = "6" readonly aria-label="enter budget per half portion">
             </div>
                 </div>    
 </div>
