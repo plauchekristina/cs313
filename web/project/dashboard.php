@@ -44,7 +44,7 @@ $account_id=$_SESSION['client']['account_id'];?>
                             <p>Past orders:</p>
                             <?php
                             require('connection.php');
-                                foreach ($db->query('SELECT * FROM orders WHERE orders_account_id = :account_id') as $row)
+                                foreach ($db->query('SELECT * FROM orders') as $row)
                                     {
                                         if ($row['orders_account_id']=$account_id){
                                             echo "<li><b>Order #: </b>" . $row['orders_id'] . "<a href='#'> Edit</a></li> ";
