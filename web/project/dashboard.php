@@ -1,5 +1,5 @@
 <?php session_start();
-$userID=$_SESSION['client']['account_id'];?>
+$account_id=$_SESSION['client']['account_id'];?>
 <?php include('../project/common/nav.php');
 ?> 
 <!---  ####### Body content begins ####### -->
@@ -41,14 +41,15 @@ $userID=$_SESSION['client']['account_id'];?>
                     <div class="col-sm-12">
                         <div class="panel panel-default text-left well">
                             <div class="panel-body">
-                            <p>List of Past orders goes here:</p>
-                            <ul>
-                                <li>Order 1</li>
-                                <li>Order 2</li>
-                                <li>Order 3</li>
-                                <li>Order 4</li>
-                                <li>Order 5</li>
-                            </ul>
+                            <p>Past orders:</p>
+                            <?php
+                            require('connection.php');
+                                foreach ($db->query('SELECT order_id FROM orders WHERE orders_id = :account_id') as $row)
+                                    {
+                                      echo "<li><b>Order #: </b>" . $row['order_id'] . "<p>View</p></b> ";
+                            
+                                }
+                              ?>
 
                             </div>
                         </div>

@@ -1,6 +1,6 @@
 <?php session_start();
 $userId=$_SESSION['client']['account_id'];
-$_SESSION['coop_data'];?>
+$_SESSION['coop'];?>
 <?php include('../project/common/nav.php');?>
 
 <!---  ####### Body content begins ####### -->
@@ -20,6 +20,7 @@ $_SESSION['coop_data'];?>
               Order Data
         </h3>
         <p><strong>Order Budget: </strong><span id="target-total"></span></p>
+        <p><?php echo $_SESSION['coop'];?></p>
         <form action = "model/orders-model.php" method ="post">
         <input name="account_id" id="account_id" type="hidden" value = "<?php echo $_SESSION['client']['account_id'];?>">
         

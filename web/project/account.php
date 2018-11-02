@@ -41,10 +41,10 @@
                             <div class="panel-body">
                             <p>Info goes here:</p>
                             <ul>
-                                <li>First Name</li>
-                                <li>Last Name</li>
-                                <li>Email</li>
-                                <li>Username</li>
+                                <li>First Name: <?php echo $_SESSION['client']['first_name'];?></li>
+                                <li>Last Name: <?php echo $_SESSION['client']['last_name'];?></li>
+                                <li>Email: <?php echo $_SESSION['client']['email'];?> </li>
+                                <li>Username: <?php echo $_SESSION['client']['username'];?></li>
                                 <li>Password</li>
                             </ul>
                             <h2>Account List</h2>
