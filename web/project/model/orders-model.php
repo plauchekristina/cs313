@@ -10,7 +10,7 @@ $account_id=htmlspecialchars($_POST ['account_id']);
 
 
 // The SQL statement
-$sql = 'SELECT coop_id FROM coop WHERE coop_user_id = :account_id';
+$sql = 'SELECT * FROM coop WHERE coop_user_id = :account_id';
 // Create the prepared statement using the db connection
 $stmt = $db->prepare($sql);
 // The next four lines replace the placeholders in the SQL

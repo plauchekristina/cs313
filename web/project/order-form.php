@@ -1,5 +1,6 @@
 <?php session_start();
-$userId=$_SESSION['client']['account_id'];?>
+$userId=$_SESSION['client']['account_id'];
+require('../connection.php');?>
 <?php include('../project/common/nav.php');?>
 
 <!---  ####### Body content begins ####### -->
@@ -21,6 +22,7 @@ $userId=$_SESSION['client']['account_id'];?>
         <p><strong>Order Budget: </strong><span id="target-total"></span></p>
         <form action = "model/orders-model.php" method ="post">
         <input name="account_id" id="account_id" type="hidden" value = "<?php echo $_SESSION['client']['account_id'];?>">
+        
         <div class="thumbnail text-left">
             <h4>Full Portions</h4>
           <div class="d-inline row">
