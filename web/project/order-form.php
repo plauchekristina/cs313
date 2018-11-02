@@ -1,6 +1,8 @@
 <?php session_start();
-$userId=$_SESSION['client']['account_id'];
-$_SESSION['coop'];?>
+if (!isset($_SESSION['client'])){
+    header('Location:login.php');
+}
+?>
 <?php include('../project/common/nav.php');?>
 
 <!---  ####### Body content begins ####### -->
