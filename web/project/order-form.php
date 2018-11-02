@@ -36,7 +36,7 @@ $_SESSION['coop'];?>
                 <div class="form-group col-sm-6">
                     <label>Budget Per:</label> 
                     <div> 
-                    <input type="number" name="full-budget" id="full-budget" size="10" readonly  value = "10">
+                    <input type="number" name="full-budget" id="full-budget" size="10" readonly  value = "<?php echo $_SESSION['coop']['coop_full_budget'];?>">
                     </div>
                 </div>
 </div>
@@ -54,7 +54,7 @@ $_SESSION['coop'];?>
                 <div class="form-group col-sm-6">
                     <label>Budget Per:</label> 
                     <div> 
-            <input type="number" name="half-budget" id="half-budget" size="10" value = "6" readonly aria-label="enter budget per half portion">
+            <input type="number" name="half-budget" id="half-budget" size="10" value = "<?php echo $_SESSION['coop']['coop_half_budget'];?>" readonly aria-label="enter budget per half portion">
             </div>
                 </div>    
 </div>
@@ -71,15 +71,14 @@ $_SESSION['coop'];?>
                     <div class="panel-body">
                         <div class="form-header">
                         <div class="input-group-lg">
-                                <input class="form-control input-lg" type="text" id="co-op-name" value="<?php echo $_SESSION['coop']['coop_name'];?>">  
+                                <input class="form-control input-lg" type="text" id="co-op-name" value="<?php echo $_SESSION['coop']['coop_name'];?>" readonly>  
                         </div>
                         
                               
                               
                                 <div>
                                     <label>Date:</label>                                           
-                                    <input type="text" name="order-date" id="order-date" value ="<?php 
-                    echo "<strong>Today is:</strong> ".date("m/d/Y");?>">
+                                    <input type="text" name="order-date" id="order-date" value ="<?php echo date("m/d/Y");?>" >
                                 </div>
                                
                     
