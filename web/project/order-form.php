@@ -171,7 +171,7 @@ if (!isset($_SESSION['client'])){
         <div class="form-group col-sm-2">
                         <label>Order Total:</label> 
                 <div> 
-                    <input type="number" name="grand-total" id="grand-total" >
+                    <input type="number" step=".01" name="grand-total" id="grand-total" >
                 </div>
             </div> 
         <input type="submit" name="submit" id="regbtn" value="Save" class="btn-success">     

@@ -23,7 +23,7 @@ $account_id=htmlspecialchars($_POST ['account_id']);
 
     //$db = dbConnect();
     // The SQL statement
-    $sql = 'UPDATE account SET first_name = :first_name, last_name = :last_name, email = :email, username = :username WHERE account_id ='.$account_id;
+    $sql = 'UPDATE account SET first_name = :first_name, last_name = :last_name, email = :email, username = :username WHERE account_id = :account_id';
     // Create the prepared statement using the db connection
     $stmt = $db->prepare($sql);
     // The next four lines replace the placeholders in the SQL
@@ -33,6 +33,7 @@ $account_id=htmlspecialchars($_POST ['account_id']);
     $stmt->bindValue(':last_name', $last_name, PDO::PARAM_STR);
     $stmt->bindValue(':email', $email, PDO::PARAM_STR);
     $stmt->bindValue(':username', $username, PDO::PARAM_STR);
+    $stmt->bindValue(':account_id', $account_id, PDO::PARAM_STR);
     try {
         $stmt->execute();
     }
