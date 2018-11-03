@@ -42,7 +42,7 @@ var_dump($_POST);
          catch (Exception $e) {
           echo $e;
       }
-      //header('Location: ../account.php'); 
-      //die();
+      header('Location: ../account.php'); 
+      die();
 ?>
 
