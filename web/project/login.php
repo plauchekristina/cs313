@@ -48,14 +48,13 @@
                           <form action="model/login-model.php" method="POST">
                           
            <h2>Login</h2>
-        <div class="fail-message"><p>All fields are required</p></div>
+        <div class="fail-message"><p>All fields are required <?php if (isset($_SESSION['message'])){echo $_SESSION['message'];} ?></p></div>
         
         <div>
         <label for="username">Username</label>
                 </div>
                 <div>
-                <input name="username" id="username" type="text" <?php if (isset($username)) {
-                echo "value='$username'";} ?> required>
+                <input name="username" id="username" type="text" required>
         </div>
 
         <div>

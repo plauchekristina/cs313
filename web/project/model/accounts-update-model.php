@@ -21,8 +21,8 @@ var_dump($_POST);
 
     //$db = dbConnect();
     // The SQL statement
-    $sql = 'INSERT INTO account (first_name, last_name, email, username, user_password)
-        VALUES (:first_name, :last_name, :email, :username, :user_password)';
+    $sql = 'UPDATE account SET first_name = :first_name, last_name = :last_name, email = :email, username = :username, user_password = :user_password)
+    ';
     // Create the prepared statement using the db connection
     $stmt = $db->prepare($sql);
     // The next four lines replace the placeholders in the SQL

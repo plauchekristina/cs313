@@ -8,7 +8,7 @@ if (!isset($_SESSION['client'])){
 
 <div class="jumbotron">
         <div class="container text-center">
-            <h1>Register</h1>
+            <h1>Update Account</h1>
         </div>
     </div>
     <div class="container text-center">
@@ -49,7 +49,7 @@ if (!isset($_SESSION['client'])){
                             <div class="panel-body">
                           <!--- Form Begins-->
                           <form action="model/accounts-update-model.php" method="POST">
-           <h2>Register</h2>
+           <h2>Update Account Info</h2>
         <div class="fail-message"><p>All fields are required</p></div>
         <div>
                 <label for="first_name">First Name</label>
@@ -61,7 +61,7 @@ if (!isset($_SESSION['client'])){
                 <label for="last_name">Last Name</label>
         </div>
         <div>
-                <input name="last_name" id="last_name" type="text" value = "<?php if (isset($_SESSION['client'])){echo $_SESSION['client']['last_name'];}?>" ?> required>
+                <input name="last_name" id="last_name" type="text" value = "<?php if (isset($_SESSION['client'])){echo $_SESSION['client']['last_name'];}?>" required> 
         </div>
         <div>
         <label for="username">Username</label>
@@ -80,7 +80,7 @@ if (!isset($_SESSION['client'])){
                 <p>Passwords must be at least 8 characters and contain at least 1 number, 1 capital letter, and 1 special character</p>
         </div>
         <div>
-          <input type="password" name="user_password" id="user_password" required pattern="(?=^.{8,}$)(?=.*\d)(?=.*\W+)(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$"  value = "<?php if (isset($_SESSION['client'])){echo $_SESSION['client']['user_password'];}?>">     
+          <input type="password" name="user_password" id="user_password" required pattern="(?=^.{8,}$)(?=.*\d)(?=.*\W+)(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" >     
         </div>
         <div>
             <label>&nbsp;</label>
