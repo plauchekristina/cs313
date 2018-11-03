@@ -11,7 +11,7 @@ var_dump($_SESSION);
 //$userSession = $_POST["username"];
 
 
-
+$account_id=htmlspecialchars($_POST ['account_id']);
 
   $first_name= htmlspecialchars($_POST ['first_name']);
   $last_name= htmlspecialchars($_POST ['last_name']);
@@ -23,7 +23,7 @@ var_dump($_SESSION);
 
     //$db = dbConnect();
     // The SQL statement
-    $sql = 'UPDATE account SET first_name = :first_name, last_name = :last_name, email = :email, username = :username';
+    $sql = 'UPDATE account SET first_name = :first_name, last_name = :last_name, email = :email, username = :username WHERE account_id ='.$account_id;
     // Create the prepared statement using the db connection
     $stmt = $db->prepare($sql);
     // The next four lines replace the placeholders in the SQL

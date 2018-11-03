@@ -39,6 +39,27 @@ var_dump($_POST);
          catch (Exception $e) {
           echo $e;
       }
+
+      ///get coop data as array
+$account_id= $_SESSION['client']['account_id'];
+
+    // The SQL statement for pulling the co-op data to save to the session
+$sql = 'SELECT * FROM coop WHERE coop_user_id = :account_id';
+// Create the prepared statement using the db connection
+$stmt = $db->prepare($sql);
+// The next four lines replace the placeholders in the SQL
+// statement with the actual values in the variables
+// and tells the database the type of data it is
+$stmt->bindValue(':account_id', $account_id, PDO::PARAM_INT);
+// Insert the data
+try {
+    $stmt->execute();
+    $coop_data= $stmt->fetch();
+    $_SESSION['coop'] = $coop_data; 
+}
+   catch (Exception $e) {
+    echo $e;
+}
       header('Location: ../dashboard.php'); 
       die();
 ?>
