@@ -49,7 +49,7 @@ if (!isset($_SESSION['client'])){
                                 <li>Email: <?php echo $_SESSION['client']['email'];?> </li>
                                 <li>Username: <?php echo $_SESSION['client']['username'];?></li>
                             </ul>
-<p><a href="#">Edit</a></p>
+<p><a href="account-update.php">Edit</a></p>
 <hr/>
 <h2>Co-Op Info:</h2>
                             <ul>
