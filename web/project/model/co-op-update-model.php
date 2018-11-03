@@ -21,22 +21,20 @@ $account_id= $_SESSION['client']['account_id'];
       //$db = dbConnect();
       // The SQL statement
       $sql = 'UPDATE coop 
-      SET 
-      coop_user_id = :coop_user_id, 
+      SET  
       coop_name = :coop_name, 
       coop_contact_name = :coop_contact_name, 
       coop_contact_email = :coop_contact_email, 
       coop_full_budget = :coop_full_budget, 
       coop_half_budget = :coop_half_budget 
       WHERE 
-      account_id ='.$account_id;
+      cooop_user_id ='.$account_id;
         
       // Create the prepared statement using the db connection
       $stmt = $db->prepare($sql);
       // The next four lines replace the placeholders in the SQL
       // statement with the actual values in the variables
       // and tells the database the type of data it is
-      $stmt->bindValue(':coop_user_id', $coop_user_id, PDO::PARAM_INT);
       $stmt->bindValue(':coop_name', $coop_name, PDO::PARAM_STR);
       $stmt->bindValue(':coop_contact_name', $contact_name, PDO::PARAM_STR);
       $stmt->bindValue(':coop_contact_email', $contact_email, PDO::PARAM_STR);
