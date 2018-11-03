@@ -19,8 +19,9 @@ var_dump($_POST);
   
       //$db = dbConnect();
       // The SQL statement
-      $sql = 'UPDATE coop (coop_user_id, coop_name, coop_contact_name, coop_contact_email, coop_full_budget, coop_half_budget)
-          SET (:coop_user_id, :coop_name, :coop_contact_name, :coop_contact_email, :coop_full_budget, :coop_half_budget)';
+      $sql = 'UPDATE coop SET coop_user_id = :coop_user_id, coop_name = :coop_name, coop_contact_name = :coop_contact_name, 
+      coop_contact_email = :coop_contact_email, coop_full_budget = :coop_full_budget, coop_half_budget =:coop_half_budget';
+        
       // Create the prepared statement using the db connection
       $stmt = $db->prepare($sql);
       // The next four lines replace the placeholders in the SQL
