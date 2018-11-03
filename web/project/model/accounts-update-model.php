@@ -10,8 +10,8 @@ var_dump($_SESSION);
 //session start
 //$userSession = $_POST["username"];
 
+$account_id= $_SESSION['client']['account_id'];
 
-$account_id=htmlspecialchars($_POST ['account_id']);
 
   $first_name= htmlspecialchars($_POST ['first_name']);
   $last_name= htmlspecialchars($_POST ['last_name']);
@@ -23,7 +23,14 @@ $account_id=htmlspecialchars($_POST ['account_id']);
 
    
     // The SQL statement
-    $sql = 'UPDATE account SET first_name = :first_name, last_name = :last_name, email = :email, username = :username WHERE account_id = '.$account_id;
+    $sql = 'UPDATE account 
+    SET 
+    first_name = :first_name, 
+    last_name = :last_name, 
+    email = :email, 
+    username = :username 
+    WHERE 
+    account_id ='.$account_id;
     // Create the prepared statement using the db connection
     $stmt = $db->prepare($sql);
     // The next four lines replace the placeholders in the SQL
@@ -40,6 +47,8 @@ $account_id=htmlspecialchars($_POST ['account_id']);
         echo $e;
     }
 
+
+    
       // The SQL statement
       $sql = 'SELECT account_id, first_name, last_name, username,email FROM account WHERE username = :username';
       // Create the prepared statement using the db connection
