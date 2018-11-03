@@ -20,16 +20,16 @@ $account_id= $_SESSION['client']['account_id'];
   
       //$db = dbConnect();
       // The SQL statement
-      $sql = "UPDATE coop 
+      $sql = 'UPDATE coop 
       SET 
-      coop_user_id = '$coop_user_id', 
-      coop_name = '$coop_name', 
-      coop_contact_name = '$coop_contact_name', 
-      coop_contact_email = '$coop_contact_email', 
-      coop_full_budget = '$coop_full_budget', 
-      coop_half_budget = '$coop_half_budget' 
+      coop_user_id = :coop_user_id, 
+      coop_name = :coop_name, 
+      coop_contact_name = :coop_contact_name, 
+      coop_contact_email = :coop_contact_email, 
+      coop_full_budget = :coop_full_budget, 
+      coop_half_budget = :coop_half_budget 
       WHERE 
-      account_id ='$account_id'";
+      account_id ='.$account_id;
         
       // Create the prepared statement using the db connection
       $stmt = $db->prepare($sql);
