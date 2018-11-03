@@ -5,8 +5,9 @@ session_start();
  */
 require('../connection.php');
 var_dump($_POST);
+var_dump($_SESSION);
 
-
+$account_id= $_SESSION['client']['account_id'];
     $coop_user_id=htmlspecialchars($_POST ['account_id']);
     $coop_name= htmlspecialchars($_POST ['coop_name']);
     $contact_name= htmlspecialchars($_POST ['contact_name']);
@@ -51,7 +52,7 @@ var_dump($_POST);
       }
       
       ///get coop data as array
-$account_id= $_SESSION['client']['account_id'];
+
 
     // The SQL statement for pulling the co-op data to save to the session
 $sql = 'SELECT * FROM coop WHERE coop_user_id = :account_id';
@@ -70,7 +71,7 @@ try {
    catch (Exception $e) {
     echo $e;
 }
-      header('Location: ../account.php'); 
-      die();
+      //header('Location: ../account.php'); 
+     // die();
 ?>
 
