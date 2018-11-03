@@ -40,6 +40,24 @@ var_dump($_SESSION);
         echo $e;
     }
 
+      // The SQL statement
+      $sql = 'SELECT account_id, first_name, last_name, username,email FROM account WHERE username = :username';
+      // Create the prepared statement using the db connection
+      $stmt = $db->prepare($sql);
+      // The next four lines replace the placeholders in the SQL
+      // statement with the actual values in the variables
+      // and tells the database the type of data it is
+      $stmt->bindValue(':username', $username, PDO::PARAM_STR);
+      // Insert the data
+      try {
+          $stmt->execute();
+          $client= $stmt->fetch();
+          $_SESSION['client']=$client;
+        
+      }
+         catch (Exception $e) {
+          echo $e;
+      }
    //header('Location:../login.php');
    //die ();
     // Ask how many rows changed as a result of our insert
