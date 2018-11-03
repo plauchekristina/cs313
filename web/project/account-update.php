@@ -67,7 +67,7 @@ if (!isset($_SESSION['client'])){
         <label for="username">Username</label>
                 </div>
                 <div>
-                <input name="username" id="username" type="text" value = "<?php if (isset($_SESSION['client'])){echo $_SESSION['client']['username'];}?>" required>
+                <input name="username" id="username" type="text" value = "<?php echo $_SESSION['client']['email'];?>" required>
         </div>
         <div>
                 <label for="email">Email</label>
