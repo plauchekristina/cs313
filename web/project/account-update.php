@@ -55,25 +55,25 @@ if (!isset($_SESSION['client'])){
                 <label for="first_name">First Name</label>
         </div>
         <div>
-                <input name="first_name" id="first_name" type="text" value = "<?php if (isset($_SESSION['client'])){echo $_SESSION['client']['first_name'];}?>" required>
+                <input name="first_name" id="first_name" type="text" value = "<?php echo $_SESSION['client']['first_name'];?>" required>
         </div>
         <div>
                 <label for="last_name">Last Name</label>
         </div>
         <div>
-                <input name="last_name" id="last_name" type="text" value = "<?php if (isset($_SESSION['client'])){echo $_SESSION['client']['last_name'];}?>" required> 
+                <input name="last_name" id="last_name" type="text" value = "<?php echo $_SESSION['client']['last_name'];?>" required> 
         </div>
         <div>
         <label for="username">Username</label>
                 </div>
                 <div>
-                <input name="username" id="username" type="text" value = "<?php echo $_SESSION['client']['email'];?>" required>
+                <input name="username" id="username" type="text" value = "<?php echo $_SESSION['client']['username'];?>" required>
         </div>
         <div>
                 <label for="email">Email</label>
         </div>
         <div>
-                <input type="email" name="email" id="email" <value = "<?php if (isset($_SESSION['client'])){echo $_SESSION['client']['email'];}?>" required >
+                <input type="email" name="email" id="email" <value = "<?php echo $_SESSION['client']['email'];?>" required >
         </div>
         
         
