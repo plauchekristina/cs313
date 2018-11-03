@@ -79,7 +79,7 @@ if (!isset($_SESSION['client'])){
         
         <div>
             <label>&nbsp;</label>
-            <input type="submit" name="submit" id="regbtn" value="Register" class="register">
+            <input type="submit" name="submit" id="regbtn" value="Update" class="register">
             <!-- Add the action name-value pair -->
             <input type="hidden" name="action" value="register">
         </div>
