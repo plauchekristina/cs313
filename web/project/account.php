@@ -59,7 +59,7 @@ if (!isset($_SESSION['client'])){
                                 <li>Full Budget: <?php echo $_SESSION['coop']['coop_full_budget'];?></li>
                                 <li>Half Budget: <?php echo $_SESSION['coop']['coop_half_budget'];?></li>
                             </ul>
-<p><a href="#">Edit</a></p>
+<p><a href="project/co-op-update.php">Edit</a></p>
 <!-- <ul>
 <! <?php
 /* require('connection.php');
