@@ -28,7 +28,7 @@ $account_id= $_SESSION['client']['account_id'];
       coop_full_budget = :coop_full_budget, 
       coop_half_budget = :coop_half_budget 
       WHERE 
-      cooop_user_id ='.$account_id;
+      coop_user_id ='.$account_id;
         
       // Create the prepared statement using the db connection
       $stmt = $db->prepare($sql);
