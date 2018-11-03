@@ -5,6 +5,8 @@ session_start();
  */
 require('../connection.php');
 var_dump($_POST);
+echo "SESSION DUMP STARTS HERE:";
+var_dump($_SESSION);
 //session start
 //$userSession = $_POST["username"];
 
@@ -15,13 +17,13 @@ var_dump($_POST);
   $last_name= htmlspecialchars($_POST ['last_name']);
   $email= htmlspecialchars($_POST ['email']);
   $username= htmlspecialchars($_POST ['username']);
-  $user_password= htmlspecialchars($_POST ['user_password']); 
-  $hashedPassword = password_hash($user_password, PASSWORD_DEFAULT);
+  //$user_password= htmlspecialchars($_POST ['user_password']); 
+  //$hashedPassword = password_hash($user_password, PASSWORD_DEFAULT);
   
 
     //$db = dbConnect();
     // The SQL statement
-    $sql = 'UPDATE account SET first_name = :first_name, last_name = :last_name, email = :email, username = :username, user_password = :user_password)
+    $sql = 'UPDATE account SET first_name = :first_name, last_name = :last_name, email = :email, username = :username)
     ';
     // Create the prepared statement using the db connection
     $stmt = $db->prepare($sql);
@@ -32,8 +34,6 @@ var_dump($_POST);
     $stmt->bindValue(':last_name', $last_name, PDO::PARAM_STR);
     $stmt->bindValue(':email', $email, PDO::PARAM_STR);
     $stmt->bindValue(':username', $username, PDO::PARAM_STR);
-    $stmt->bindValue(':user_password', $hashedPassword, PDO::PARAM_STR);
-    // Insert the data
     try {
         $stmt->execute();
     }

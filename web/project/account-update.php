@@ -75,13 +75,8 @@ if (!isset($_SESSION['client'])){
         <div>
                 <input type="email" name="email" id="email" <value = "<?php if (isset($_SESSION['client'])){echo $_SESSION['client']['email'];}?>" required >
         </div>
-        <div>
-                <label for="user_password">Password</label>
-                <p>Passwords must be at least 8 characters and contain at least 1 number, 1 capital letter, and 1 special character</p>
-        </div>
-        <div>
-          <input type="password" name="user_password" id="user_password" required pattern="(?=^.{8,}$)(?=.*\d)(?=.*\W+)(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" >     
-        </div>
+        
+        
         <div>
             <label>&nbsp;</label>
             <input type="submit" name="submit" id="regbtn" value="Register" class="register">
