@@ -174,7 +174,7 @@ if (!isset($_SESSION['client'])){
                     <input type="number" step=".01" name="grand-total" id="grand-total" >
                 </div>
             </div> 
-        <input type="submit" name="submit" id="regbtn" value="Save" class="btn-success">     
+        <input type="submit" name="submit" id="regbtn" value="Submit" class="btn-success">     
         </form>
     </div>
 </div>

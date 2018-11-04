@@ -8,16 +8,14 @@ if (!isset($_SESSION['client'])){
 <!---  ####### Body content begins ####### -->
 <div class="jumbotron">
         <div class="container text-center">
-            <h1>Dashboard</h1>
+            <h1>Food Co-op Orders</h1>
         </div>
     </div>
     <div class="container text-center">
         <div class="row">
             <div class="col-sm-12 panel panel-default text-left">
                 <div  class="panel-body">
-                <h2>
-                        <?php echo "Welcome, ".$_SESSION['client']['first_name'];?>
-</h2>
+                    <p></p>
                    
             </div>
             </div>
@@ -52,7 +50,7 @@ if (!isset($_SESSION['client'])){
                                 foreach ($db->query('SELECT * FROM orders WHERE orders_account_id = '.$account_id) as $row)
                                     {
                                         if ($row['orders_account_id']=$account_id){
-                                            echo "<li><b>Order #: </b>" . $row['orders_id'] . "<a href='orders-view.php'> View</a></li> ";
+                                            echo "<li><b>Order #: </b>" . $row['orders_id'] . "<a href='#'> View</a></li> ";
                                         } else {
                                             echo "<p>No orders could be found</p>";
                                         }

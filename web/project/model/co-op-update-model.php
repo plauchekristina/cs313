@@ -69,7 +69,7 @@ try {
    catch (Exception $e) {
     echo $e;
 }
-      //header('Location: ../account.php'); 
-     // die();
+      header('Location: ../account.php'); 
+     die();
 ?>
 
