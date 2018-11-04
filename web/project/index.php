@@ -37,7 +37,7 @@
                             
                             <?php if (isset($_SESSION['client'])){echo "<h2>What would you like to do?</h2><h3><a href='orderform.php'>Place a new order.</a></h3>
 <p>or</p><h3><a href='dashboard.php'>See past orders</a></h3>";}?>
-                <?php if ($_SESSION['coop']=0){echo var_dump($_SESSION);}?>
+                <?php if (!isset($_SESSION['coop']['coop_name'])){echo var_dump($_SESSION);}?>
 
                             </div>
                         </div>
