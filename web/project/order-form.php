@@ -190,10 +190,11 @@ if (!isset($_SESSION['client'])){
                 </div>
             </div> 
 </div>
-</div>
-            <h3>Amount Left to Spend:<span id="over-under"></span></h3>
+<h3>Amount Left to Spend:<span id="over-under"></span></h3>
         <input type="submit" name="submit" id="regbtn" value="Submit" class="btn-success">     
         </form>
+</div>
+           
 
         </div>
     </div>
