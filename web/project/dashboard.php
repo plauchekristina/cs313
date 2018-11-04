@@ -59,7 +59,11 @@ if (!isset($_SESSION['client'])){
                                 foreach ($db->query('SELECT * FROM orders WHERE orders_account_id = '.$account_id) as $row)
                                     {
                                         if ($row['orders_account_id']=$account_id){
-                                            echo "<li><b>Order #: </b>" . $row['orders_id'] . "<a href='orders-view.php'> View</a></li> ";
+                                            echo "<h3><b>Order #: </b>" . $row['orders_id'] . "</h3> ";
+                                            echo "<p>Date:".$row['orders_date']."</p>";
+                                            echo "<p># Full Ordered:".$row['orders_full_qty']."</p>";
+                                            echo "<p># Half Ordered".$row['orders_half_qty']."</p>";
+                                            echo "<p>Grand Total: $".$row['orders_total']."</p><hr/>";
                                 
                                         } else {
                                             echo "<p>No orders could be found</p>";
