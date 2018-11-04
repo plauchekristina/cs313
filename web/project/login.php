@@ -35,7 +35,7 @@
         <div>
                 <label for="user_password">Password</label>
                 <p>Passwords must be at least 8 characters and contain at least 1 number, 1 capital letter, and 1 special character</p>
-                <?php echo $_SESSION['message']; ?></p>
+                <?php echo $message; ?></p>
         </div>
         <div>
           <input type="password" name="user_password" id="user_password" required pattern="(?=^.{8,}$)(?=.*\d)(?=.*\W+)(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$">     
@@ -49,16 +49,9 @@
                
             </form>
                           <!--Form ends -->   
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-            </div>
+                            
 <!--end center column-->
-</div> 
-</div> 
+
     
        
     <script src ="../scripts/functions.js"></script>
