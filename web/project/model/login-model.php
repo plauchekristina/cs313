@@ -70,6 +70,8 @@ try {
     $_SESSION['message']=$message;
     
 }
-
+$message = "Your username and password didn't match. Please try again.";
+$_SESSION['message']=$message;
+header('Location:../login.php');
     
 ?>
