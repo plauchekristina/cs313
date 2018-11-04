@@ -20,7 +20,7 @@
                         <?php if (!isset($_SESSION['client'])){
                         echo "<h3><a href='/project/register.php'>Register Now</a> or <a href='/project/login.php'>Login</a> to get started. </h3>
                         ";}?>
-                        <?php if ((isset($_SESSION['client'])) && ($_SESSION['coop']=NULL)){ echo "<h3><a href='co-op.php'>Create your Co-op</a></h3>"?>
+                        <?php if ($_SESSION['coop']=0){ echo "<h3><a href='co-op.php'>Create your Co-op</a></h3>"?>
                    
             </div>
             </div>
