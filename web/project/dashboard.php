@@ -60,6 +60,7 @@ if (!isset($_SESSION['client'])){
                                     {
                                         if ($row['orders_account_id']=$account_id){
                                             echo "<li><b>Order #: </b>" . $row['orders_id'] . "<a href='orders-view.php'> View</a></li> ";
+                                
                                         } else {
                                             echo "<p>No orders could be found</p>";
                                         }
