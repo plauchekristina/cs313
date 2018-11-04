@@ -180,7 +180,7 @@ if (!isset($_SESSION['client'])){
 </div>
            
        
-            </div>
+            
            
             <div class="d-inline row">
         <div class="form-group col-sm-2">
@@ -190,7 +190,8 @@ if (!isset($_SESSION['client'])){
                 </div>
             </div> 
 </div>
-            <h2>Amount Left to Spend:<span id="over-under"></span></h2>
+</div>
+            <h3>Amount Left to Spend:<span id="over-under"></span></h3>
         <input type="submit" name="submit" id="regbtn" value="Submit" class="btn-success">     
         </form>
 
