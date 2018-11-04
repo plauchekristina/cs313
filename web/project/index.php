@@ -3,18 +3,25 @@
 <!---  ####### Body content begins ####### -->
 <div class="jumbotron">
         <div class="container text-center">
-            <h1>Welcome <?php echo ", ".$_SESSION['client']['first_name'];?></h1>
+            <h1>Group Buying<?php if (!isset($_SESSION['client'])){echo ", ".$_SESSION['client']['first_name'];}?></h1>
         </div>
     </div>
     <div class="container text-center">
         <div class="row">
             <div class="col-sm-12 panel panel-default text-left">
                 <div  class="panel-body">
-                    <p>It's harvest time and your group of friends wants to do some home canning and make homemade applesauce.
-                        You've been charged with purchasing apples for everyone. Some people want full portions (example $50 worth of apples)
-                        and others want half portions ($25 worth of apples). 
-                        You need to figure how many boxes of apples to purchase for the group based on the amount of money everyone 
-                        will contribute per portion.</p>
+              <h2>Save money by buying in bulk as a group.</h2>
+              <h3>Our Calculator makes it easy to figure out how much to purchase.</h3>
+                    <p><b>Scenario:</b>It's harvest time and your group of friends wants to do some home canning and make homemade applesauce.
+                        You've been charged with purchasing apples for everyone. 
+                        Your group decides that a full portion is $50 worth of apples (this is the full portion budget). 
+                        Some people want full portions and others want half portions. Others may want double or triple portions.
+                        You need to figure how many boxes of apples to purchase for the group based on the # of portions requested</p>
+                        <?php if (!isset($_SESSION['client'])){
+                        echo "<h3><a href='/project/register.php'>Register Now</a> or <a href='/project/login.php'>Login</a>to get started. </h3>
+                        ";
+                        }else {echo "<h3><a href='orderform.php'>Place a new order.</a></h3>
+                        <p>or</p><h3><a href='dashboard.php'>See past orders</a></h3>";}?>
                    
             </div>
             </div>
@@ -43,12 +50,12 @@
                     <div class="col-sm-12">
                         <div class="panel panel-default text-left well">
                             <div class="panel-body">
-                            <h2>Let's get started</h2>
+                            <h2>What would you like to do?</h2>
                             <?php if (!isset($_SESSION['client'])){
-   echo "<p><a href='/project/register.php'>Register</a></p>
+   echo "<h3><a href='/project/register.php'>Register</a></h3>
    <p><a href='/project/login.php'>Login</a></p>";
-}else {echo "<p>You're already logged in. <a href='orderform.php'>Place a new order.</a></p>
-<p>See <a href='dashboard.php'>See past orders</a></p>";}?>
+}else {echo "<h3><a href='orderform.php'>Place a new order.</a></h3>
+<p>or</p><h3><a href='dashboard.php'>See past orders</a></h3>";}?>
                 
 
                             </div>
