@@ -40,19 +40,14 @@
 
 
 
-                <?php if (isset($_SESSION['coop']['coop_name'])){echo var_dump($_SESSION);}else{echo "Coop name not set";}?>
-
-                <?php if (isset($_SESSION['client'])){
-                    if (isset($_SESSION['coop']['coop_name'])){
-                        echo "Logged in & Coop name set".var_dump($_SESSION);
-                    }else{
-                        echo "not logged in & coop name not set";
-                        }
-                    }else if (!isset($_SESSION['client'])){
-                        echo "not logged in";}
-                        else{echo "not sure Coop name not set";
-                    } 
-                        ?>
+                <?php if (!isset($_SESSION['coop']['coop_name'])){echo "<h3><a href='co-op.php>Create your Co-op</a></h3>";}?>
+                <?php if (!isset($_SESSION['coop']['coop_name'])){
+                    echo "<h3><a href='co-op.php>Create your Co-op</a></h3>";
+                    }else {echo "<h2>What would you like to do?</h2><h3><a href='orderform.php'>Place a new order.</a></h3>
+                        <p>or</p><h3><a href='dashboard.php'>See past orders</a></h3>"
+                        
+                    }?>
+                
 
                             </div>
                         </div>
