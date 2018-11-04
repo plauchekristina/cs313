@@ -48,6 +48,7 @@ if (!isset($_SESSION['client'])){
                                 <li>Last Name: <?php echo $_SESSION['client']['last_name'];?></li>
                                 <li>Email: <?php echo $_SESSION['client']['email'];?> </li>
                                 <li>Username: <?php echo $_SESSION['client']['username'];?></li>
+                                <li>User Id: <?php  echo $_SESSION['client']['account_id'];?></li>
                             </ul>
 <p><a href="account-update.php">Edit</a></p>
 <hr/>

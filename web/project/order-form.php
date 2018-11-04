@@ -8,23 +8,45 @@ if (!isset($_SESSION['client'])){
 <!---  ####### Body content begins ####### -->
 <div class="container text-center">
 <div class="row">
-   <!--<div class="col-sm-12 panel panel-default text-left">
+   <div class="col-sm-12 panel panel-default text-left">
         <div class="panel-body">
-            <div class="bg-success">
-        <h2>Amount Left to Spend:<span id="over-under"></span></h2>
-        </div>
-        </div>
+        <p>You're purchasing food for a food co-op. Some people want full portions and some people want half portions.
+        You need to figure how many boxes of apples to purchase for the group.</p> 
+        <p>Fill in the fields below to figure out how many boxes you should buy.
+     </p>
+     <form action = "model/orders-model.php" method ="post">
+        <input name="account_id" id="account_id" type="hidden" value = "<?php echo $_SESSION['client']['account_id'];?>">
+     <div>
+                        <label># People who want a Full Portion:</label>
+                        <div>
+                            <input type="number" onfocus="targetInput(this)" onfocusout="targetOutput(this)" name="full-count" id="full-count" aria-label="enter number of full portions ordered">
+                        </div>
+                        <input type="hidden" name="full-budget" id="full-budget"  value = "<?php echo $_SESSION['coop']['coop_full_budget'];?>">
+                    </div>
 
-    </div> -->
+
+                    <div>
+                        <label># People who want a Half Portion:</label>
+                        <div>
+                            <input type="number" onfocus="targetInput(this)" onfocusout="targetOutput(this)" name="half-count" id="half-count" size="10"
+                                onchange="orderQuantities()" aria-label="enter number of half portions ordered">
+                        </div>
+                        <input type="hidden" name="half-budget" id="half-budget" size="10" value = "<?php echo $_SESSION['coop']['coop_half_budget'];?>" >
+                    </div>
+                    <h3>Purchasing Budget:
+                        <span id="target-total"></span>
+                    </h3>
+    </div>
+
+    </div>
     <!-- Left column -->
-    <div class="col-sm-3 well text-left">
+    <!-- <div class="col-sm-3 well text-left">
         <h3>
               Order Data
         </h3>
         <p><strong>Order Budget: </strong><span id="target-total"></span></p>
-        <p><?php echo $_SESSION['coop'];?></p>
-        <form action = "model/orders-model.php" method ="post">
-        <input name="account_id" id="account_id" type="hidden" value = "<?php echo $_SESSION['client']['account_id'];?>">
+        <p><?php //echo $_SESSION['coop'];?></p>
+        
         
         <div class="thumbnail text-left">
             <h4>Full Portions</h4>
@@ -38,7 +60,7 @@ if (!isset($_SESSION['client'])){
                 <div class="form-group col-sm-6">
                     <label>Budget Per:</label> 
                     <div> 
-                    <input type="number" name="full-budget" id="full-budget" size="10" readonly  value = "<?php echo $_SESSION['coop']['coop_full_budget'];?>">
+                    <input type="number" name="full-budget" id="full-budget" size="10" readonly  value = "<?php //echo $_SESSION['coop']['coop_full_budget'];?>">
                     </div>
                 </div>
 </div>
@@ -56,13 +78,13 @@ if (!isset($_SESSION['client'])){
                 <div class="form-group col-sm-6">
                     <label>Budget Per:</label> 
                     <div> 
-            <input type="number" name="half-budget" id="half-budget" size="10" value = "<?php echo $_SESSION['coop']['coop_half_budget'];?>" readonly aria-label="enter budget per half portion">
+            <input type="number" name="half-budget" id="half-budget" size="10" value = "<?php //echo $_SESSION['coop']['coop_half_budget'];?>" readonly aria-label="enter budget per half portion">
             </div>
                 </div>    
 </div>
         </div>
-        <!--<button type="button" onclick="orderTarget()">Calculate</button> -->
-    </div>
+       
+    </div> -->
 
     <!-- Center column -->
     <div class="col-sm-9">
@@ -169,11 +191,12 @@ if (!isset($_SESSION['client'])){
            
         </div>
         <div class="form-group col-sm-2">
-                        <label>Order Total:</label> 
+                        <label>Total with Tax:</label> 
                 <div> 
                     <input type="number" step=".01" name="grand-total" id="grand-total" >
                 </div>
             </div> 
+            <h2>Amount Left to Spend:<span id="over-under"></span></h2>
         <input type="submit" name="submit" id="regbtn" value="Submit" class="btn-success">     
         </form>
     </div>

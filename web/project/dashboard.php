@@ -31,18 +31,16 @@ if (!isset($_SESSION['client'])){
                 <div class="well">
                     <h2><?php echo $_SESSION['coop']['coop_name'];?></h2>
 <?php if (!isset($_SESSION['coop']['coop_name'])){ echo "<h3>Please <a href='co-op.php'>create your co-op</a></h3>";}?>
-                           
-                            
-                               
-                                <p><b>Full Budget:</b> <?php echo "$".$_SESSION['coop']['coop_full_budget'];?></p>
-                                <p><b>Half Budget:</b> <?php echo "$".$_SESSION['coop']['coop_half_budget'];?></p>
+        <p><b>Full Budget:</b> <?php echo "$".$_SESSION['coop']['coop_full_budget'];?></p>
+        <p><b>Half Budget:</b> <?php echo "$".$_SESSION['coop']['coop_half_budget'];?></p>
                           
+        <form action="order-form.php">
+        <input type="submit" name="submit" id="regbtn" value="New Order" class="btn-success">
+</form>
                            
                             
                             
-                           
-                    
-<br>
+            
                 </div>
 <?php  echo "<br/>Id: ".$_SESSION['client']['account_id'];?>
 
