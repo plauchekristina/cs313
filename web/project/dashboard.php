@@ -42,7 +42,7 @@ if (!isset($_SESSION['client'])){
                             
             
                 </div>
-<?php  echo "<br/>Id: ".$_SESSION['client']['account_id'];?>
+
 
             </div>
 

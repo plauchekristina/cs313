@@ -51,7 +51,7 @@
                           <!--Form ends -->   
                             
 <!--end center column-->
-
+</div>
     
        
     <script src ="../scripts/functions.js"></script>
