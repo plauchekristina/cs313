@@ -8,7 +8,7 @@ if (!isset($_SESSION['client'])){
 <!---  ####### Body content begins ####### -->
 <div class="jumbotron">
         <div class="container text-center">
-            <h1>Dashboard</h1>
+            <h1>Orders Dashboard</h1>
         </div>
     </div>
     <div class="container text-center">
@@ -18,7 +18,9 @@ if (!isset($_SESSION['client'])){
                 <h2>
                         <?php echo "Welcome, ".$_SESSION['client']['first_name'];?>
 </h2>
-                   
+<p> 
+                    <?php 
+                    echo "<strong>Today is:</strong> ".date("m/d/Y");?></p>        
             </div>
             </div>
 
@@ -27,13 +29,20 @@ if (!isset($_SESSION['client'])){
             <!-- Left column -->
             <div class="col-sm-3 well">
                 <div class="well">
-                    <h2>
-                        <?php echo "Welcome, ".$_SESSION['client']['first_name'];?>
-</h2>
+                    <h2><?php echo $_SESSION['coop']['coop_name'];?></h2>
+<?php if (!isset($_SESSION['coop']['coop_name'])){ echo "<h3>Please <a href='co-op.php'>create your co-op</a></h3>";}?>
+                           
+                            
+                               
+                                <p><b>Full Budget:</b> <?php echo "$".$_SESSION['coop']['coop_full_budget'];?></p>
+                                <p><b>Half Budget:</b> <?php echo "$".$_SESSION['coop']['coop_half_budget'];?></p>
+                          
+                           
+                            
+                            
+                           
                     
-<br><p> 
-                    <?php 
-                    echo "<strong>Today is:</strong> ".date("m/d/Y");?></p>
+<br>
                 </div>
 <?php  echo "<br/>Id: ".$_SESSION['client']['account_id'];?>
 
@@ -46,7 +55,7 @@ if (!isset($_SESSION['client'])){
                     <div class="col-sm-12">
                         <div class="panel panel-default text-left well">
                             <div class="panel-body">
-                            <p>Past orders:</p>
+                            <h2>Past orders:</h2>
                             <?php
                             require('connection.php');
                                 foreach ($db->query('SELECT * FROM orders WHERE orders_account_id = '.$account_id) as $row)
