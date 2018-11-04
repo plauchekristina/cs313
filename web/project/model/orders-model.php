@@ -37,9 +37,9 @@ $orders_full_qty=($_POST ['full-count']);
 $orders_full_budget=($_POST ['full-budget']);
 $orders_half_qty=($_POST ['half-count']);
 $orders_half_budget= ($_POST ['half-budget']);
-$orders_date= htmlspecialchars($_POST [order-date]);
+$orders_date= ($_POST ['order-date']);
  
-$item_name= htmlspecialchars($_POST ['item-name']);
+$item_name= ($_POST ['item-name']);
 $item_count=($_POST ['item-count']);
 $item_unit=($_POST ['item-unit']);
 $item_price=($_POST ['item-price']);
