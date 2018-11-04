@@ -67,7 +67,7 @@ try {
 } else {
     $_SESSION['message']=$message;
     $message = "Your username and password didn't match. Please try again.";
-    header('Location:../login.php');
+    include '../login.php');
     die();
 }
 
