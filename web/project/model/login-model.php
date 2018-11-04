@@ -62,8 +62,8 @@ try {
 
     if ( password_verify($user_password, $session_password)){
         $_SESSION['client']['user_password']=NULL;
-    header('Location:../index.php');
-    die();
+    //header('Location:../index.php');
+    //die();
 } else {  
     $message = "Your username and password didn't match. Please try again.";
    echo $_SESSION['message']=$message;
