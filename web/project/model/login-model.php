@@ -60,7 +60,7 @@ try {
 
     if ( password_verify($user_password, $session_password)){
         $_SESSION['client']['user_password']=NULL;
-        if (!isset($_SESSION['coop'])){
+        if ($_SESSION['coop']=NULL){
             header('Location:../coop.php');
             die();} else{
                 header('Location:../index.php');
