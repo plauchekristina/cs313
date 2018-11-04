@@ -61,8 +61,8 @@ if (!isset($_SESSION['client'])){
                                         if ($row['orders_account_id']=$account_id){
                                             echo "<h3><b>Order #: </b>" . $row['orders_id'] . "</h3> ";
                                             echo "<p>Date:".$row['orders_date']."</p>";
-                                            echo "<p># Full Ordered:".$row['orders_full_qty']."</p>";
-                                            echo "<p># Half Ordered".$row['orders_half_qty']."</p>";
+                                            echo "<p># Full Ordered: ".$row['orders_full_qty']."</p>";
+                                            echo "<p># Half Ordered: ".$row['orders_half_qty']."</p>";
                                             echo "<p>Grand Total: $".$row['orders_total']."</p><hr/>";
                                 
                                         } else {
