@@ -5,6 +5,8 @@ session_start();
  */
 require('../connection.php');
 var_dump($_POST);
+echo "####SESSION DUMP STARTS HERE";
+var_dump($_SESSION);
 //session start
 //$userSession = $_POST["username"];
 
@@ -60,13 +62,8 @@ try {
 
     if ( password_verify($user_password, $session_password)){
         $_SESSION['client']['user_password']=NULL;
-        if ($_SESSION['coop']=NULL){
-            header('Location:../coop.php');
-            die();} else{
-                header('Location:../index.php');
-                die();
-            }
-   
+    //header('Location:../index.php');
+    //die();
 } else {
     $_SESSION['message']=$message;
     $message = "Your username and password didn't match. Please try again.";

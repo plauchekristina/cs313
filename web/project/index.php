@@ -20,32 +20,23 @@
                         <?php if (!isset($_SESSION['client'])){
                         echo "<h3><a href='/project/register.php'>Register Now</a> or <a href='/project/login.php'>Login</a> to get started. </h3>
                         ";}?>
+                        <?php if ((isset($_SESSION['client'])) && ($_SESSION['coop']=NULL)){ echo "<h3><a href='co-op.php'>Create your Co-op</a></h3>"?>
                    
             </div>
             </div>
 
-   
-
-            <!-- Left column -->
-            <div class="col-sm-3 well">
-                <div class="well">
-                    <h2>
-                       <img src ="">
-                </div>
-
-
-            </div>
 
             <!-- Center column -->
-            <div class="col-sm-9">
+            <?php if (isset($_SESSION['client'])){echo "
+            <div class='col-sm-12'>
 
-                <div class="row">
-                    <div class="col-sm-12">
-                        <div class="panel panel-default text-left well">
-                            <div class="panel-body">
+                <div class='row'>
+                    <div class='col-sm-12'>
+                        <div class='panel panel-default text-left well'>
+                            <div class='panel-body'>
                             <h2>What would you like to do?</h2>
-                            <?php if (isset($_SESSION['client'])){echo "<h3><a href='orderform.php'>Place a new order.</a></h3>
-<p>or</p><h3><a href='dashboard.php'>See past orders</a></h3>";}?>
+                            <h3><a href='orderform.php'>Place a new order.</a></h3>
+<p>or</p><h3><a href='dashboard.php'>See past orders</a></h3>
                 
 
                             </div>
@@ -54,7 +45,7 @@
                 </div>
 
 
-            </div>
+            </div>";}?>
 <!--end center column-->
 </div> 
 </div>        
