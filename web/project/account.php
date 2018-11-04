@@ -52,6 +52,7 @@ if (!isset($_SESSION['client'])){
 <p><a href="account-update.php">Edit</a></p>
 <hr/>
 <h2>Co-Op Info:</h2>
+<?php if (!isset($_SESSION['coop']['coop_name'])){ echo "<h3>Please <a href='co-op.php'>create your co-op</a></h3>";}?>
                             <ul>
                                 <li>Co-op Name: <?php echo $_SESSION['coop']['coop_name'];?></li>
                                 <li>Contact Name: <?php echo $_SESSION['coop']['coop_contact_name'];?></li>
@@ -59,20 +60,12 @@ if (!isset($_SESSION['client'])){
                                 <li>Full Budget: <?php echo $_SESSION['coop']['coop_full_budget'];?></li>
                                 <li>Half Budget: <?php echo $_SESSION['coop']['coop_half_budget'];?></li>
                             </ul>
-<p><a href="co-op-update.php">Edit</a></p>
-<!-- <ul>
-<! <?php
-/* require('connection.php');
-	foreach ($db->query('SELECT first_name, last_name, username, email FROM account') as $row)
-		{
-		  echo "<li><b>Username: </b>" . $row['username'] . "<ul><li><b>Name:</b> ";
-		  echo $row['first_name'];
-		  echo " " . $row['last_name'] . " </li>";
-		  echo "<li><b>Email:</b>" . $row['email'] . "</li></ul>";
-		  echo '</li>';
-    } */
-  ?> 
-  </ul>  -->
+                           
+                            
+                            
+                            <?php if (isset($_SESSION['coop']['coop_name'])){echo "<p><a href='co-op-update.php'>Edit</a></p>";}?>
+
+
                             </div>
                         </div>
                     </div>
