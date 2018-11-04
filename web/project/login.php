@@ -53,9 +53,7 @@
 <!--end center column-->
 </div>
 </div>
-</div>
-</div> 
-</div>
+
        
     <script src ="../scripts/functions.js"></script>
     <?php include($_SERVER["DOCUMENT_ROOT"] . '/project/common/footer.php');?>  
