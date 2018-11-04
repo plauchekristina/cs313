@@ -36,7 +36,7 @@ if (isset($_SESSION['client'])){ echo "
                 <div class='row'>
                     <div class='col-sm-12'>
                         <div class='panel panel-default text-left well'>
-                            <div class='panel-body'>":}?>
+                            <div class='panel-body'>"; }?>
 <!-- Directs customer to create co-op-->
 <?php 
 
@@ -62,7 +62,7 @@ if (isset($_SESSION['client'])){ echo "
                 </div>
 
 
-            </div>":} ?>
+            </div>";} ?>
 <!--end center column-->
 </div> 
 </div>        
