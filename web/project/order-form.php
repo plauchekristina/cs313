@@ -87,28 +87,20 @@ if (!isset($_SESSION['client'])){
     </div> -->
 
     <!-- Center column -->
-    <div class="col-sm-9">
+    <div class="col-sm-12">
 <!-- #### HEADER #####-->
         <div class="row">
             <div class="col-sm-12">
                 <div class="panel panel-default text-left">
                     <div class="panel-body">
-                        <div class="form-header">
-                        <div class="input-group-lg">
-                                <input class="form-control input-lg" type="text" id="co-op-name" value="<?php echo $_SESSION['coop']['coop_name'];?>" readonly>  
-                        </div>
                         
-                              
-                              
+                        
+                                <h3><?php echo $_SESSION['coop']['coop_name'];?> Order</h3>  
                                 <div>
                                     <label>Date:</label>                                           
                                     <input type="text" name="order-date" id="order-date" value ="<?php echo date("m/d/Y");?>" >
                                 </div>
-                               
-                    
-                       
-
-                    </div>
+                   
                 </div>
             </div>
         </div>
@@ -120,33 +112,34 @@ if (!isset($_SESSION['client'])){
 <div class="col-sm-12">
     <div class="well">
         <div class="thumbnail text-left"> 
-                <h4>Item 1</h4>
+                <h4>Item</h4>
 
               
                 <div class="d-inline row">       
         <div class="col-sm-2">
-                <label># Per Full:</label> 
+                <label>#Apples Per Full:</label> 
             <div> 
                 <input type="number" name="per-full" id="per-full" placeholder="#" onchange="orderQuantities()">
             </div>    
         </div>
          <div class="col-sm-2">
-                <label># Per Half:</label> 
+                <label>#Apples Per Half:</label> 
             <div> 
                 <input type="number" name="per-half" id="per-half" placeholder="#" onchange="orderQuantities()">
             </div>
         </div> 
-</div>
-<input name="account_id" id="account_id" type="hidden"  value = "<?php echo $_SESSION['client']['account_id'];?>">
-        <div class="d-inline row">
-            <div class="form-group col-sm-5">
+        <div class="form-group col-sm-5">
                     <label>Item Name:</label> 
                 <div> 
-                    <input type="text" name="item-name" id="item-name" size="40" placeholder="Item name/description">
+                    <input type="text" name="item-name" id="item-name" size="40" value="Apples">
                 </div>    
             </div>
-            <div class="form-group col-sm-1">
-                        <label>Count:</label> 
+</div>
+
+        <div class="d-inline row">
+           
+            <div class="form-group col-sm-2">
+                        <label># In Box:</label> 
                 <div> 
                         <input type="number" name="item-count" id="item-count" placeholder="#" onchange="orderQuantities()">
                 </div>
@@ -164,22 +157,22 @@ if (!isset($_SESSION['client'])){
             </div>
             <!-- -->
             <div class="form-group col-sm-2">
-                        <label>Price:</label> 
+                        <label>Box Price:</label> 
                 <div> 
                     <input type="number" name="item-price" id="item-price" placeholder="$0.00" onchange="orderQuantities()">
                 </div>
             
             </div>
                 <!-- -->
-                <div class="form-group col-sm-1">
-                        <label>Quantity:</label> 
+                <div class="form-group col-sm-2">
+                        <label>#Boxes to Order:</label> 
                 <div> 
                     <input type="number" name="item-quantity" id="item-quantity" readonly >
                 </div>
             </div> 
             <!-- -->
             <div class="form-group col-sm-2">
-                        <label>Total:</label> 
+                        <label>Item Total:</label> 
                 <div> 
                     <input type="number" name="item-total" id="item-total" readonly >
                 </div>
@@ -189,16 +182,19 @@ if (!isset($_SESSION['client'])){
        
             </div>
            
-        </div>
+            <div class="d-inline row">
         <div class="form-group col-sm-2">
                         <label>Total with Tax:</label> 
                 <div> 
                     <input type="number" step=".01" name="grand-total" id="grand-total" >
                 </div>
             </div> 
+</div>
             <h2>Amount Left to Spend:<span id="over-under"></span></h2>
         <input type="submit" name="submit" id="regbtn" value="Submit" class="btn-success">     
         </form>
+
+        </div>
     </div>
 </div>
 
