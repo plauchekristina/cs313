@@ -34,14 +34,21 @@
                     <li class="active">
                         <a href="/project/index.php">Project Home</a>
                     </li>
-                    <li>
-                        <a href="/project/order-form.php">Order Form</a>
+                    <?php 
+
+                    if (isset($_SESSION['client'])){
+                    if (!isset($_SESSION['coop']['coop_name'])){ echo "";
+                    }else{ echo "<li>
+                        <a href='/project/order-form.php'>Order Form</a>
                     </li>
                     <li>
-                        <a href="/project/dashboard.php">Dashboard</a>
-                    </li>
+                        <a href='/project/dashboard.php'>Dashboard</a>
+                    </li>";}
+               
+
+                }
                    
-                    <?if (isset($_SESSION['client'])){echo "<li><a href='/project/logout.php'>Logout</a></li>";}
+                    if (isset($_SESSION['client'])){echo "<li><a href='/project/logout.php'>Logout</a></li>";}
                     else{echo"<li><a href='/project/login.php'>Login</a></li>";}?>
 
                     
