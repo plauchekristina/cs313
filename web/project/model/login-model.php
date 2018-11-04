@@ -60,8 +60,13 @@ try {
 
     if ( password_verify($user_password, $session_password)){
         $_SESSION['client']['user_password']=NULL;
-    header('Location:../dashboard.php');
-    die();
+        if (isset($_SESSION['coop'])){
+            header('Location:../index.php');
+            die();} else{
+                header('Location:../coop.php');
+                die();
+            }
+   
 } else {
     $_SESSION['message']=$message;
     $message = "Your username and password didn't match. Please try again.";

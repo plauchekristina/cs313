@@ -3,7 +3,7 @@
 <!---  ####### Body content begins ####### -->
 <div class="jumbotron">
         <div class="container text-center">
-            <h1>Group Buying<?php if (!isset($_SESSION['client'])){echo ", ".$_SESSION['client']['first_name'];}?></h1>
+            <h1>Group Buying Calculator</h1>
         </div>
     </div>
     <div class="container text-center">
@@ -18,10 +18,8 @@
                         Some people want full portions and others want half portions. Others may want double or triple portions.
                         You need to figure how many boxes of apples to purchase for the group based on the # of portions requested</p>
                         <?php if (!isset($_SESSION['client'])){
-                        echo "<h3><a href='/project/register.php'>Register Now</a> or <a href='/project/login.php'>Login</a>to get started. </h3>
-                        ";
-                        }else {echo "<h3><a href='orderform.php'>Place a new order.</a></h3>
-                        <p>or</p><h3><a href='dashboard.php'>See past orders</a></h3>";}?>
+                        echo "<h3><a href='/project/register.php'>Register Now</a> or <a href='/project/login.php'>Login</a> to get started. </h3>
+                        ";}?>
                    
             </div>
             </div>
@@ -32,12 +30,7 @@
             <div class="col-sm-3 well">
                 <div class="well">
                     <h2>
-                        <a href="#">Date</a>
-</h2>
-                    
-<br><p> 
-                    <?php 
-                    echo "<strong>Today is:</strong> ".date("m/d/Y");?></p>
+                       <img src ="">
                 </div>
 
 
@@ -51,10 +44,7 @@
                         <div class="panel panel-default text-left well">
                             <div class="panel-body">
                             <h2>What would you like to do?</h2>
-                            <?php if (!isset($_SESSION['client'])){
-   echo "<h3><a href='/project/register.php'>Register</a></h3>
-   <p><a href='/project/login.php'>Login</a></p>";
-}else {echo "<h3><a href='orderform.php'>Place a new order.</a></h3>
+                            <?php if (isset($_SESSION['client'])){echo "<h3><a href='orderform.php'>Place a new order.</a></h3>
 <p>or</p><h3><a href='dashboard.php'>See past orders</a></h3>";}?>
                 
 
