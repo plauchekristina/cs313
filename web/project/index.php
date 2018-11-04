@@ -26,27 +26,18 @@
 
    
 
-            <!-- Left column -->
-            <div class="col-sm-3 well">
-                <div class="well">
-                    <h2>
-                       <img src ="">
-                </div>
-
-
-            </div>
 
             <!-- Center column -->
-            <div class="col-sm-9">
+            <div class="col-sm-12">
 
                 <div class="row">
                     <div class="col-sm-12">
                         <div class="panel panel-default text-left well">
                             <div class="panel-body">
-                            <h2>What would you like to do?</h2>
-                            <?php if (isset($_SESSION['client'])){echo "<h3><a href='orderform.php'>Place a new order.</a></h3>
+                            
+                            <?php if (isset($_SESSION['client'])){echo "<h2>What would you like to do?</h2><h3><a href='orderform.php'>Place a new order.</a></h3>
 <p>or</p><h3><a href='dashboard.php'>See past orders</a></h3>";}?>
-                
+                <?php if ($_SESSION['coop']=0){echo var_dump($_SESSION);}?>
 
                             </div>
                         </div>
