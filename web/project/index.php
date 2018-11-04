@@ -34,22 +34,7 @@
                     <div class="col-sm-12">
                         <div class="panel panel-default text-left well">
                             <div class="panel-body">
-                            
-                            <?php if (isset($_SESSION['client'])){echo "<h2>What would you like to do?</h2><h3><a href='orderform.php'>Place a new order.</a></h3>
-<p>or</p><h3><a href='dashboard.php'>See past orders</a></h3>";}?>
-
-
-
-                <?php if (!isset($_SESSION['coop']['coop_name'])){echo "<h3><a href='co-op.php'>Create your Co-op1</a></h3>";}?>
-                
-                
-                <?php if (!isset($_SESSION['coop']['coop_name'])){
-                    echo "<h3><a href='co-op.php'>Create your Co-op2</a></h3>";
-                    }else {echo "<h2>What would you like to do?</h2><h3><a href='orderform.php'>Place a new order.</a></h3>
-                        <p>or</p><h3><a href='dashboard.php'>See past orders</a></h3>";
-                        
-                    } ?>
-
+<!-- Directs customer to create co-op-->
 <?php 
 
 if (isset($_SESSION['client'])){
