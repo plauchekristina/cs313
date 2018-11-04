@@ -65,9 +65,10 @@ try {
     header('Location:../index.php');
     die();
 } else {  
+    require '../login.php';
     $message = "Your username and password didn't match. Please try again.";
     $_SESSION['message']=$message;
-    include '../login.php';
+    
 }
 
     
