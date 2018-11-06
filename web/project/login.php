@@ -1,5 +1,5 @@
 <?php session_start();
-require('controller/accounts-controller.php') ?>
+require('../project/controller/accounts-controller') ?>
 <?php include('../project/common/nav.php');?> 
 
 <!---  ####### Body content begins ####### -->
@@ -36,7 +36,7 @@ require('controller/accounts-controller.php') ?>
         <div>
                 <label for="user_password">Password</label>
                 <p>Passwords must be at least 8 characters and contain at least 1 number, 1 capital letter, and 1 special character</p>
-                <?php echo $message; ?>
+                <?php echo $_SESSION['message']; ?>
         </div>
         <div>
           <input type="password" name="user_password" id="user_password" required pattern="(?=^.{8,}$)(?=.*\d)(?=.*\W+)(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$">     
