@@ -1,5 +1,5 @@
 <?php session_start();
-require('../project/controller/accounts-controller') ?>
+include('../project/controller/accounts-controller') ?>
 <?php include('../project/common/nav.php');?> 
 
 <!---  ####### Body content begins ####### -->
