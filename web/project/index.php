@@ -28,6 +28,7 @@
 
 
             <!-- Center column -->
+            <?php echo $_SESSION['message']; ?>
             <?php 
 
 if (isset($_SESSION['client'])){ echo "
@@ -36,7 +37,7 @@ if (isset($_SESSION['client'])){ echo "
                 <div class='row'>
                     <div class='col-sm-12'>
                         <div class='panel panel-default text-left well'>
-                            <div class='panel-body'>"; }?>
+                            <div class='panel-body'>"; }?>     
 <!-- Directs customer to create co-op-->
 <?php 
 
