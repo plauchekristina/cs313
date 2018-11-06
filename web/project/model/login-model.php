@@ -62,6 +62,8 @@ try {
 
     if ( password_verify($user_password, $session_password)){
         $_SESSION['client']['user_password']=NULL;
+        $message = "Login successful.";
+        $_SESSION['message']=$message;
     header('Location:../index.php');
     die();
 } //else {  
