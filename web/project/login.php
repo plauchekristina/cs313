@@ -1,4 +1,5 @@
-<?php session_start();?>
+<?php session_start();
+require('model/login-model.php') ?>
 <?php include('../project/common/nav.php');?> 
 
 <!---  ####### Body content begins ####### -->
