@@ -1,5 +1,5 @@
 <?php session_start();
-require('model/login-model.php') ?>
+require('controller/accounts-controller.php') ?>
 <?php include('../project/common/nav.php');?> 
 
 <!---  ####### Body content begins ####### -->
