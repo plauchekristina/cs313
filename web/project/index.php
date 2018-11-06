@@ -28,7 +28,7 @@
 
 
             <!-- Center column -->
-            <?php echo $_SESSION['message']; ?>
+           
             <?php 
 
 if (isset($_SESSION['client'])){ echo "
