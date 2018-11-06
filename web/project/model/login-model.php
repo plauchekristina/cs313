@@ -64,12 +64,12 @@ try {
         $_SESSION['client']['user_password']=NULL;
     header('Location:../index.php');
     die();
-} else {  
-    $message = "Your username and password didn't match. Please try again.";
-  $_SESSION['message']=$message;
-   header('Location:../login-fail.php');
+} //else {  
+  //  $message = "Your username and password didn't match. Please try again.";
+  //$_SESSION['message']=$message;
+  // header('Location:../login-fail.php');
    
-}
+//}
 
 
     
