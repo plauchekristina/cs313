@@ -72,6 +72,12 @@ try {
   // header('Location:../login-fail.php');
    
 //}
+if (!password_verify($user_password, $session_password)){
+    $message = "Your username and password didn't match. Please try again.";
+    $_SESSION['message']=$message;
+header('Location:../login.php');
+die();
+}
 
 
     
