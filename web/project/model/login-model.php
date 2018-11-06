@@ -67,9 +67,9 @@ try {
 } else {  
     $message = "Your username and password didn't match. Please try again.";
    echo $_SESSION['message']=$message;
-   include('../login.php');
+   header('Location:../login.php');
 }
-echo "This is showing from the login-model page";
-include('../login.php');
+
+
     
 ?>

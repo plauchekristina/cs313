@@ -4,7 +4,7 @@
  echo $_SESSION['message'];
 
 
-
+ echo "This is showing from the accounts-controller page";
 
 
 
