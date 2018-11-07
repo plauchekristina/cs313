@@ -54,25 +54,8 @@ if (!isset($_SESSION['client'])){
                         <div class="panel panel-default text-left well">
                             <div class="panel-body">
                             <h2>Past orders:</h2>
-                            <?php
-                            require('connection.php');
-                                foreach ($db->query('SELECT * FROM orders WHERE orders_account_id = '.$account_id) as $row)
-                                    {
-                                        if ($row['orders_account_id']=$account_id){
-                                            echo "<h3><b>Order #: </b>" . $row['orders_id'] . "</h3> ";
-                                            echo "<p>Date:".$row['orders_date']."</p>";
-                                            echo "<p># Full Ordered: ".$row['orders_full_qty']."</p>";
-                                            echo "<p># Half Ordered: ".$row['orders_half_qty']."</p>";
-                                            echo "<p>Grand Total: $".$row['orders_total']."</p><hr/>";
-                                
-                                        } else {
-                                            echo "<p>No orders could be found</p>";
-                                        }
-                                     
-                            
-                                }
-                              ?>
-                              <!-- Testing Join Statement-->
+                        
+                              <!-- Join Query-->
                                <?php
                             require('connection.php');
                                 foreach ($db->query('SELECT * FROM orders INNER JOIN item ON orders.orders_id = item.item_orders_id 
@@ -81,10 +64,12 @@ if (!isset($_SESSION['client'])){
                                         if ($row['orders_account_id']=$account_id){
                                             echo "<h3><b>Order #: </b>" . $row['orders_id'] . "</h3> ";
                                             echo "<p>Date:".$row['orders_date']."</p>";
-                                            echo "<p># Full Ordered: ".$row['orders_full_qty']."</p>";
-                                            echo "<p># Half Ordered: ".$row['orders_half_qty']."</p>";
+                                            echo "<p>".$row['orders_full_qty']."people ordered full portions</p>";
+                                            echo "<p>".$row['orders_half_qty']."people ordered half portions</p><h4>Item Details</h4>";
+                                            echo "<p>".$row['item_order_qty']." boxes of ".$row['item_count']." ".$row['item_unit']." ".$row['item_name']."</p>";
+                                            echo "<p>Sub-total:".$row['item_order_cost']."</p>";
                                             echo "<p>Grand Total: $".$row['orders_total']."</p><hr/>";
-                                            echo "<p>Grand Total: $".$row['item_name']."</p><hr/>";
+                                            
                                 
                                         } else {
                                             echo "<p>No orders could be found</p>";
