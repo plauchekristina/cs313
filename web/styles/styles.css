@@ -66,3 +66,7 @@ input[type=number] {
 .alert {
     color: red;
 }
+
+.submit {
+    margin: 1%;
+}

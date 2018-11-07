@@ -40,8 +40,8 @@
         <div>
           <input type="password" name="user_password" id="user_password" required pattern="(?=^.{8,}$)(?=.*\d)(?=.*\W+)(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$">     
         </div>
-        <div>
-            <label>&nbsp;</label>
+        <div class="submit">
+           
             <input type="submit" name="submit" id="regbtn" value="Login" class="btn-success">
             <!-- Add the action name-value pair -->
             
