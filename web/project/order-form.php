@@ -12,12 +12,14 @@ if (!isset($_SESSION['client'])){
         <div class="panel-body">
         <p>You're purchasing food for a food co-op. Some people want full portions and some people want half portions.
         You need to figure how many boxes of apples to purchase for the group.</p> 
-        <p>Fill in the fields below to figure out how many boxes you should buy.
+        <p>Fill in the fields below to figure out how many boxes you should buy. <span class="alert">* All fields are required.</span>
      </p>
-     <p class="alert">* All fields are required.</p>
+     
      <form action = "model/orders-model.php" method ="post">
         <input name="account_id" id="account_id" type="hidden" value = "<?php echo $_SESSION['client']['account_id'];?>">
-     <div>
+     
+        <div class="d-inline row">       
+        <div class="col-sm-2">
                         <label># People who want a Full Portion:<span class="alert">*</span></label>
                         <div>
                             <input type="number" onfocus="targetInput(this)" required onfocusout="targetOutput(this)" name="full-count" id="full-count" aria-label="enter number of full portions ordered">
@@ -27,7 +29,7 @@ if (!isset($_SESSION['client'])){
                     </div>
 
 
-                    <div>
+                    <div class="col-sm-2">
                         <label># People who want a Half Portion:<span class="alert">*</span></label>
                         <div>
                             <input type="number" onfocus="targetInput(this)" required onfocusout="targetOutput(this)" name="half-count" id="half-count" size="10"
@@ -36,6 +38,7 @@ if (!isset($_SESSION['client'])){
                         <!-- Budget data from co-op info. Used for calculations, but hidden from viewer.-->
                         <input type="hidden" name="half-budget" id="half-budget" size="10" value = "<?php echo $_SESSION['coop']['coop_half_budget'];?>" >
                     </div>
+</div>
                     <h3>Purchasing Budget:
                         <span id="target-total"></span>
                     </h3>
