@@ -68,7 +68,7 @@ try {
     die();
 } 
 if (!password_verify($user_password, $session_password)){
-    $message = "<p class='fail'>Your username and password didn't match. Please try again.</p>";
+    $message = "<p class='alert'>Your username and password didn't match. Please try again.</p>";
     $_SESSION['message']=$message;
 header('Location:../login.php');
 die();
