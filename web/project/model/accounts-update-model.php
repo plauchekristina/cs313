@@ -53,7 +53,7 @@ $account_id= $_SESSION['client']['account_id'];
       $sql = 'SELECT account_id, first_name, last_name, username,email FROM account WHERE username = :username';
       // Create the prepared statement using the db connection
       $stmt = $db->prepare($sql);
-      // The next four lines replace the placeholders in the SQL
+      // The next lines replace the placeholders in the SQL
       // statement with the actual values in the variables
       // and tells the database the type of data it is
       $stmt->bindValue(':username', $username, PDO::PARAM_STR);
@@ -67,9 +67,9 @@ $account_id= $_SESSION['client']['account_id'];
          catch (Exception $e) {
           echo $e;
       }
-   //header('Location:../account.php');
-   //die ();
-    // Ask how many rows changed as a result of our insert
+   header('Location:../account.php');
+die ();
+    
    
    
     
