@@ -1,6 +1,6 @@
 <?php session_start();
 $account_id=$_SESSION['client']['account_id'];
-    header('Location:index.php');
+   
 ?>
 <?php include('../project/common/nav.php');
 ?> 
