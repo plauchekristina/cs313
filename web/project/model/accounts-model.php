@@ -43,7 +43,7 @@ var_dump($_POST);
 
    header('Location:../login.php');
    die ();
-    // Ask how many rows changed as a result of our insert
+ 
    
    
     

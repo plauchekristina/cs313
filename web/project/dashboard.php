@@ -69,6 +69,7 @@ if (!isset($_SESSION['client'])){
                                             echo "<h4>".$row['item_order_qty']." boxes of ".$row['item_count']." ".$row['item_unit']." ".$row['item_name']."</h4>";
                                             echo "<p><b>Sub-total: </b>$".$row['item_order_cost']."</p>";
                                             echo "<p><b>Grand Total: </b>$".$row['orders_total']."</p><hr/>";
+                                            echo "<p><a href='/orders-view.php?id=".$row['orders_id']."'>View</a></p>";
                                             
                                 
                                         } else {
